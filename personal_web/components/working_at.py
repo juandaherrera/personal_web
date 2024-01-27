@@ -1,0 +1,16 @@
+import reflex as rx
+
+from personal_web.styles.styles import Size
+
+
+def working_at(image: str, url: str, alt: str) -> rx.Component:
+    return rx.hstack(
+        rx.text("En", font_size=Size.BIG.value),
+        rx.link(
+            rx.image(src=image, alt=alt, height="2.5em"),
+            href=url,
+            is_external=True,
+        ),
+        align_items="end",
+        padding_bottom=Size.DEFAULT_MEDIUM.value,
+    )
