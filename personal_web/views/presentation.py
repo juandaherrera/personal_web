@@ -1,6 +1,7 @@
 import reflex as rx
 
 import personal_web.constants as const
+import personal_web.styles.styles as styles
 from personal_web.components.buttons import default_button
 from personal_web.components.link_icon import link_icon
 from personal_web.components.main_pic import main_pic
@@ -9,76 +10,79 @@ from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
 
 
+def hello_iam() -> rx.Component:
+    return rx.vstack(
+        rx.text(
+            "Hola👋🏻, soy",
+            font_size=Size.BIG.value,
+            color=TextColor.SECONDARY.value,
+            padding_buttom=Size.ZERO.value,
+        ),
+        rx.heading(
+            "Juan David Herrera",
+            size="2xl",
+            color=TextColor.PRIMARY.value,
+        ),
+        rx.text(
+            const.CURRENT_POSITION,
+            font_size=Size.BIG.value,
+            color=TextColor.SECONDARY.value,
+        ),
+        # Dónde trabajo?
+        working_at(
+            const.CURRENT_COMPANY_LOGO,
+            const.CURRENT_COMPANY_URL,
+            f"Logo {const.CURRENT_COMPANY_NAME}",
+        ),
+        rx.divider(
+            border_color=TextColor.PRIMARY.value,
+        ),
+        # Redes
+        rx.hstack(
+            link_icon(
+                "icons/github.svg",
+                const.GUTHUB_URL,
+                "Logo GitHub",
+            ),
+            link_icon(
+                "icons/linkedin.svg",
+                const.LINKEDIN_URL,
+                "Logo LinkedIn",
+            ),
+            link_icon(
+                "icons/instagram.svg",
+                const.INSTAGRAM_URL,
+                "Logo Instagram",
+            ),
+            spacing=Size.DEFAULT_MEDIUM.value,
+            padding_y=Size.DEFAULT_MEDIUM.value,
+        ),
+        # Conoce más acerca de mi
+        rx.box(
+            default_button(
+                "Conoce más de mi",
+                "arrow_down",
+                Color.PRIMARY.value,
+                Color.SECONDARY.value,
+            ),
+        ),
+        align_items="start",
+    )
+
+
 def presentation() -> rx.Component:
     return rx.stack(
         rx.center(
-            rx.hstack(
-                main_pic(const.MAIN_PIC),
-                rx.vstack(
-                    rx.text(
-                        "Hola👋🏻, soy",
-                        font_size=Size.BIG.value,
-                        color=TextColor.SECONDARY.value,
-                        padding_buttom=Size.ZERO.value,
-                    ),
-                    rx.heading(
-                        "Juan David Herrera",
-                        size="3xl",
-                        color=TextColor.PRIMARY.value,
-                    ),
-                    rx.text(
-                        const.CURRENT_POSITION,
-                        font_size=Size.BIG.value,
-                        color=TextColor.SECONDARY.value,
-                    ),
-                    # Dónde trabajo?
-                    working_at(
-                        const.CURRENT_COMPANY_LOGO,
-                        const.CURRENT_COMPANY_URL,
-                        f"Logo {const.CURRENT_COMPANY_NAME}",
-                    ),
-                    rx.divider(
-                        border_color=TextColor.PRIMARY.value,
-                    ),
-                    # Redes
-                    rx.hstack(
-                        link_icon(
-                            "icons/github.svg", const.GUTHUB_URL, "Logo GitHub"
-                        ),
-                        link_icon(
-                            "icons/linkedin.svg",
-                            const.LINKEDIN_URL,
-                            "Logo LinkedIn",
-                        ),
-                        link_icon(
-                            "icons/instagram.svg",
-                            const.INSTAGRAM_URL,
-                            "Logo Instagram",
-                        ),
-                        spacing=Size.DEFAULT_MEDIUM.value,
-                        padding_y=Size.DEFAULT_MEDIUM.value,
-                    ),
-                    # Conoce más acerca de mi
-                    rx.box(
-                        default_button(
-                            "Conoce más de mi",
-                            "arrow_down",
-                            Color.PRIMARY.value,
-                            Color.SECONDARY.value,
-                        ),
-                    ),
-                    align_items="start",
-                ),
+            rx.responsive_grid(
+                rx.center(main_pic(const.MAIN_PIC)),
+                rx.center(hello_iam()),
+                columns=[1, 1, 1, 1, 2],
                 width="100%",
                 padding_x=Size.VERY_BIG.value,
                 padding_y=Size.DEFAULT_BIG.value,
                 spacing=Size.BIG.value,
+                justify_content="center",
             ),
         ),
-        align_items="center",
-        width="100%",
-        background="#0E1116",
-        box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
-        margin_top=Size.ZERO.value,
-        padding_y=Size.DEFAULT_BIG.value,
+        style=styles.PRESENTATION_STACK_STYLE,
     )

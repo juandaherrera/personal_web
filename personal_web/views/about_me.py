@@ -7,12 +7,13 @@ from personal_web.styles.styles import Size
 
 def about_me() -> rx.Component:
     return rx.vstack(
-        title("Acerca de mi 👨🏻‍💻"),
+        # TO_DO lógica para scrollear hasta aquí
+        title("Acerca de mi 👨🏻‍💻", id="about_me"),
         rx.text(
             ABOUT_ME, text_align="justify", font_size=Size.DEFAULT_MEDIUM.value
         ),
         align_items="start",
-        width="85em",
+        max_width="85em",
         padding_x=Size.VERY_BIG.value,
         padding_y=Size.VERY_BIG.value,
     )

@@ -6,7 +6,7 @@ class Color(Enum):
     SECONDARY = "#FF9B9B"
     TERTIARY = "#F1E0C5"
     BACKGROUND = "#080A0D"
-    # BACKGROUND = "#0C1116"080A0D
+    BACKGROUND_ALT = "#0E1116"
     CONTENT = "#020305"
 
 

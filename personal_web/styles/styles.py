@@ -32,6 +32,7 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "font_weight": FontWeight.LIGHT.value,
     "color": TextColor.PRIMARY.value,
+    "scroll_behavior": "smooth",
     rx.Link: {"text_decoration": "none", "_hover": {}},
 }
 
@@ -58,7 +59,7 @@ NAVBAR_STYLE = dict(
 )
 
 MAIN_PIC_STYLE = dict(
-    max_width="43em",
+    max_width=["20em", "30em", "43em"],
     border_radius="50%",
     padding="0.6em",
     border=f"{Size.SMALL.value} solid {Color.PRIMARY.value}",
@@ -66,4 +67,13 @@ MAIN_PIC_STYLE = dict(
         "border": f"{Size.SMALL.value} solid {Color.PRIMARY.value}",
         "box_shadow": f"0 0 8px {Color.PRIMARY.value}, 0 0 12px {Color.PRIMARY.value}",
     },
+)
+
+PRESENTATION_STACK_STYLE = dict(
+    align_items="center",
+    width="100%",
+    background=Color.BACKGROUND_ALT.value,
+    box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
+    margin_top=Size.ZERO.value,
+    padding_y=Size.DEFAULT_BIG.value,
 )
