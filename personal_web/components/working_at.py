@@ -11,6 +11,5 @@ def working_at(image: str, url: str, alt: str) -> rx.Component:
             href=url,
             is_external=True,
         ),
-        align_items="end",
         padding_bottom=Size.DEFAULT_MEDIUM.value,
     )
