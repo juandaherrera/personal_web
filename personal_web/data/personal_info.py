@@ -11,3 +11,23 @@ ABOUT_ME = f"""
     los desafíos de la ingeniería de datos. Mi objetivo es combinar análisis 
     sólidos con la construcción de infraestructuras de datos robustas y efectivas.
 """
+
+TECHSTACK = (
+    ("python", True, "/"),
+    ("javascript", True, "/"),
+    ("docker", True, "/"),
+    ("bash", True, "/"),
+    ("postgresql", True, "/"),
+    ("mysql", True, "/"),
+    ("mongodb", True, "/"),
+    ("django", True, "/"),
+    ("html5", True, "/"),
+    ("css3", True, "/"),
+    ("git", True, "/"),
+    ("github", True, "/"),
+    ("bitbucket", True, "/"),
+    ("/technologies/airflow.svg", False, "/"),
+    ("/technologies/snowflake.svg", False, "/"),
+    ("/technologies/redashio.svg", False, "/"),
+    ("/technologies/power-bi.svg", False, "/"),
+)

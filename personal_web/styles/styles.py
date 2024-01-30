@@ -24,6 +24,7 @@ class Size(Enum):
 STYLESHEETS = [
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css",  # Lenguages Icons
 ]
 
 # Styles
