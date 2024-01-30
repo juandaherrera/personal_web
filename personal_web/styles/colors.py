@@ -12,6 +12,6 @@ class Color(Enum):
 
 class TextColor(Enum):
     PRIMARY = "#F1F2F4"
-    SECONDARY = "FFFFFF"
+    SECONDARY = "#FFFFFF"
     TERTIARY = "#0C1116"
     PINK = "#F5B8A5"

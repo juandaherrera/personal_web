@@ -18,10 +18,12 @@ class Size(Enum):
     BIG = "2em"
     MEDIUM_BIG = "3em"
     VERY_BIG = "4em"
+    LARGE = "5em"
 
 
 # Stylesheets
 STYLESHEETS = [
+    "/css/loop.css",
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap",
     "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css",  # Lenguages Icons
@@ -59,6 +61,7 @@ NAVBAR_STYLE = dict(
     width="100%",
 )
 
+# TO_DO validar si es mejor cambiar el ancho fijo por un porcentaje
 MAIN_PIC_STYLE = dict(
     max_width=["20em", "30em", "43em"],
     border_radius="50%",

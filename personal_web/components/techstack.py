@@ -1,5 +1,6 @@
 import reflex as rx
 
+from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 
 
@@ -7,15 +8,20 @@ from personal_web.styles.styles import Size
 def techstack(src: str, url: str = "/", is_class: bool = True) -> rx.Component:
     return rx.cond(
         is_class,
-        rx.box(
-            class_name=f"devicon-{src}-plain",
-            font_size=Size.VERY_BIG.value,
-            padding_x="0.12em",
+        rx.link(
+            rx.box(
+                class_name=f"devicon-{src}-plain",
+                font_size=Size.LARGE.value,
+                padding_x=Size.MEDIUM.value,
+                _hover={"text_shadow": f"0 0 8px {Color.PRIMARY.value}"},
+            ),
+            href=url,
+            is_external=True,
         ),
         rx.box(
             rx.image(
                 src=src, height=Size.VERY_BIG.value, width=Size.VERY_BIG.value
             ),
-            padding_x="0.48em",
+            padding_x=Size.VERY_BIG.value,
         ),
     )
