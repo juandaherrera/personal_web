@@ -1,7 +1,30 @@
+from datetime import date
+
 # Personal
 MAIN_PIC = (
     "https://juandaherreraweb.blob.core.windows.net/web/juanda_squared.jpeg"
 )
+
+# Páginas
+META = [
+    {"name": "og:type", "content": "website"},
+]
+
+INDEX_TILE = "Juan David Herrera | Web Personal"
+INDEX_DESCRIPTION = (
+    f"Portafolio persona de Juan David Herrera © {date.today().year}"
+)
+INDEX_PREVIEW = (
+    "https://juandaherreraweb.blob.core.windows.net/web/preview_web.png"
+)
+
+INDEX_META = [
+    {"name": "og:title", "content": INDEX_TILE},
+    {"name": "og:description", "content": INDEX_DESCRIPTION},
+    {"name": "og:image", "content": INDEX_PREVIEW},
+]
+
+INDEX_META.extend(META)
 
 # Redes Sociales
 GUTHUB_URL = "https://github.com/juandaherrera"
