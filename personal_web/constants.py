@@ -12,4 +12,11 @@ INSTAGRAM_URL = "https://www.instagram.com/juandaherrep/"
 CURRENT_COMPANY_NAME = "Rappi"
 CURRENT_COMPANY_URL = "https://www.rappi.com.co/"
 CURRENT_COMPANY_LOGO = "icons/rappi.svg"
-CURRENT_POSITION = "Senior Data Analyst / Data Engineer"
+CURRENT_POSITION = [
+    "Senior Data Analyst",
+    3000,
+    "Data Engineer",
+    3000,
+    "BI Specialist",
+    3000,
+]

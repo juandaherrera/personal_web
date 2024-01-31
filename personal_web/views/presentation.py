@@ -4,6 +4,7 @@ import personal_web.constants as const
 import personal_web.styles.styles as styles
 from personal_web.components.buttons import default_button
 from personal_web.components.link_icon import link_icon
+from personal_web.components.type_animation import type_animation
 from personal_web.components.working_at import working_at
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
@@ -13,7 +14,7 @@ def hello_iam() -> rx.Component:
     return rx.vstack(
         rx.text(
             "Hola👋🏻, soy",
-            font_size=Size.BIG.value,
+            font_size=[Size.DEFAULT_BIG.value, Size.BIG.value],
             color=TextColor.SECONDARY.value,
             padding_buttom=Size.ZERO.value,
         ),
@@ -22,10 +23,14 @@ def hello_iam() -> rx.Component:
             size="2xl",
             color=TextColor.PRIMARY.value,
         ),
-        rx.text(
-            const.CURRENT_POSITION,
-            font_size=Size.BIG.value,
-            color=TextColor.SECONDARY.value,
+        type_animation(
+            sequence=const.CURRENT_POSITION,
+            repeat=float("inf"),
+            speed=20,
+            style=dict(
+                font_size=Size.BIG.value,
+                color=TextColor.SECONDARY.value,
+            ),
         ),
         # Dónde trabajo?
         working_at(

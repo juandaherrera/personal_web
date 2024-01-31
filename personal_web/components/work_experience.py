@@ -7,6 +7,21 @@ from personal_web.styles.styles import Size
 from .texts import title
 
 
+# Añadir tecnologías usadas en el trabajo. Quizas usar badges con borders redondeados.
+# Ejemplo: https://adriancecilia.dev/#projects
+def work_experience(job: Job) -> rx.Component:
+    return rx.accordion(
+        rx.accordion_item(
+            rx.accordion_button(_we_header(job)),
+            rx.accordion_panel(_we_panel(job)),
+            border_top_width=Size.ZERO.value,
+            border_color=Color.SECONDARY.value,
+        ),
+        allow_toggle=True,
+        width="100%",
+    )
+
+
 def _we_header(job: Job) -> rx.Component:
     return rx.vstack(
         rx.hstack(
@@ -66,17 +81,4 @@ def _we_panel(job: Job) -> rx.Component:
             font_size=Size.DEFAULT_MEDIUM.value,
         ),
         align_items="start",
-    )
-
-
-def work_experience(job: Job) -> rx.Component:
-    return rx.accordion(
-        rx.accordion_item(
-            rx.accordion_button(_we_header(job)),
-            rx.accordion_panel(_we_panel(job)),
-            border_top_width=Size.ZERO.value,
-            border_color=Color.SECONDARY.value,
-        ),
-        allow_toggle=True,
-        width="100%",
     )
