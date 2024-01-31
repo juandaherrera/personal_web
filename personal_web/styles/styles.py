@@ -2,6 +2,8 @@ from enum import Enum
 
 import reflex as rx
 
+from personal_web.utils import hex_to_rgb
+
 from .colors import Color, TextColor
 from .fonts import Font, FontWeight
 
@@ -83,4 +85,17 @@ PRESENTATION_STACK_STYLE = dict(
     box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
     margin_top=Size.ZERO.value,
     padding_y=Size.DEFAULT_BIG.value,
+)
+
+TECH_BADGE_STYLE = dict(
+    padding_y=Size.SMALL.value,
+    padding_x=Size.DEFAULT.value,
+    bg=hex_to_rgb(Color.AQUA.value, 0.15),
+    color=Color.AQUA.value,
+    border_radius="15px",
+    font_size=Size.MEDIUM.value,
+    font_weight="normal",
+    text_transform="capitalize",
+    margin_right=[Size.DEFAULT.value, Size.DEFAULT_BIG.value],
+    margin_bottom=[Size.DEFAULT.value, Size.DEFAULT_BIG.value],
 )

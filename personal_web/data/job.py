@@ -14,6 +14,11 @@ class Job(BaseModel):
     company_logo: Optional[str]
     description: str
     achievements: Optional[str]
+    technologies: Optional[List[str]] = []
+
+    @validator('technologies', pre=True, allow_reuse=True)
+    def technologies_unicity(cls, v):
+        return list(dict().fromkeys(v).keys())
 
     # TO_DO podría agregar Babel para enviar las fechas en español.
     @property

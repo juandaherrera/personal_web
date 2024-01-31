@@ -1,14 +1,14 @@
 import reflex as rx
 
+import personal_web.styles.styles as styles
 from personal_web.data.job import Job
 from personal_web.styles.colors import Color, TextColor
+from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 
 from .texts import title
 
 
-# Añadir tecnologías usadas en el trabajo. Quizas usar badges con borders redondeados.
-# Ejemplo: https://adriancecilia.dev/#projects
 def work_experience(job: Job) -> rx.Component:
     return rx.accordion(
         rx.accordion_item(
@@ -71,14 +71,28 @@ def _we_panel(job: Job) -> rx.Component:
         rx.text(
             job.description,
             text_align="justify",
-            font_size=Size.DEFAULT_MEDIUM.value,
+            font_size=FontSize.BODY.value,
             padding_bottom=Size.DEFAULT.value,
         ),
         title("🏆 Logros", "md"),
         rx.text(
             job.achievements,
             text_align="justify",
-            font_size=Size.DEFAULT_MEDIUM.value,
+            font_size=FontSize.BODY.value,
+        ),
+        rx.cond(
+            len(job.technologies) > 0,
+            rx.flex(
+                *[_tech_badge(name) for name in job.technologies],
+                padding_top=Size.DEFAULT_MEDIUM.value,
+                padding_bottom=Size.ZERO.value,
+                spacing=Size.DEFAULT_BIG.value,
+                flex_wrap="wrap",
+            ),
         ),
         align_items="start",
     )
+
+
+def _tech_badge(tech_name: str) -> rx.Component:
+    return rx.badge(tech_name, style=styles.TECH_BADGE_STYLE)
