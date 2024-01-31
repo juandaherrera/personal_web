@@ -6,7 +6,7 @@ ABOUT_ME = f"""
     Mi pasión radica en la transformación y optimización de datos para 
     impulsar soluciones estratégicas. Actualmente, en Rappi, me encuentro 
     en una transición hacia el campo del Data Engineering. Con habilidades
-    avanzadas en SQL, Python, Apache Airflow y Snowflake, y respaldado por una 
+    avanzadas en SQL, Python, Power BI, Apache Airflow y Snowflake, y respaldado por una 
     sólida formación a través de cursos especializados, estoy listo para abordar 
     los desafíos de la ingeniería de datos. Mi objetivo es combinar análisis 
     sólidos con la construcción de infraestructuras de datos robustas y efectivas.

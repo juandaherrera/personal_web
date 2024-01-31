@@ -39,6 +39,12 @@ BASE_STYLE = {
     rx.Link: {"text_decoration": "none", "_hover": {}},
 }
 
+INDEX_SECTION_STYLE = dict(
+    width=["85%", "80%", "70%"],
+    padding_x=Size.DEFAULT.value,
+    padding_y=Size.VERY_BIG.value,
+)
+
 DEFAULT_BUTTON_STYLE = dict(
     background_color="transparent",
     border=f"{Size.VERY_SMALL.value} solid",
@@ -54,7 +60,7 @@ NAVBAR_TITLE_STYLE = dict(
 NAVBAR_STYLE = dict(
     position="sticky",
     bg=Color.CONTENT.value,
-    padding_x=Size.BIG.value,
+    padding_x=[Size.BIG.value, Size.MEDIUM_BIG.value],
     padding_y=Size.DEFAULT.value,
     z_index="999",
     top="0",

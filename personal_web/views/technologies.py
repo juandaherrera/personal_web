@@ -27,5 +27,4 @@ def technologies() -> rx.Component:
             padding_y=Size.MEDIUM.value,
         ),
         width="100%",
-        padding_bottom=Size.VERY_BIG.value,
     )

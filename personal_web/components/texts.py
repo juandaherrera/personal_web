@@ -9,7 +9,13 @@ def title(
     size: str = "2xl",
     color: str = TextColor.PRIMARY.value,
     id: str = None,
+    **kwargs
 ) -> rx.Component:
     return rx.heading(
-        text, size=size, color=color, margin_bottom=Size.VERY_SMALL.value, id=id
+        text,
+        size=size,
+        color=color,
+        margin_bottom=Size.VERY_SMALL.value,
+        id=id,
+        **kwargs
     )

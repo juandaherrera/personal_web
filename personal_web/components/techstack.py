@@ -13,7 +13,10 @@ def techstack(src: str, url: str = "/", is_class: bool = True) -> rx.Component:
                 class_name=f"devicon-{src}-plain",
                 font_size=Size.LARGE.value,
                 padding_x=Size.MEDIUM.value,
-                _hover={"text_shadow": f"0 0 8px {Color.PRIMARY.value}"},
+                _hover={
+                    "color": Color.SECONDARY.value,
+                    "text_shadow": f"0 0 6px {Color.PRIMARY.value}",
+                },
             ),
             href=url,
             is_external=True,
