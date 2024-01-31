@@ -67,14 +67,11 @@ NAVBAR_STYLE = dict(
     width="100%",
 )
 
-# TO_DO validar si es mejor cambiar el ancho fijo por un porcentaje
 MAIN_PIC_STYLE = dict(
-    max_width=["20em", "30em", "43em"],
-    border_radius="50%",
-    padding="0.6em",
-    border=f"{Size.SMALL.value} solid {Color.PRIMARY.value}",
+    border=f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
+    padding=Size.DEFAULT.value,
     _hover={
-        "border": f"{Size.SMALL.value} solid {Color.PRIMARY.value}",
+        "border": f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
         "box_shadow": f"0 0 8px {Color.PRIMARY.value}, 0 0 12px {Color.PRIMARY.value}",
     },
 )

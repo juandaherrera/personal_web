@@ -4,7 +4,6 @@ import personal_web.constants as const
 import personal_web.styles.styles as styles
 from personal_web.components.buttons import default_button
 from personal_web.components.link_icon import link_icon
-from personal_web.components.main_pic import main_pic
 from personal_web.components.working_at import working_at
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
@@ -74,9 +73,16 @@ def presentation() -> rx.Component:
     return rx.stack(
         rx.center(
             rx.responsive_grid(
-                rx.center(main_pic(const.MAIN_PIC)),
+                rx.center(
+                    rx.avatar(
+                        src=const.MAIN_PIC,
+                        size="full",
+                        style=styles.MAIN_PIC_STYLE,
+                    ),
+                    max_width=["20em", "30em", "40em"],
+                ),
                 rx.center(hello_iam()),
-                columns=[1, 1, 1, 1, 2],
+                columns=[1, 1, 1, 2, 2],
                 width="100%",
                 padding_x=Size.VERY_BIG.value,
                 padding_y=Size.DEFAULT_BIG.value,
