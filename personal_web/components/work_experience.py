@@ -32,7 +32,7 @@ def _we_header(job: Job) -> rx.Component:
                     alt=f"Logo de {job.company_name}",
                     height="2.5em",
                 ),
-                width="5.5em",
+                width=["4em", "5.5em"],
             ),
             # Divisor
             rx.center(
@@ -43,7 +43,10 @@ def _we_header(job: Job) -> rx.Component:
                 height=Size.BIG.value,
             ),
             # Cargo
-            rx.center(title(job.title, "lg"), text_align="left"),
+            rx.center(
+                title(job.title, font_size=FontSize.SUBTITLES.value),
+                text_align="left",
+            ),
             # Logo compañía
             rx.center(
                 rx.accordion_icon(
@@ -58,8 +61,15 @@ def _we_header(job: Job) -> rx.Component:
         ),
         # Fechas cargo
         rx.text(
-            f"{job.start_date_format} - {job.end_date_format}",
-            color=Color.SECONDARY.value,
+            rx.span(
+                f"{job.start_date_format} - {job.end_date_format}",
+                color=Color.SECONDARY.value,
+            ),
+            rx.span(
+                f" · {job.calculate_duration()}",
+                color=Color.TERTIARY.value,
+            ),
+            font_size=FontSize.SMALL_TEXT.value,
         ),
         align_items="start",
     )
@@ -67,14 +77,18 @@ def _we_header(job: Job) -> rx.Component:
 
 def _we_panel(job: Job) -> rx.Component:
     return rx.vstack(
-        title("📋 Función principal", "md", padding_top=Size.DEFAULT.value),
+        title(
+            "📋 Función principal",
+            font_size=FontSize.SECOND_SUBTITLE.value,
+            padding_top=Size.DEFAULT.value,
+        ),
         rx.text(
             job.description,
             text_align="justify",
             font_size=FontSize.BODY.value,
             padding_bottom=Size.DEFAULT.value,
         ),
-        title("🏆 Logros", "md"),
+        title("🏆 Logros", font_size=FontSize.SECOND_SUBTITLE.value),
         rx.text(
             job.achievements,
             text_align="justify",

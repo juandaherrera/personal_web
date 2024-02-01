@@ -1,5 +1,9 @@
 from datetime import date
 
+# APP Version
+version = "0.1.0"
+REPO_URL = "https://github.com/juandaherrera/personal_web"
+
 # Personal
 MAIN_PIC = (
     "https://juandaherreraweb.blob.core.windows.net/web/juanda_squared.jpeg"
