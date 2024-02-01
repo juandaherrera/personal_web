@@ -1,6 +1,12 @@
 import datetime
 from typing import Optional
 
+import reflex as rx
+
+
+def lang(language: str = "es") -> rx.Component:
+    return rx.script(f"document.documentElement.lang='{language}'")
+
 
 def get_experience() -> int:
     return datetime.date.today().year - 2021

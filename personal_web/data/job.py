@@ -2,6 +2,7 @@ import json
 from datetime import date
 from typing import List, Optional, Union
 
+from dateutil.relativedelta import relativedelta
 from pydantic import AnyUrl, BaseModel, validator
 
 
@@ -14,6 +15,11 @@ class Job(BaseModel):
     company_logo: Optional[str]
     description: str
     achievements: Optional[str]
+    technologies: Optional[List[str]] = []
+
+    @validator('technologies', pre=True, allow_reuse=True)
+    def technologies_unicity(cls, v):
+        return list(dict().fromkeys(v).keys())
 
     # TO_DO podría agregar Babel para enviar las fechas en español.
     @property
@@ -28,11 +34,39 @@ class Job(BaseModel):
             else self.end_date.strftime('%b. %Y')
         )
 
-    # TO_DO Lógica para calcular el tiempo en cada posición. Ideal que la actual se recalcule cada día.
     @property
-    def time(self):
-        if str(self.end_date).isalpha():
-            return None
+    def is_current_job(self):
+        return isinstance(self.end_date, str)
+
+    def calculate_duration(self):
+        if isinstance(self.end_date, str):
+            end_date = date.today()
+        else:
+            end_date = self.end_date
+
+        # Para igualar el calculo de LinkedIn
+        end_date = end_date + relativedelta(months=+1)
+
+        # Calcula la diferencia entre las fechas
+        diff = relativedelta(end_date, self.start_date)
+        years = diff.years
+        months = diff.months
+
+        # Formatea la salida según la duración
+        if years == 0 and months <= 1:
+            return "1 mes"
+        elif years == 0:
+            return f"{months} meses"
+        elif years == 1 and months == 1:
+            return f"1 año y 1 mes"
+        elif years == 1:
+            return f"1 año y {months} meses" if months else "1 año"
+        elif months == 1:
+            return f"{years} años y 1 mes"
+        else:
+            return (
+                f"{years} años y {months} meses" if months else f"{years} años"
+            )
 
 
 with open("assets/data/work_experience.json") as file:
