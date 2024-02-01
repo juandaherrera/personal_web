@@ -44,7 +44,7 @@ BASE_STYLE = {
 INDEX_SECTION_STYLE = dict(
     width=["85%", "80%", "70%"],
     padding_x=Size.DEFAULT.value,
-    padding_y=Size.VERY_BIG.value,
+    padding_top=Size.VERY_BIG.value,
 )
 
 DEFAULT_BUTTON_STYLE = dict(

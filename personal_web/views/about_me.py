@@ -18,4 +18,5 @@ def about_me() -> rx.Component:
         ),
         align_items="start",
         style=styles.INDEX_SECTION_STYLE,
+        padding_bottom=Size.VERY_BIG.value,
     )

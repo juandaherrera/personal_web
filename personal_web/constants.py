@@ -1,7 +1,7 @@
 from datetime import date
 
 # APP Version
-version = "0.1.0"
+version = "0.2.0"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
