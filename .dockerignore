@@ -1,0 +1,4 @@
+.web
+.venv
+.gitignore
+__pycache__/*
