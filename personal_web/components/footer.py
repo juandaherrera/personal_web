@@ -10,7 +10,9 @@ from personal_web.styles.styles import Size
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
-            src="favicon.ico", height="4em", margin_bottom=Size.ZERO.value
+            src="favicon.ico",
+            height=["3.5em", "4em"],
+            margin_bottom=Size.ZERO.value,
         ),
         rx.link(
             rx.text(

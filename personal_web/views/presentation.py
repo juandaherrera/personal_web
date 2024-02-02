@@ -28,7 +28,7 @@ def hello_iam() -> rx.Component:
             repeat=float("inf"),
             speed=20,
             style=dict(
-                font_size=Size.BIG.value,
+                font_size=[Size.DEFAULT_BIG.value, Size.BIG.value],
                 color=TextColor.SECONDARY.value,
             ),
         ),
