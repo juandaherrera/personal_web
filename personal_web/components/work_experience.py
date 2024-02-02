@@ -47,7 +47,7 @@ def _we_header(job: Job) -> rx.Component:
                 title(job.title, font_size=FontSize.SUBTITLES.value),
                 text_align="left",
             ),
-            # Logo compañía
+            # Ícono de acordión
             rx.center(
                 rx.accordion_icon(
                     font_size=Size.BIG.value,

@@ -9,14 +9,17 @@ from personal_web.styles.styles import Size
 
 def footer() -> rx.Component:
     return rx.vstack(
-        # rx.image(src="favicon.ico"),
+        rx.image(
+            src="favicon.ico", height="4em", margin_bottom=Size.ZERO.value
+        ),
         rx.link(
             rx.text(
                 rx.span(
                     f"© {datetime.date.today().year} ",
                 ),
-                rx.span(f"v{const.version} ", color=Color.SECONDARY.value),
-                rx.span("by juandaherrera."),
+                rx.span("by juandaherrera "),
+                rx.span(f"v{const.version}", color=Color.SECONDARY.value),
+                rx.span("."),
                 font_size=Size.DEFAULT.value,
             ),
             href=const.REPO_URL,
@@ -27,7 +30,8 @@ def footer() -> rx.Component:
             font_size=Size.DEFAULT.value,
             margin_top=Size.ZERO.value,
         ),
-        margin_bottom=Size.SMALL.value,
+        spacing=Size.ZERO.value,
+        padding_top=Size.DEFAULT.value,
         padding_bottom=Size.SMALL.value,
         color=TextColor.SECONDARY.value,
     )
