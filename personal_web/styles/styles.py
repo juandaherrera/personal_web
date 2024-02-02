@@ -42,7 +42,7 @@ BASE_STYLE = {
 }
 
 INDEX_SECTION_STYLE = dict(
-    width=["85%", "80%", "70%"],
+    width=["85%", "80%", "80%", "70%"],
     padding_x=Size.DEFAULT.value,
     padding_top=Size.VERY_BIG.value,
 )
