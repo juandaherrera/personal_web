@@ -97,7 +97,7 @@ def _we_panel(job: Job) -> rx.Component:
         rx.cond(
             len(job.technologies) > 0,
             rx.flex(
-                *[_tech_badge(name) for name in job.technologies],
+                *[tech_badge(name) for name in job.technologies],
                 padding_top=Size.DEFAULT_MEDIUM.value,
                 padding_bottom=Size.ZERO.value,
                 spacing=Size.DEFAULT_BIG.value,
@@ -108,5 +108,5 @@ def _we_panel(job: Job) -> rx.Component:
     )
 
 
-def _tech_badge(tech_name: str) -> rx.Component:
+def tech_badge(tech_name: str) -> rx.Component:
     return rx.badge(tech_name, style=styles.TECH_BADGE_STYLE)
