@@ -81,23 +81,26 @@ def presentation() -> rx.Component:
     return rx.stack(
         rx.center(
             rx.responsive_grid(
-                rx.center(
+                rx.stack(
                     rx.avatar(
                         src=const.MAIN_PIC,
                         size="full",
                         style=styles.MAIN_PIC_STYLE,
                     ),
-                    max_width=["20em", "30em", "30em", "32em", "36em"],
+                    width="100%",
+                    align_items="end",
                 ),
                 hello_iam(),
                 columns=[1, 1, 1, 2, 2],
                 width="100%",
-                padding_x=Size.VERY_BIG.value,
                 padding_y=Size.DEFAULT_BIG.value,
-                spacing=Size.VERY_BIG.value,
+                spacing_x=Size.VERY_BIG.value,
+                spacing_y=Size.BIG.value,
                 justify_content="center",
                 align_items="center",
             ),
+            width=styles.INDEX_SECTION_STYLE["width"],
+            padding_x=styles.INDEX_SECTION_STYLE["padding_x"],
         ),
         style=styles.PRESENTATION_STACK_STYLE,
     )
