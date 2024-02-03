@@ -6,8 +6,8 @@ class Color(Enum):
     SECONDARY = "#FF9B9B"
     TERTIARY = "#F1E0C5"
     AQUA = "#4DBFB9"
-    BACKGROUND = "#080A0D"
-    BACKGROUND_ALT = "#0E1116"
+    BACKGROUND = "#0E1116"
+    BACKGROUND_ALT = "#151A22"
     CONTENT = "#020305"
 
 

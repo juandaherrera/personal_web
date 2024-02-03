@@ -10,6 +10,10 @@ def working_at(image: str, url: str, alt: str) -> rx.Component:
             rx.image(src=image, alt=alt, height=["2em", "2.5em"]),
             href=url,
             is_external=True,
+            transition="transform 0.2s ease",
+            _hover={
+                "transform": "scale(1.1)",
+            },
         ),
         padding_bottom=Size.DEFAULT_MEDIUM.value,
     )

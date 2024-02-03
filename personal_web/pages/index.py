@@ -34,6 +34,7 @@ def index() -> rx.Component:
             footer(),
             width="100%",
             background=Color.BACKGROUND_ALT.value,
+            box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
         ),
         width="100%",
     )

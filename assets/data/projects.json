@@ -6,8 +6,8 @@
         "repository_url": "https://github.com/juandaherrera/personal_web"
     },
     {
-        "name": "Prueba técnica Data Quality Engineer",
-        "description": "Solución a prueba ténica de Data Quality Engineer.",
+        "name": "Prueba Técnica Data Quality Engineer",
+        "description": "Solución a prueba técnica de Data Quality Engineer.",
         "technologies": ["Python", "Pandas", "Matplotlib"],
         "repository_url": "https://github.com/juandaherrera/prueba-dqe-r5"
     },
