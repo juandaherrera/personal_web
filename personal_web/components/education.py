@@ -4,7 +4,7 @@ from personal_web.components.texts import title
 from personal_web.data.education import Degree
 from personal_web.styles.colors import Color
 from personal_web.styles.fonts import FontSize
-from personal_web.styles.styles import Size
+from personal_web.styles.styles import EDUCATION_COLLEGE_LOGO_STYLE, Size
 
 
 def college_degree(degree: Degree) -> rx.Component:
@@ -13,7 +13,7 @@ def college_degree(degree: Degree) -> rx.Component:
             rx.image(
                 src=degree.college_logo,
                 alt=f"Logo de {degree.college}",
-                height="5em",
+                style=EDUCATION_COLLEGE_LOGO_STYLE,
             ),
         ),
         rx.vstack(

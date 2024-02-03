@@ -10,7 +10,37 @@ from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
 
 
-def hello_iam() -> rx.Component:
+def presentation() -> rx.Component:
+    return rx.stack(
+        rx.center(
+            rx.responsive_grid(
+                rx.stack(
+                    rx.avatar(
+                        src=const.MAIN_PIC,
+                        size="full",
+                        style=styles.MAIN_PIC_STYLE,
+                    ),
+                    width="100%",
+                    aspect_ratio=1 / 1,
+                    align_items="end",
+                ),
+                _hello_iam(),
+                columns=[1, 1, 1, 2, 2],
+                width="100%",
+                padding_y=Size.DEFAULT_BIG.value,
+                spacing_x=Size.VERY_BIG.value,
+                spacing_y=Size.BIG.value,
+                justify_content="center",
+                align_items="center",
+            ),
+            width=styles.INDEX_SECTION_STYLE["width"],
+            padding_x=styles.INDEX_SECTION_STYLE["padding_x"],
+        ),
+        style=styles.PRESENTATION_STACK_STYLE,
+    )
+
+
+def _hello_iam() -> rx.Component:
     return rx.vstack(
         rx.text(
             "Hola👋🏻, soy",
@@ -36,7 +66,7 @@ def hello_iam() -> rx.Component:
         working_at(
             const.CURRENT_COMPANY_LOGO,
             const.CURRENT_COMPANY_URL,
-            f"Logo {const.CURRENT_COMPANY_NAME}",
+            f"Logo de {const.CURRENT_COMPANY_NAME}",
         ),
         rx.divider(
             border_color=TextColor.PRIMARY.value,
@@ -74,33 +104,4 @@ def hello_iam() -> rx.Component:
             # display="none",
         ),
         align_items="start",
-    )
-
-
-def presentation() -> rx.Component:
-    return rx.stack(
-        rx.center(
-            rx.responsive_grid(
-                rx.stack(
-                    rx.avatar(
-                        src=const.MAIN_PIC,
-                        size="full",
-                        style=styles.MAIN_PIC_STYLE,
-                    ),
-                    width="100%",
-                    align_items="end",
-                ),
-                hello_iam(),
-                columns=[1, 1, 1, 2, 2],
-                width="100%",
-                padding_y=Size.DEFAULT_BIG.value,
-                spacing_x=Size.VERY_BIG.value,
-                spacing_y=Size.BIG.value,
-                justify_content="center",
-                align_items="center",
-            ),
-            width=styles.INDEX_SECTION_STYLE["width"],
-            padding_x=styles.INDEX_SECTION_STYLE["padding_x"],
-        ),
-        style=styles.PRESENTATION_STACK_STYLE,
     )

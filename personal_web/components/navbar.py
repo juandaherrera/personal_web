@@ -12,12 +12,18 @@ def navbar() -> rx.Component:
             rx.span(
                 "juanda",
                 color=Color.PRIMARY.value,
-                _hover={"text_shadow": f"0 0 8px {Color.PRIMARY.value}"},
+                transition="text-shadow 0.5s ease",
+                _hover={
+                    "text_shadow": f"0 0 8px {Color.SECONDARY.value}",
+                },
             ),
             rx.span(
                 "herrera",
                 color=Color.SECONDARY.value,
-                _hover={"text_shadow": f"0 0 8px {Color.SECONDARY.value}"},
+                transition="text-shadow 0.5s ease",
+                _hover={
+                    "text_shadow": f"0 0 8px {Color.PRIMARY.value}",
+                },
             ),
             style=styles.NAVBAR_TITLE_STYLE,
         ),

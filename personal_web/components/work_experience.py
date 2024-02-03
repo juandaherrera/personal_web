@@ -31,6 +31,7 @@ def _we_header(job: Job) -> rx.Component:
                     src=job.company_logo,
                     alt=f"Logo de {job.company_name}",
                     height="2.5em",
+                    aspect_ratio=2 / 1,
                 ),
                 width=["4em", "5.5em"],
             ),

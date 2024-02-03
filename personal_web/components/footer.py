@@ -4,15 +4,15 @@ import reflex as rx
 
 import personal_web.constants as const
 from personal_web.styles.colors import Color, TextColor
-from personal_web.styles.styles import Size
+from personal_web.styles.styles import FOOTER_LOGO_STYLE, FOOTER_STYLE, Size
 
 
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
             src="favicon.ico",
-            height=["3.5em", "4em"],
-            margin_bottom=Size.ZERO.value,
+            alt="Logo de Juan David Herrera. Es una 'j' y una 'd juntas",
+            style=FOOTER_LOGO_STYLE,
         ),
         rx.link(
             rx.text(
@@ -33,7 +33,5 @@ def footer() -> rx.Component:
             margin_top=Size.ZERO.value,
         ),
         spacing=Size.ZERO.value,
-        padding_top=Size.DEFAULT.value,
-        padding_bottom=Size.SMALL.value,
-        color=TextColor.SECONDARY.value,
+        style=FOOTER_STYLE,
     )

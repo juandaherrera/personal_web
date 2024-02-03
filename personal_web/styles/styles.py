@@ -72,7 +72,15 @@ NAVBAR_STYLE = dict(
 MAIN_PIC_STYLE = dict(
     border=f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
     padding=Size.DEFAULT.value,
+    transition="transform 0.2s ease, box-shadow 0.3s ease",
     _hover={
+        "transform": [
+            "scale(1.05)",
+            "scale(1.05)",
+            "scale(1.05)",
+            "scale(1.05)",
+            "scale(1.035)",
+        ],
         "border": f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
         "box_shadow": f"0 0 8px {Color.PRIMARY.value}, 0 0 12px {Color.PRIMARY.value}",
     },
@@ -90,7 +98,7 @@ PRESENTATION_STACK_STYLE = dict(
 TECH_STACK_STYLE = dict(
     font_size=Size.LARGE.value,
     padding_x=Size.MEDIUM.value,
-    transition="transform 0.2s ease, box-shadow 0.3s ease",
+    transition="transform 0.2s ease, text-shadow 0.3s ease, color 0.5s ease",
     _hover={
         "color": Color.SECONDARY.value,
         "text_shadow": f"0 0 6px {Color.PRIMARY.value}",
@@ -109,7 +117,7 @@ TECH_BADGE_STYLE = dict(
     text_transform="capitalize",
     margin_right=[Size.MEDIUM.value, Size.DEFAULT.value],
     margin_bottom=[Size.MEDIUM.value, Size.DEFAULT.value],
-    transition="transform 0.18s ease, box-shadow 0.3s ease",
+    transition="transform 0.18s ease",
     _hover={
         "transform": "scale(1.15)",
     },
@@ -129,9 +137,33 @@ PROJECT_CARD_STYLE = dict(
     ],
     background=hex_to_rgb(Color.CONTENT.value, 0.55),
     width=["17.5em", "20em"],
-    transition="transform 0.3s ease, box-shadow 0.3s ease",
+    transition="transform 0.3s ease, box-shadow 0.35s ease",
     _hover={
         "transform": ["scale(1.05)", "scale(1.05)", "scale(1.075)"],
-        "box_shadow": f"0px 0px 20px {hex_to_rgb('#000000', 0.15)}",
+        "box_shadow": f"0px 0px 20px {hex_to_rgb(Color.CONTENT.value, 0.3)}",
     },
+)
+
+EDUCATION_COLLEGE_LOGO_STYLE = dict(
+    height="5em",
+    aspect_ratio=1 / 1,
+    transition="transform 0.18s ease",
+    _hover={
+        "transform": "scale(1.15)",
+    },
+)
+
+FOOTER_LOGO_STYLE = dict(
+    height=["3.5em", "4em"],
+    margin_bottom=Size.ZERO.value,
+    transition="transform 0.18s ease",
+    _hover={
+        "transform": "scale(1.2)",
+    },
+)
+
+FOOTER_STYLE = dict(
+    padding_top=Size.DEFAULT.value,
+    padding_bottom=Size.SMALL.value,
+    color=TextColor.SECONDARY.value,
 )

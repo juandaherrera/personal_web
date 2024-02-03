@@ -10,6 +10,10 @@ def link_icon(image: str, url: str, alt: str) -> rx.Component:
             width=Size.BIG.value,
             height=Size.BIG.value,
             alt=alt,
+            transition="transform 0.2s ease",
+            _hover={
+                "transform": "scale(1.2)",
+            },
         ),
         href=url,
         is_external=True,
