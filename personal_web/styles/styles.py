@@ -96,6 +96,19 @@ TECH_BADGE_STYLE = dict(
     font_size=Size.MEDIUM.value,
     font_weight="normal",
     text_transform="capitalize",
-    margin_right=[Size.DEFAULT.value, Size.DEFAULT_BIG.value],
-    margin_bottom=[Size.DEFAULT.value, Size.DEFAULT_BIG.value],
+    margin_right=[Size.MEDIUM.value, Size.DEFAULT.value],
+    margin_bottom=[Size.MEDIUM.value, Size.DEFAULT.value],
+)
+
+PROJECT_CARD_STYLE = dict(
+    color=TextColor.PRIMARY.value,
+    margin_right=Size.BIG.value,
+    margin_bottom=Size.BIG.value,
+    background=hex_to_rgb(Color.CONTENT.value, 0.55),
+    width=["17.5em", "20em"],
+    transition="transform 0.3s ease, box-shadow 0.3s ease",
+    _hover={
+        "transform": "scale(1.075)",
+        "box_shadow": f"0px 0px 20px {hex_to_rgb('#000000', 0.15)}",
+    },
 )

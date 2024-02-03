@@ -2,7 +2,7 @@ import reflex as rx
 
 from personal_web.components.texts import title
 from personal_web.data.education import Degree
-from personal_web.styles.colors import Color, TextColor
+from personal_web.styles.colors import Color
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 

@@ -1,4 +1,4 @@
-from typing import Literal, Union
+from typing import Union
 
 import reflex as rx
 from reflex.vars import Var

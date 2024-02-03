@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Web personal",
+        "description": "Portafolio personal desarrollado con Reflex y desplegado en Railway.",
+        "technologies": ["Python", "Reflex", "Chakra UI", "Railway"],
+        "repository_url": "https://github.com/juandaherrera/personal_web"
+    },
+    {
+        "name": "Prueba técnica Data Quality Engineer",
+        "description": "Solución a prueba ténica de Data Quality Engineer.",
+        "technologies": ["Python", "Pandas", "Matplotlib"],
+        "repository_url": "https://github.com/juandaherrera/prueba-dqe-r5"
+    },
+    {
+        "name": "Roadmap Retos de Programación",
+        "description": "Ruta de aprendizaje estructurada y desafíos de código basados en el Roadmap de @mouredev, enfocados en afinar la lógica de programación.",
+        "technologies": ["Python", "Javascript", "Bash"],
+        "repository_url": "https://github.com/juandaherrera/roadmap-retos-programacion"
+    }    
+]
