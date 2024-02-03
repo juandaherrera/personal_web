@@ -24,7 +24,7 @@ def technologies() -> rx.Component:
             ),
             class_name="logos",
             width="100%",
-            padding_y=Size.MEDIUM.value,
+            padding_y=Size.DEFAULT_MEDIUM.value,
         ),
         width="100%",
     )

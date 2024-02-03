@@ -41,7 +41,6 @@ def _project_card_header(name: str) -> rx.Component:
         title(
             name,
             font_size=FontSize.SUBTITLES.value,
-            _hover={"color": Color.SECONDARY.value},
         ),
         rx.spacer(),
         rx.divider(
@@ -56,7 +55,11 @@ def _project_card_footer(url: str) -> rx.Component:
             rx.box(
                 class_name="devicon-github-plain",
                 font_size=FontSize.BUTTON_ICONS.value,
-                _hover={"color": Color.SECONDARY.value},
+                transition="transform 0.18s ease, box-shadow 0.3s ease",
+                _hover={
+                    "color": Color.SECONDARY.value,
+                    "transform": "scale(1.25)",
+                },
             ),
             spacing=Size.SMALL.value,
             width="100%",

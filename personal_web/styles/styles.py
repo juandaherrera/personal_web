@@ -42,7 +42,7 @@ BASE_STYLE = {
 }
 
 INDEX_SECTION_STYLE = dict(
-    width=["85%", "80%", "80%", "70%"],
+    width=["85%", "80%", "80%", "75%"],
     padding_x=Size.DEFAULT.value,
     padding_top=Size.VERY_BIG.value,
 )
@@ -87,6 +87,17 @@ PRESENTATION_STACK_STYLE = dict(
     padding_y=Size.DEFAULT_BIG.value,
 )
 
+TECH_STACK_STYLE = dict(
+    font_size=Size.LARGE.value,
+    padding_x=Size.MEDIUM.value,
+    transition="transform 0.2s ease, box-shadow 0.3s ease",
+    _hover={
+        "color": Color.SECONDARY.value,
+        "text_shadow": f"0 0 6px {Color.PRIMARY.value}",
+        "transform": "scale(1.25)",
+    },
+)
+
 TECH_BADGE_STYLE = dict(
     padding_y=Size.SMALL.value,
     padding_x=Size.DEFAULT.value,
@@ -98,17 +109,29 @@ TECH_BADGE_STYLE = dict(
     text_transform="capitalize",
     margin_right=[Size.MEDIUM.value, Size.DEFAULT.value],
     margin_bottom=[Size.MEDIUM.value, Size.DEFAULT.value],
+    transition="transform 0.18s ease, box-shadow 0.3s ease",
+    _hover={
+        "transform": "scale(1.15)",
+    },
 )
 
 PROJECT_CARD_STYLE = dict(
     color=TextColor.PRIMARY.value,
-    margin_right=Size.BIG.value,
-    margin_bottom=Size.BIG.value,
+    margin_right=[
+        Size.DEFAULT.value,
+        Size.DEFAULT_BIG.value,
+        "1.85em",
+    ],
+    margin_bottom=[
+        Size.DEFAULT.value,
+        Size.DEFAULT_BIG.value,
+        "1.85em",
+    ],
     background=hex_to_rgb(Color.CONTENT.value, 0.55),
     width=["17.5em", "20em"],
     transition="transform 0.3s ease, box-shadow 0.3s ease",
     _hover={
-        "transform": "scale(1.075)",
+        "transform": ["scale(1.05)", "scale(1.05)", "scale(1.075)"],
         "box_shadow": f"0px 0px 20px {hex_to_rgb('#000000', 0.15)}",
     },
 )
