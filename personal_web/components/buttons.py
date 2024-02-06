@@ -30,6 +30,6 @@ def default_button(
                 "box_shadow": f"0 0 8px {button_color}, 0 0 12px {button_color}",
             },
         ),
-        href=url,  # TO_DO agregar la lógica para scrollear,
+        href=url,
         **kwargs,
     )

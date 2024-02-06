@@ -150,19 +150,11 @@ PROJECT_CARD_STYLE = dict(
 EDUCATION_COLLEGE_LOGO_STYLE = dict(
     height="5em",
     aspect_ratio=1 / 1,
-    transition="transform 0.18s ease",
-    _hover={
-        "transform": "scale(1.15)",
-    },
 )
 
 FOOTER_LOGO_STYLE = dict(
     height=["3.5em", "4em"],
     margin_bottom=Size.ZERO.value,
-    transition="transform 0.18s ease",
-    _hover={
-        "transform": "scale(1.2)",
-    },
 )
 
 FOOTER_STYLE = dict(

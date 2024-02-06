@@ -9,8 +9,7 @@ from personal_web.styles.styles import Size
 
 def about_me() -> rx.Component:
     return rx.vstack(
-        # TO_DO lógica para scrollear hasta aquí
-        title("Acerca de mí 👨🏻‍💻", id="about_me"),
+        title("Acerca de mí 👨🏻‍💻"),
         rx.text(
             ABOUT_ME,
             text_align="justify",
@@ -19,4 +18,5 @@ def about_me() -> rx.Component:
         align_items="start",
         style=styles.INDEX_SECTION_STYLE,
         padding_bottom=Size.VERY_BIG.value,
+        id="about_me",
     )

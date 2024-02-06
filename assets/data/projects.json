@@ -2,7 +2,7 @@
     {
         "name": "Web Personal",
         "description": "Portafolio personal desarrollado con Reflex y desplegado en Railway.",
-        "technologies": ["Python", "Reflex", "Chakra UI", "Railway"],
+        "technologies": ["Python", "Reflex", "Chakra UI", "Railway", "Docker"],
         "repository_url": "https://github.com/juandaherrera/personal_web"
     },
     {
