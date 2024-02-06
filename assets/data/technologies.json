@@ -1,0 +1,97 @@
+[
+    {
+    "name": "Python",
+    "icon": "python",
+    "url": "https://www.python.org/"
+    },
+    {
+    "name": "Airflow",
+    "icon": "apacheairflow",
+    "url": "https://airflow.apache.org/"
+    },
+    {
+    "name": "FastAPI",
+    "icon": "fastapi",
+    "url": "https://fastapi.tiangolo.com/"
+    },
+    {
+    "name": "Django",
+    "icon": "django",
+    "url": "https://www.djangoproject.com/"
+    },
+    {
+    "name": "Anaconda",
+    "icon": "anaconda",
+    "url": "https://www.anaconda.com/"
+    },
+    {
+    "name": "Docker",
+    "icon": "docker",
+    "url": "https://www.docker.com/"
+    },
+    {
+    "name": "Javascript",
+    "icon": "javascript",
+    "url": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+    "name": "HTML",
+    "icon": "html5",
+    "url": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+    "name": "CSS",
+    "icon": "css3",
+    "url": "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+    "name": "Bootstrap",
+    "icon": "bootstrap",
+    "url": "https://getbootstrap.com/"
+    },
+    {
+    "name": "Bash",
+    "icon": "bash",
+    "url": "/"
+    },
+    {
+    "name": "PosgreSQL",
+    "icon": "postgresql",
+    "url": "https://www.postgresql.org/"
+    },
+    {
+    "name": "MySQL",
+    "icon": "mysql",
+    "url": "https://www.mysql.com/"
+    },
+    {
+    "name": "MongoDB",
+    "icon": "mongodb",
+    "url": "https://www.mongodb.com/"
+    },
+    {
+    "name": "Git",
+    "icon": "git",
+    "url": "https://git-scm.com/"
+    },
+    {
+    "name": "GitHub",
+    "icon": "github",
+    "url": "https://github.com/"
+    },
+    {
+    "name": "Bitbucket",
+    "icon": "bitbucket",
+    "url": "https://bitbucket.org/"
+    },
+    {
+    "name": "Azure",
+    "icon": "azure",
+    "url": "https://azure.microsoft.com/"
+    },
+    {
+    "name": "Amazon Web Services",
+    "icon": "amazonwebservices",
+    "url": "https://aws.amazon.com/"
+    }
+]

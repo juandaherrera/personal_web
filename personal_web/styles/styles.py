@@ -28,7 +28,7 @@ STYLESHEETS = [
     "/css/loop.css",
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css",  # Lenguages Icons
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css",  # Lenguages Icons
 ]
 
 # Styles
@@ -95,9 +95,12 @@ PRESENTATION_STACK_STYLE = dict(
     padding_y=Size.DEFAULT_BIG.value,
 )
 
-TECH_STACK_STYLE = dict(
+TECH_STACK_ICON_STYLE = dict(
     font_size=Size.LARGE.value,
     padding_x=Size.MEDIUM.value,
+)
+
+TECH_STACK_STYLE = dict(
     transition="transform 0.2s ease, text-shadow 0.3s ease, color 0.5s ease",
     _hover={
         "color": Color.SECONDARY.value,
