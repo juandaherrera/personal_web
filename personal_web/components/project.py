@@ -14,7 +14,9 @@ def project_card(project: Project) -> rx.Component:
     return rx.card(
         _project_card_body(project.description, project.technologies),
         header=_project_card_header(project.name),
-        footer=_project_card_footer(project.repository_url),
+        footer=_project_card_footer(
+            project.repository_url, project.website_url
+        ),
         style=styles.PROJECT_CARD_STYLE,
     )
 
@@ -49,9 +51,11 @@ def _project_card_header(name: str) -> rx.Component:
     )
 
 
-def _project_card_footer(url: str) -> rx.Component:
-    return rx.link(
-        rx.hstack(
+def _project_card_footer(
+    github_url: str, website_url: str = "/", website_icon: str = "chrome"
+) -> rx.Component:
+    return rx.hstack(
+        rx.link(
             rx.box(
                 class_name="devicon-github-plain",
                 font_size=FontSize.BUTTON_ICONS.value,
@@ -61,10 +65,25 @@ def _project_card_footer(url: str) -> rx.Component:
                     "transform": "scale(1.25)",
                 },
             ),
-            spacing=Size.SMALL.value,
-            width="100%",
+            href=github_url,
+            is_external=True,
         ),
+        rx.cond(
+            website_url != "/",
+            rx.link(
+                rx.box(
+                    class_name=f"devicon-{website_icon}-plain",
+                    font_size=FontSize.BUTTON_ICONS.value,
+                    transition="transform 0.18s ease",
+                    _hover={
+                        "color": Color.SECONDARY.value,
+                        "transform": "scale(1.25)",
+                    },
+                ),
+                href=website_url,
+                is_external=True,
+            ),
+        ),
+        spacing=Size.DEFAULT.value,
         width="100%",
-        href=url,
-        is_external=True,
     )

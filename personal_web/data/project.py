@@ -9,6 +9,7 @@ class Project(BaseModel):
     description: str
     technologies: List[str] = []
     repository_url: Optional[AnyUrl]
+    website_url: Optional[AnyUrl] = "/"
 
 
 with open("assets/data/projects.json") as file:

@@ -1,13 +1,11 @@
 from datetime import date
 
 # APP Version
-version = "1.1.7"
+version = "1.1.8"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
-MAIN_PIC = (
-    "https://juandaherreraweb.blob.core.windows.net/web/juanda_squared.jpeg"
-)
+MAIN_PIC = "https://juandaherreraweb.blob.core.windows.net/web/juanda.webp"
 
 # Páginas
 META = [
