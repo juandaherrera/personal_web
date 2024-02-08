@@ -1,13 +1,16 @@
 from personal_web.utils import get_experience
 
 ABOUT_ME = f"""
-    Soy Ingeniero Industrial y Senior Data Analyst con más de {get_experience()} años de 
-    experiencia en el análisis de datos en áreas de Producción/Operaciones. 
-    Mi pasión radica en la transformación y optimización de datos para 
-    impulsar soluciones estratégicas. Actualmente, en Rappi, me encuentro 
-    en una transición hacia el campo del Data Engineering. Con habilidades
-    avanzadas en SQL, Python, Power BI, Apache Airflow y Snowflake, y respaldado por una 
-    sólida formación a través de cursos especializados, estoy listo para abordar 
-    los desafíos de la ingeniería de datos. Mi objetivo es combinar análisis 
-    sólidos con la construcción de infraestructuras de datos robustas y efectivas.
+    Soy un Ingeniero Industrial y Senior Data Analyst con más de {get_experience()} años de
+    experiencia en análisis de datos dentro de áreas de Producción/Operaciones.
+    Mi pasión radica en la transformación y optimización de datos para impulsar
+    soluciones estratégicas. Actualmente en Rappi, además de mis 
+    responsabilidades analíticas, me involucro activamente en proyectos de Data
+    Engineering, aplicando mis conocimientos avanzados en SQL, Python, Apache 
+    Airflow y Snowflake. Esta experiencia está respaldada por una formación 
+    sólida, complementada con cursos especializados que me han dotado de las 
+    herramientas necesarias para abordar con éxito los retos inherentes al 
+    campo del Data Engineering. Mi enfoque se centra en la integración de 
+    análisis exhaustivos con la creación y gestión de infraestructuras de 
+    datos robustas y eficientes.
 """
