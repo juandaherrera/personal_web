@@ -152,13 +152,38 @@ EDUCATION_COLLEGE_LOGO_STYLE = dict(
     aspect_ratio=1 / 1,
 )
 
+SCHOOL_ACCORDION_STYLE = dict(
+    width="100%",
+    background=hex_to_rgb(Color.CONTENT.value, 0.55),
+    border_radius=Size.MEDIUM.value,
+    padding=Size.MEDIUM.value,
+)
+
+COURSE_CARD_STYLE = dict(
+    background=hex_to_rgb(Color.BACKGROUND_ALT.value, 1),
+    transition="transform 0.3s ease, box-shadow 0.35s ease",
+    _hover={
+        "transform": "scale(1.035)",
+        "box_shadow": f"0px 0px 20px {hex_to_rgb(Color.CONTENT.value, 0.3)}",
+    },
+)
+
+ACCORDION_ICON_STYLE = dict(
+    transition="tex-shadow 0.3s ease, color 0.35s ease, transform 0.35s ease",
+    _hover={
+        "transform": "scale(1.2)",
+        "color": Color.SECONDARY.value,
+        "text_shadow": f"0 0 8px {Color.PRIMARY.value}",
+    },
+)
+
 FOOTER_LOGO_STYLE = dict(
     height=["3.5em", "4em"],
     margin_bottom=Size.ZERO.value,
 )
 
 FOOTER_STYLE = dict(
-    padding_top=Size.DEFAULT.value,
+    padding_top=Size.VERY_BIG.value,
     padding_bottom=Size.SMALL.value,
     color=TextColor.SECONDARY.value,
 )

@@ -1,6 +1,7 @@
 import reflex as rx
 
 import personal_web.styles.styles as styles
+from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 
@@ -31,5 +32,39 @@ def default_button(
             },
         ),
         href=url,
+        **kwargs,
+    )
+
+
+def rounded_button(
+    text: str,
+    url: str,
+    icon: str = "external_link",
+    border_color: str = TextColor.PRIMARY.value,
+    text_color: str = TextColor.SECONDARY.value,
+    text_size: str = FontSize.SMALL_TEXT.value,
+    **kwargs,
+):
+    return rx.link(
+        rx.hstack(
+            rx.text(text),
+            rx.icon(tag=icon),
+            color=text_color,
+            font_size=text_size,
+            spacing=Size.SMALL.value,
+            align_items="center",
+            border="0.1em solid",
+            border_color=border_color,
+            border_radius="1.2em",
+            padding_y="0.5em",
+            padding_x="1em",
+            transition="border-color 0.25s ease, color 0.25s ease",
+            _hover={
+                "border_color": Color.SECONDARY.value,
+                "color": Color.SECONDARY.value,
+            },
+        ),
+        href=url,
+        is_external=True,
         **kwargs,
     )
