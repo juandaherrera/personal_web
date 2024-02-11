@@ -51,11 +51,7 @@ def _we_header(job: Job) -> rx.Component:
             # Ícono de acordión
             rx.center(
                 rx.accordion_icon(
-                    font_size=Size.BIG.value,
-                    _hover={
-                        "color": Color.SECONDARY.value,
-                        "text_shadow": f"0 0 8px {Color.PRIMARY.value}",
-                    },
+                    font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
                 )
             ),
             spacing=Size.DEFAULT_MEDIUM.value,
