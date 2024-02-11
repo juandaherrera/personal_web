@@ -128,18 +128,8 @@ TECH_BADGE_STYLE = dict(
 
 PROJECT_CARD_STYLE = dict(
     color=TextColor.PRIMARY.value,
-    margin_right=[
-        Size.DEFAULT.value,
-        Size.DEFAULT_BIG.value,
-        "1.85em",
-    ],
-    margin_bottom=[
-        Size.DEFAULT.value,
-        Size.DEFAULT_BIG.value,
-        "1.85em",
-    ],
     background=hex_to_rgb(Color.CONTENT.value, 0.55),
-    width=["17.5em", "20em"],
+    width="100%",
     transition="transform 0.3s ease, box-shadow 0.35s ease",
     _hover={
         "transform": ["scale(1.05)", "scale(1.05)", "scale(1.075)"],

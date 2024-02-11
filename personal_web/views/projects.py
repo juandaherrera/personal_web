@@ -10,9 +10,10 @@ from personal_web.styles.styles import Size
 def projects() -> rx.Component:
     return rx.vstack(
         title("Proyectos 💻"),
-        rx.flex(
+        rx.responsive_grid(
             *[project_card(project) for project in projects_list],
-            flex_wrap="wrap",
+            columns=[1, 1, 2, 3],
+            spacing=Size.DEFAULT_BIG.value
         ),
         align_items="start",
         spacing=Size.DEFAULT_BIG.value,
