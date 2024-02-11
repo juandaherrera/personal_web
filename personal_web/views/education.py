@@ -17,4 +17,5 @@ def education() -> rx.Component:
         align_items="start",
         spacing=Size.DEFAULT_BIG.value,
         style=styles.INDEX_SECTION_STYLE,
+        id="education",
     )

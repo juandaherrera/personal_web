@@ -62,7 +62,12 @@ NAVBAR_TITLE_STYLE = dict(
 NAVBAR_STYLE = dict(
     position="sticky",
     bg=Color.CONTENT.value,
-    padding_x=[Size.BIG.value, Size.MEDIUM_BIG.value],
+    padding_x=[
+        Size.BIG.value,
+        Size.MEDIUM_BIG.value,
+        Size.MEDIUM_BIG.value,
+        Size.VERY_BIG.value,
+    ],
     padding_y=Size.DEFAULT.value,
     z_index="999",
     top="0",

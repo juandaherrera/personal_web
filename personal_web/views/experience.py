@@ -17,4 +17,5 @@ def experience() -> rx.Component:
         spacing=Size.DEFAULT_BIG.value,
         style=styles.INDEX_SECTION_STYLE,
         padding_bottom=Size.LARGE.value,
+        id="experience",
     )

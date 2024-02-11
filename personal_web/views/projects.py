@@ -18,4 +18,5 @@ def projects() -> rx.Component:
         align_items="start",
         spacing=Size.DEFAULT_BIG.value,
         style=styles.INDEX_SECTION_STYLE,
+        id="projects",
     )
