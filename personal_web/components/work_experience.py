@@ -12,7 +12,7 @@ from .texts import title
 def work_experience(job: Job) -> rx.Component:
     return rx.accordion(
         rx.accordion_item(
-            rx.accordion_button(_we_header(job)),
+            rx.accordion_button(_we_header(job), _hover={}),
             rx.accordion_panel(_we_panel(job)),
             border_top_width=Size.ZERO.value,
             border_color=Color.SECONDARY.value,
@@ -23,52 +23,57 @@ def work_experience(job: Job) -> rx.Component:
 
 
 def _we_header(job: Job) -> rx.Component:
-    return rx.vstack(
-        rx.hstack(
-            # Logo compañía
-            rx.center(
-                rx.image(
-                    src=job.company_logo,
-                    alt=f"Logo de {job.company_name}",
-                    height="2.5em",
-                    aspect_ratio=2 / 1,
+    return rx.hstack(
+        rx.vstack(
+            rx.hstack(
+                # Logo compañía
+                rx.center(
+                    rx.image(
+                        src=job.company_logo,
+                        alt=f"Logo de {job.company_name}",
+                        height="2.5em",
+                        aspect_ratio=2 / 1,
+                    ),
+                    width=["4em", "5.5em"],
                 ),
-                width=["4em", "5.5em"],
-            ),
-            # Divisor
-            rx.center(
-                rx.divider(
-                    orientation="vertical",
-                    border_color=TextColor.PRIMARY.value,
+                # Divisor
+                rx.center(
+                    rx.divider(
+                        orientation="vertical",
+                        border_color=TextColor.PRIMARY.value,
+                    ),
+                    height=Size.BIG.value,
                 ),
-                height=Size.BIG.value,
+                # Cargo
+                rx.center(
+                    title(job.title, font_size=FontSize.SUBTITLES.value),
+                    text_align="left",
+                ),
+                spacing=Size.DEFAULT_MEDIUM.value,
             ),
-            # Cargo
-            rx.center(
-                title(job.title, font_size=FontSize.SUBTITLES.value),
+            # Fechas cargo
+            rx.text(
+                rx.span(
+                    f"{job.start_date_format} - {job.end_date_format}",
+                    color=Color.SECONDARY.value,
+                ),
+                rx.span(
+                    f" · {job.calculate_duration()}",
+                    color=Color.TERTIARY.value,
+                ),
                 text_align="left",
+                font_size=FontSize.SMALL_TEXT.value,
             ),
-            # Ícono de acordión
-            rx.center(
-                rx.accordion_icon(
-                    font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
-                )
-            ),
-            spacing=Size.DEFAULT_MEDIUM.value,
+            align_items="start",
         ),
-        # Fechas cargo
-        rx.text(
-            rx.span(
-                f"{job.start_date_format} - {job.end_date_format}",
-                color=Color.SECONDARY.value,
-            ),
-            rx.span(
-                f" · {job.calculate_duration()}",
-                color=Color.TERTIARY.value,
-            ),
-            font_size=FontSize.SMALL_TEXT.value,
+        rx.spacer(),
+        # Ícono de acordión
+        rx.center(
+            rx.accordion_icon(
+                font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
+            )
         ),
-        align_items="start",
+        width="100%",
     )
 
 

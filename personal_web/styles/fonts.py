@@ -13,6 +13,7 @@ class FontSize(Enum):
     BUTTON_ICONS = ["1.6em", "1.9em"]
     BODY = ["0.95em", "1.125em"]
     SMALL_TEXT = ["0.85em", "1em"]
+    VERY_SMALL_TEXT = ["0.75em", "0.8em"]
 
 
 class FontWeight(Enum):

@@ -97,7 +97,8 @@
             {
                 "name": "Curso de Fundamentos de Ingeniería de Datos",
                 "issue_date": "2023-10-01",
-                "credential_url": "https://platzi.com/p/david.parra/curso/5514-course/diploma/detalle/"
+                "credential_url": "https://platzi.com/p/david.parra/curso/5514-course/diploma/detalle/",
+                "technologies": ["ETL"]
             },
             {
                 "name": "Curso de Introducción a MongoDB",

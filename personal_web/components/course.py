@@ -16,7 +16,8 @@ def school(school: School) -> rx.Component:
     return rx.accordion(
         rx.accordion_item(
             rx.accordion_button(
-                _school_header(school.name, school.logo, school.courses_qty)
+                _school_header(school.name, school.logo, school.courses_qty),
+                _hover={},
             ),
             rx.accordion_panel(
                 rx.responsive_grid(
@@ -89,9 +90,11 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             align_items="start",
             spacing=Size.VERY_SMALL.value,
         ),
+        rx.spacer(),
         rx.accordion_icon(
             font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
         ),
         align_items="center",
+        width="100%",
         spacing=Size.DEFAULT.value,
     )

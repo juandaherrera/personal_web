@@ -30,7 +30,14 @@ def navbar() -> rx.Component:
         rx.spacer(),
         rx.menu(
             rx.menu_button(
-                rx.icon(tag="hamburger", font_size=Size.DEFAULT_BIG.value)
+                rx.icon(
+                    tag="hamburger",
+                    font_size=Size.DEFAULT_BIG.value,
+                ),
+                transition="color 0.2s ease",
+                _hover={
+                    "color": Color.SECONDARY.value,
+                },
             ),
             rx.menu_list(
                 _menu_item("Acerca de mí 👨🏻‍💻", "#about_me"),
@@ -48,6 +55,7 @@ def navbar() -> rx.Component:
     )
 
 
+# TO_DO revisar emojis a la derecha del todo
 def _menu_item(text: str, url: str, is_external: bool = False) -> rx.Component:
     return rx.menu_item(
         rx.link(rx.text(text), href=url, is_external=is_external),

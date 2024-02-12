@@ -5,7 +5,7 @@ import reflex as rx
 from personal_web.utils import hex_to_rgb
 
 from .colors import Color, TextColor
-from .fonts import Font, FontWeight
+from .fonts import Font, FontSize, FontWeight
 
 
 # Sizes
@@ -120,7 +120,7 @@ TECH_BADGE_STYLE = dict(
     bg=hex_to_rgb(Color.AQUA.value, 0.15),
     color=Color.AQUA.value,
     border_radius="15px",
-    font_size=Size.MEDIUM.value,
+    font_size=FontSize.VERY_SMALL_TEXT.value,
     font_weight="normal",
     text_transform="capitalize",
     margin_right=[Size.MEDIUM.value, Size.DEFAULT.value],
@@ -137,7 +137,7 @@ PROJECT_CARD_STYLE = dict(
     width="100%",
     transition="transform 0.3s ease, box-shadow 0.35s ease",
     _hover={
-        "transform": ["scale(1.05)", "scale(1.05)", "scale(1.075)"],
+        "transform": "scale(1.05)",
         "box_shadow": f"0px 0px 20px {hex_to_rgb(Color.CONTENT.value, 0.3)}",
     },
 )
