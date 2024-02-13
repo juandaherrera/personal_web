@@ -1,0 +1,18 @@
+[
+    {
+        "title": "AZ900 - Azure Certified",
+        "institute": "Microsoft",
+        "institute_logo": "icons/microsoft.svg",
+        "start_year": 2024,
+        "end_year": 2024,
+        "credential_url": "https://learn.microsoft.com/api/credentials/share/es-es/JuanDavidHerreraParra-4810/30A17FF8D8BDB9F0?sharingId"
+    },
+    {
+        "title": "Bases de Datos para Data Engineers",
+        "institute": "Platzi",
+        "institute_logo": "icons/platzi.svg",
+        "start_year": 2024,
+        "end_year": 2024,
+        "credential_url": "https://platzi.com/p/david.parra/learning-path/13487-bases-datos-ingenieria/diploma/detalle/"
+    }
+]

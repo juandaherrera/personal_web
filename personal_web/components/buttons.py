@@ -43,6 +43,7 @@ def rounded_button(
     border_color: str = TextColor.PRIMARY.value,
     text_color: str = TextColor.SECONDARY.value,
     text_size: str = FontSize.SMALL_TEXT.value,
+    hover_color: str = Color.SECONDARY.value,
     **kwargs,
 ):
     return rx.link(
@@ -60,8 +61,8 @@ def rounded_button(
             padding_x="1em",
             transition="border-color 0.25s ease, color 0.25s ease",
             _hover={
-                "border_color": Color.SECONDARY.value,
-                "color": Color.SECONDARY.value,
+                "border_color": hover_color,
+                "color": hover_color,
             },
         ),
         href=url,

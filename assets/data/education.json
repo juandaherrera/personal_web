@@ -5,19 +5,5 @@
         "college_logo": "icons/icesi.svg",
         "start_year": 2017,
         "end_year": 2022
-    },
-    {
-        "title": "AZ900 - Azure Certified",
-        "college": "Microsoft",
-        "college_logo": "icons/microsoft.svg",
-        "start_year": 2024,
-        "end_year": 2024
-    },
-    {
-        "title": "Bases de Datos para Data Engineers",
-        "college": "Platzi",
-        "college_logo": "icons/platzi.svg",
-        "start_year": 2024,
-        "end_year": 2024
     }
 ]

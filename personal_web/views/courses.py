@@ -14,6 +14,6 @@ def courses() -> rx.Component:
         align_items="start",
         spacing=Size.DEFAULT_BIG.value,
         style=styles.INDEX_SECTION_STYLE,
-        padding_top=Size.BIG.value,
+        padding_top=Size.LARGE.value,
         id="courses",
     )

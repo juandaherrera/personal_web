@@ -19,7 +19,7 @@ El sitio está estructurado en cinco secciones principales que representan difer
 ![Work in Progress](https://img.shields.io/badge/status-work_in_progress-yellow)
 
 * [X] Sección de Cursos.
-* [ ] Sección de Certificaciones.
+* [X] Sección de Certificaciones.
 * [ ] Testimonios / Recomendaciones.
 * [ ] Formulario de contacto.
 * [ ] Switch de idioma [ES / EN]
