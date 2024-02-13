@@ -80,7 +80,11 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             height=Size.VERY_BIG.value,
         ),
         rx.vstack(
-            title(name, size="xl", margin_bottom=Size.ZERO.value),
+            title(
+                name,
+                font_size=FontSize.SUBTITLES.value,
+                margin_bottom=Size.ZERO.value,
+            ),
             rx.text(
                 rx.span(courses_qty, color=Color.SECONDARY.value),
                 " Cursos Finalizados",

@@ -28,7 +28,7 @@ STYLESHEETS = [
     "/css/loop.css",
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css",  # Lenguages Icons
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css",  # Lenguages Icons
 ]
 
 # Styles

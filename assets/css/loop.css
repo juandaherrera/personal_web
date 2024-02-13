@@ -20,6 +20,7 @@
     animation-play-state: paused;
 }
 
+/* 1.4s por technología */
 .logos-slide {
-    animation: 26s slide infinite linear;
+    animation: 33.6s slide infinite linear;
 }
