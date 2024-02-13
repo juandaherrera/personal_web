@@ -5,6 +5,12 @@
         "url": "https://platzi.com/",
         "courses": [
             {
+                "name": "Curso de PostgreSQL Aplicado a Ciencia de Datos",
+                "issue_date": "2024-02-13",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1780-postgresql-datos/diploma/detalle/",
+                "technologies": ["SQL", "PostgreSQL"]
+            },
+            {
                 "name": "Curso de Manejo de Datos Faltantes: Detección y Exploración",
                 "issue_date": "2024-02-01",
                 "credential_url": "https://platzi.com/p/david.parra/curso/4196-datos-faltantes/diploma/detalle/",

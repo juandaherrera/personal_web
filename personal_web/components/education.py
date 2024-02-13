@@ -32,8 +32,7 @@ def college_degree(degree: Degree) -> rx.Component:
             ),
             align_items="start",
             spacing=Size.ZERO.value,
+            max_width=["90%", "85%", "80%", "80%", "75%"],
         ),
         spacing=Size.DEFAULT.value,
-        margin_right=[Size.DEFAULT_BIG.value, Size.VERY_BIG.value],
-        margin_bottom=[Size.DEFAULT_BIG.value, Size.VERY_BIG.value],
     )
