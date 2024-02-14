@@ -7,6 +7,7 @@ from personal_web.components.navbar import navbar
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 from personal_web.views.about_me import about_me
+from personal_web.views.certifications import certifications
 from personal_web.views.courses import courses
 from personal_web.views.education import education
 from personal_web.views.experience import experience
@@ -32,6 +33,7 @@ def index() -> rx.Component:
         rx.vstack(
             projects(),
             education(),
+            certifications(),
             courses(),
             footer(),
             width="100%",
