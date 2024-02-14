@@ -20,6 +20,11 @@
         "url": "https://www.djangoproject.com/"
     },
     {
+        "name": "Spark",
+        "icon": "apachespark",
+        "url": "https://spark.apache.org/"
+    },
+    {
         "name": "Anaconda",
         "icon": "anaconda",
         "url": "https://www.anaconda.com/"
