@@ -1,7 +1,7 @@
 from datetime import date
 
 # APP Version
-version = "1.3.2"
+version = "1.3.3"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
@@ -16,9 +16,7 @@ INDEX_TILE = "Juan David Herrera | Web Personal"
 INDEX_DESCRIPTION = (
     f"Portafolio persona de Juan David Herrera © {date.today().year}"
 )
-INDEX_PREVIEW = (
-    "https://juandaherreraweb.blob.core.windows.net/web/preview_web.png"
-)
+INDEX_PREVIEW = "img/web_preview.webp"
 
 INDEX_META = [
     {"name": "og:title", "content": INDEX_TILE},
