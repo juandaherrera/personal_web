@@ -9,9 +9,9 @@ from .menu import menu
 
 
 def navbar() -> rx.Component:
-    return rx.hstack(
-        rx.box(
-            rx.span(
+    return rx.chakra.hstack(
+        rx.chakra.box(
+            rx.chakra.span(
                 "juanda",
                 color=Color.PRIMARY.value,
                 transition="text-shadow 0.5s ease",
@@ -19,7 +19,7 @@ def navbar() -> rx.Component:
                     "text_shadow": f"0 0 8px {Color.SECONDARY.value}",
                 },
             ),
-            rx.span(
+            rx.chakra.span(
                 "herrera",
                 color=Color.SECONDARY.value,
                 transition="text-shadow 0.5s ease",
@@ -29,7 +29,7 @@ def navbar() -> rx.Component:
             ),
             style=styles.NAVBAR_TITLE_STYLE,
         ),
-        rx.spacer(),
+        rx.chakra.spacer(),
         menu(),
         style=styles.NAVBAR_STYLE,
         box_shadow=f"0 {Size.VERY_SMALL.value} {Size.BIG.value} 0 {hex_to_rgb(Color.PRIMARY.value, 0.2)}",

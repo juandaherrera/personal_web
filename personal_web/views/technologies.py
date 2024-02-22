@@ -6,13 +6,13 @@ from personal_web.styles.styles import Size
 
 
 def technologies() -> rx.Component:
-    return rx.vstack(
-        rx.hstack(
-            rx.hstack(
+    return rx.chakra.vstack(
+        rx.chakra.hstack(
+            rx.chakra.hstack(
                 *[techstack(tech) for tech in tech_list],
                 class_name="logos-slide"
             ),
-            rx.hstack(
+            rx.chakra.hstack(
                 *[techstack(tech) for tech in tech_list],
                 class_name="logos-slide"
             ),

@@ -11,7 +11,7 @@ from .work_experience import tech_badge
 
 
 def project_card(project: Project) -> rx.Component:
-    return rx.card(
+    return rx.chakra.card(
         _project_card_body(project.description, project.technologies),
         header=_project_card_header(project.name),
         footer=_project_card_footer(
@@ -22,11 +22,11 @@ def project_card(project: Project) -> rx.Component:
 
 
 def _project_card_body(description: str, technologies: list) -> rx.Component:
-    return rx.vstack(
-        rx.text(description),
+    return rx.chakra.vstack(
+        rx.chakra.text(description),
         rx.cond(
             len(technologies) > 0,
-            rx.flex(
+            rx.chakra.flex(
                 *[tech_badge(name) for name in technologies],
                 padding_top=Size.DEFAULT_MEDIUM.value,
                 padding_bottom=Size.ZERO.value,
@@ -39,13 +39,13 @@ def _project_card_body(description: str, technologies: list) -> rx.Component:
 
 
 def _project_card_header(name: str) -> rx.Component:
-    return rx.flex(
+    return rx.chakra.flex(
         title(
             name,
             font_size=FontSize.SUBTITLES.value,
         ),
-        rx.spacer(),
-        rx.divider(
+        rx.chakra.spacer(),
+        rx.chakra.divider(
             border_color=Color.SECONDARY.value,
         ),
     )
@@ -54,9 +54,9 @@ def _project_card_header(name: str) -> rx.Component:
 def _project_card_footer(
     github_url: str, website_url: str = "/", website_icon: str = "chrome"
 ) -> rx.Component:
-    return rx.hstack(
-        rx.link(
-            rx.box(
+    return rx.chakra.hstack(
+        rx.chakra.link(
+            rx.chakra.box(
                 class_name="devicon-github-plain",
                 font_size=FontSize.BUTTON_ICONS.value,
                 transition="transform 0.18s ease",
@@ -70,8 +70,8 @@ def _project_card_footer(
         ),
         rx.cond(
             website_url != "/",
-            rx.link(
-                rx.box(
+            rx.chakra.link(
+                rx.chakra.box(
                     class_name=f"devicon-{website_icon}-plain",
                     font_size=FontSize.BUTTON_ICONS.value,
                     transition="transform 0.18s ease",

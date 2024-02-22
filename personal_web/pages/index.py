@@ -23,14 +23,14 @@ from personal_web.views.technologies import technologies
     meta=const.INDEX_META,
 )
 def index() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         utils.lang(),
         navbar(),
         presentation(),
         about_me(),
         technologies(),
         experience(),
-        rx.vstack(
+        rx.chakra.vstack(
             projects(),
             education(),
             certifications(),

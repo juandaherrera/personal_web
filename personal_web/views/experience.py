@@ -10,7 +10,7 @@ from personal_web.styles.styles import Size
 
 
 def experience() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title("Experiencia 💼"),
         *[work_experience(item) for item in work_experience_list],
         align_items="start",

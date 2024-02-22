@@ -13,14 +13,14 @@ from .buttons import rounded_button
 
 
 def school(school: School) -> rx.Component:
-    return rx.accordion(
-        rx.accordion_item(
-            rx.accordion_button(
+    return rx.chakra.accordion(
+        rx.chakra.accordion_item(
+            rx.chakra.accordion_button(
                 _school_header(school.name, school.logo, school.courses_qty),
                 _hover={},
             ),
-            rx.accordion_panel(
-                rx.responsive_grid(
+            rx.chakra.accordion_panel(
+                rx.chakra.responsive_grid(
                     *[course(item) for item in school.courses],
                     columns=[1, 1, 2, 3, 3],
                     width="100%",
@@ -36,8 +36,8 @@ def school(school: School) -> rx.Component:
 
 
 def course(course: Course) -> rx.Component:
-    return rx.card(
-        rx.flex(
+    return rx.chakra.card(
+        rx.chakra.flex(
             *[tech_badge(item) for item in course.technologies],
             padding_y=Size.ZERO.value,
             flex_wrap="wrap",
@@ -53,13 +53,13 @@ def course(course: Course) -> rx.Component:
 
 
 def _course_header(name: str, issue_date: str):
-    return rx.vstack(
+    return rx.chakra.vstack(
         title(
             name,
             margin_bottom=Size.ZERO.value,
             font_size=FontSize.SECOND_SUBTITLE.value,
         ),
-        rx.text(
+        rx.chakra.text(
             issue_date,
             font_size=FontSize.SMALL_TEXT.value,
             color=Color.SECONDARY.value,
@@ -70,23 +70,23 @@ def _course_header(name: str, issue_date: str):
 
 
 def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
-    return rx.hstack(
-        rx.image(
+    return rx.chakra.hstack(
+        rx.chakra.image(
             src=logo, height=Size.VERY_BIG.value, min_width=Size.VERY_BIG.value
         ),
-        rx.divider(
+        rx.chakra.divider(
             orientation="vertical",
             border_color=TextColor.PRIMARY.value,
             height=Size.VERY_BIG.value,
         ),
-        rx.vstack(
+        rx.chakra.vstack(
             title(
                 name,
                 font_size=FontSize.SUBTITLES.value,
                 margin_bottom=Size.ZERO.value,
             ),
-            rx.text(
-                rx.span(courses_qty, color=Color.SECONDARY.value),
+            rx.chakra.text(
+                rx.chakra.span(courses_qty, color=Color.SECONDARY.value),
                 " Cursos Finalizados",
                 font_size=FontSize.BODY.value,
                 text_align="left",
@@ -94,8 +94,8 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             align_items="start",
             spacing=Size.VERY_SMALL.value,
         ),
-        rx.spacer(),
-        rx.accordion_icon(
+        rx.chakra.spacer(),
+        rx.chakra.accordion_icon(
             font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
         ),
         align_items="center",

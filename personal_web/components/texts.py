@@ -12,7 +12,7 @@ def title(
     margin_bottom: str = Size.VERY_SMALL.value,
     **kwargs,
 ) -> rx.Component:
-    return rx.heading(
+    return rx.chakra.heading(
         text,
         size=size,
         color=color,

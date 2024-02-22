@@ -8,7 +8,7 @@ from personal_web.styles.styles import Size
 
 
 def courses() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title("Cursos 📝"),
         *[school(item) for item in schools_list],
         align_items="start",

@@ -8,9 +8,9 @@ from personal_web.styles.styles import Size
 
 
 def projects() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title("Proyectos 💻"),
-        rx.responsive_grid(
+        rx.chakra.responsive_grid(
             *[project_card(project) for project in projects_list],
             columns=[1, 1, 2, 3],
             spacing=Size.DEFAULT_BIG.value

@@ -8,26 +8,26 @@ from personal_web.styles.styles import FOOTER_LOGO_STYLE, FOOTER_STYLE, Size
 
 
 def footer() -> rx.Component:
-    return rx.vstack(
-        rx.image(
+    return rx.chakra.vstack(
+        rx.chakra.image(
             src="favicon.ico",
             alt="Logo de Juan David Herrera. Es una 'j' y una 'd juntas",
             style=FOOTER_LOGO_STYLE,
         ),
-        rx.link(
-            rx.text(
-                rx.span(
+        rx.chakra.link(
+            rx.chakra.text(
+                rx.chakra.span(
                     f"© {datetime.date.today().year} ",
                 ),
-                rx.span("by juandaherrera "),
-                rx.span(f"v{const.version}", color=Color.SECONDARY.value),
-                rx.span("."),
+                rx.chakra.span("by juandaherrera "),
+                rx.chakra.span(f"v{const.version}", color=Color.SECONDARY.value),
+                rx.chakra.span("."),
                 font_size=Size.DEFAULT.value,
             ),
             href=const.REPO_URL,
             is_external=True,
         ),
-        rx.text(
+        rx.chakra.text(
             "Built with ❤ from Palmira, Colombia.",
             font_size=Size.DEFAULT.value,
             margin_top=Size.ZERO.value,

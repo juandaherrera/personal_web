@@ -8,9 +8,9 @@ from personal_web.styles.styles import Size
 
 
 def about_me() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title("Acerca de mí 👨🏻‍💻"),
-        rx.text(
+        rx.chakra.text(
             ABOUT_ME,
             text_align="justify",
             font_size=FontSize.BODY.value,

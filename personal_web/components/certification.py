@@ -10,27 +10,27 @@ from .buttons import rounded_button
 
 
 def certification(certification: Certification) -> rx.Component:
-    return rx.hstack(
-        rx.center(
-            rx.image(
+    return rx.chakra.hstack(
+        rx.chakra.center(
+            rx.chakra.image(
                 src=certification.institute_logo,
                 alt=f"Logo de {certification.institute}",
                 style=EDUCATION_COLLEGE_LOGO_STYLE,
             ),
         ),
-        rx.vstack(
+        rx.chakra.vstack(
             title(
                 certification.title,
                 font_size=FontSize.SUBTITLES.value,
             ),
-            rx.hstack(
-                rx.vstack(
-                    rx.text(
+            rx.chakra.hstack(
+                rx.chakra.vstack(
+                    rx.chakra.text(
                         certification.institute,
                         font_size=FontSize.BODY.value,
                         color=Color.SECONDARY.value,
                     ),
-                    rx.text(
+                    rx.chakra.text(
                         certification.period,
                         font_size=FontSize.SMALL_TEXT.value,
                     ),
@@ -39,7 +39,7 @@ def certification(certification: Certification) -> rx.Component:
                 ),
                 rx.cond(
                     certification.credential_url != '/',
-                    rx.divider(
+                    rx.chakra.divider(
                         orientation="vertical",
                         border_color=TextColor.PRIMARY.value,
                         height=Size.BIG.value,

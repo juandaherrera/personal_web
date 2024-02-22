@@ -10,10 +10,10 @@ from .texts import title
 
 
 def work_experience(job: Job) -> rx.Component:
-    return rx.accordion(
-        rx.accordion_item(
-            rx.accordion_button(_we_header(job), _hover={}),
-            rx.accordion_panel(_we_panel(job)),
+    return rx.chakra.accordion(
+        rx.chakra.accordion_item(
+            rx.chakra.accordion_button(_we_header(job), _hover={}),
+            rx.chakra.accordion_panel(_we_panel(job)),
             border_top_width=Size.ZERO.value,
             border_color=Color.SECONDARY.value,
         ),
@@ -23,12 +23,12 @@ def work_experience(job: Job) -> rx.Component:
 
 
 def _we_header(job: Job) -> rx.Component:
-    return rx.hstack(
-        rx.vstack(
-            rx.hstack(
+    return rx.chakra.hstack(
+        rx.chakra.vstack(
+            rx.chakra.hstack(
                 # Logo compañía
-                rx.center(
-                    rx.image(
+                rx.chakra.center(
+                    rx.chakra.image(
                         src=job.company_logo,
                         alt=f"Logo de {job.company_name}",
                         height="2.5em",
@@ -37,27 +37,27 @@ def _we_header(job: Job) -> rx.Component:
                     width=["4em", "5.5em"],
                 ),
                 # Divisor
-                rx.center(
-                    rx.divider(
+                rx.chakra.center(
+                    rx.chakra.divider(
                         orientation="vertical",
                         border_color=TextColor.PRIMARY.value,
                     ),
                     height=Size.BIG.value,
                 ),
                 # Cargo
-                rx.center(
+                rx.chakra.center(
                     title(job.title, font_size=FontSize.SUBTITLES.value),
                     text_align="left",
                 ),
                 spacing=Size.DEFAULT_MEDIUM.value,
             ),
             # Fechas cargo
-            rx.text(
-                rx.span(
+            rx.chakra.text(
+                rx.chakra.span(
                     f"{job.start_date_format} - {job.end_date_format}",
                     color=Color.SECONDARY.value,
                 ),
-                rx.span(
+                rx.chakra.span(
                     f" · {job.calculate_duration()}",
                     color=Color.TERTIARY.value,
                 ),
@@ -66,10 +66,10 @@ def _we_header(job: Job) -> rx.Component:
             ),
             align_items="start",
         ),
-        rx.spacer(),
+        rx.chakra.spacer(),
         # Ícono de acordión
-        rx.center(
-            rx.accordion_icon(
+        rx.chakra.center(
+            rx.chakra.accordion_icon(
                 font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
             )
         ),
@@ -78,27 +78,27 @@ def _we_header(job: Job) -> rx.Component:
 
 
 def _we_panel(job: Job) -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title(
             "📋 Función principal",
             font_size=FontSize.SECOND_SUBTITLE.value,
             padding_top=Size.DEFAULT.value,
         ),
-        rx.text(
+        rx.chakra.text(
             job.description,
             text_align="justify",
             font_size=FontSize.BODY.value,
             padding_bottom=Size.DEFAULT.value,
         ),
         title("🏆 Logros", font_size=FontSize.SECOND_SUBTITLE.value),
-        rx.text(
+        rx.chakra.text(
             job.achievements,
             text_align="justify",
             font_size=FontSize.BODY.value,
         ),
         rx.cond(
             len(job.technologies) > 0,
-            rx.flex(
+            rx.chakra.flex(
                 *[tech_badge(name) for name in job.technologies],
                 padding_top=Size.DEFAULT_MEDIUM.value,
                 padding_bottom=Size.ZERO.value,
@@ -111,4 +111,4 @@ def _we_panel(job: Job) -> rx.Component:
 
 
 def tech_badge(tech_name: str) -> rx.Component:
-    return rx.badge(tech_name, style=styles.TECH_BADGE_STYLE)
+    return rx.chakra.badge(tech_name, style=styles.TECH_BADGE_STYLE)

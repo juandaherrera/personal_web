@@ -9,13 +9,13 @@ from personal_web.styles.styles import (
 
 
 def techstack(technology: Technology) -> rx.Component:
-    return rx.link(
-        rx.vstack(
-            rx.box(
+    return rx.chakra.link(
+        rx.chakra.vstack(
+            rx.chakra.box(
                 class_name=f"devicon-{technology.icon}-plain",
                 style=TECH_STACK_ICON_STYLE,
             ),
-            rx.text(technology.name, padding_top=Size.SMALL.value),
+            rx.chakra.text(technology.name, padding_top=Size.SMALL.value),
             align_items="center",
             style=TECH_STACK_STYLE,
         ),

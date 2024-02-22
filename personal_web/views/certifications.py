@@ -8,9 +8,9 @@ from personal_web.styles.styles import Size
 
 
 def certifications() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         title("Certificaciones 📃"),
-        rx.responsive_grid(
+        rx.chakra.responsive_grid(
             *[certification(item) for item in certifications_list],
             columns=[1, 1, 2, 2, 3],
             spacing_x=Size.DEFAULT_BIG.value,

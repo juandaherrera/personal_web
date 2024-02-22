@@ -38,7 +38,7 @@ BASE_STYLE = {
     "font_weight": FontWeight.LIGHT.value,
     "color": TextColor.PRIMARY.value,
     "scroll_behavior": "smooth",
-    rx.Link: {"text_decoration": "none", "_hover": {}},
+    rx.chakra.Link: {"text_decoration": "none", "_hover": {}},
 }
 
 INDEX_SECTION_STYLE = dict(

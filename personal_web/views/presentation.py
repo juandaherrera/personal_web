@@ -11,11 +11,11 @@ from personal_web.styles.styles import Size
 
 
 def presentation() -> rx.Component:
-    return rx.stack(
-        rx.center(
-            rx.responsive_grid(
-                rx.stack(
-                    rx.avatar(
+    return rx.chakra.stack(
+        rx.chakra.center(
+            rx.chakra.responsive_grid(
+                rx.chakra.stack(
+                    rx.chakra.avatar(
                         src=const.MAIN_PIC,
                         size="full",
                         style=styles.MAIN_PIC_STYLE,
@@ -41,14 +41,14 @@ def presentation() -> rx.Component:
 
 
 def _hello_iam() -> rx.Component:
-    return rx.vstack(
-        rx.text(
+    return rx.chakra.vstack(
+        rx.chakra.text(
             "Hola👋🏻, soy",
             font_size=[Size.DEFAULT_BIG.value, Size.BIG.value],
             color=TextColor.SECONDARY.value,
             padding_buttom=Size.ZERO.value,
         ),
-        rx.heading(
+        rx.chakra.heading(
             "Juan David Herrera",
             size="2xl",
             color=TextColor.PRIMARY.value,
@@ -68,11 +68,11 @@ def _hello_iam() -> rx.Component:
             const.CURRENT_COMPANY_URL,
             f"Logo de {const.CURRENT_COMPANY_NAME}",
         ),
-        rx.divider(
+        rx.chakra.divider(
             border_color=TextColor.PRIMARY.value,
         ),
         # Redes
-        rx.hstack(
+        rx.chakra.hstack(
             link_icon(
                 "icons/github.svg",
                 const.GUTHUB_URL,
@@ -92,7 +92,7 @@ def _hello_iam() -> rx.Component:
             padding_y=Size.DEFAULT_MEDIUM.value,
         ),
         # Conoce más acerca de mi
-        rx.box(
+        rx.chakra.box(
             default_button(
                 "Conoce más de mi",
                 "arrow_down",
