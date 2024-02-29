@@ -12,9 +12,15 @@
             },
             {
                 "name": "Curso de Manejo de Datos Faltantes: Detección y Exploración",
-                "issue_date": "2024-02-01",
+                "issue_date": "2024-02-02",
                 "credential_url": "https://platzi.com/p/david.parra/curso/4196-datos-faltantes/diploma/detalle/",
                 "technologies": ["Python", "Pandas"]
+            },
+            {
+                "name": "Curso de Principios de Visualización de Datos para Business Intelligence",
+                "issue_date": "2024-02-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2195-visualizacion-datos/diploma/detalle/",
+                "technologies": ["Power BI"]
             },
             {
                 "name": "Curso de FastAPI: Base de Datos, Modularización y Deploy a Producción",
