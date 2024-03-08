@@ -71,9 +71,7 @@ def _course_header(name: str, issue_date: str):
 
 def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
     return rx.chakra.hstack(
-        rx.chakra.image(
-            src=logo, height=Size.VERY_BIG.value, min_width=Size.VERY_BIG.value
-        ),
+        rx.chakra.image(src=logo, height=Size.VERY_BIG.value, min_width=Size.VERY_BIG.value),
         rx.chakra.divider(
             orientation="vertical",
             border_color=TextColor.PRIMARY.value,
@@ -95,9 +93,7 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             spacing=Size.VERY_SMALL.value,
         ),
         rx.chakra.spacer(),
-        rx.chakra.accordion_icon(
-            font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
-        ),
+        rx.chakra.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE),
         align_items="center",
         width="100%",
         spacing=Size.DEFAULT.value,

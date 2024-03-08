@@ -179,6 +179,6 @@ FOOTER_LOGO_STYLE = dict(
 
 FOOTER_STYLE = dict(
     padding_top=Size.VERY_BIG.value,
-    padding_bottom=Size.SMALL.value,
+    padding_bottom=Size.MEDIUM.value,
     color=TextColor.SECONDARY.value,
 )

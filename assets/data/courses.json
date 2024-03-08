@@ -205,5 +205,24 @@
                 "technologies": ["Azure Databricks", "Python", "Apache Spark", "SQL"]
             }
         ]
+    },
+    {
+        "name": "Google",
+        "logo": "/icons/google.svg",
+        "url": "https://grow.google/intl/es/courses-and-tools/",
+        "courses": [
+            {
+                "name": "Curso avanzado de Google Analytics",
+                "issue_date": "2019-07-15",
+                "credential_url": "https://analytics.google.com/analytics/academy/certificate/R33dVGyQSmaJSqbbW_nS_w",
+                "technologies": ["Google Analytics"]
+            },
+            {
+                "name": "Google Analytics para Principiantes",
+                "issue_date": "2019-07-01",
+                "credential_url": "https://analytics.google.com/analytics/academy/certificate/RbhZX3hCR5iHhNvzdYwcrg",
+                "technologies": ["Google Analytics"]
+            }
+        ]
     }
 ]
