@@ -5,6 +5,12 @@
         "url": "https://platzi.com/",
         "courses": [
             {
+                "name": "Curso de Matemáticas para Data Science: Estadística Descriptiva",
+                "issue_date": "2024-03-10",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2353-estadistica-descriptiva/diploma/detalle/",
+                "technologies": ["Python", "Estadística"]
+            },
+            {
                 "name": "Curso de Visualización de Datos con Matplotlib y Seaborn",
                 "issue_date": "2024-03-07",
                 "credential_url": "https://platzi.com/p/david.parra/curso/2913-matplotlib-seaborn/diploma/detalle/",
