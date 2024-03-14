@@ -69,9 +69,7 @@ def _we_header(job: Job) -> rx.Component:
         rx.chakra.spacer(),
         # Ícono de acordión
         rx.chakra.center(
-            rx.chakra.accordion_icon(
-                font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE
-            )
+            rx.chakra.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE)
         ),
         width="100%",
     )
@@ -79,22 +77,34 @@ def _we_header(job: Job) -> rx.Component:
 
 def _we_panel(job: Job) -> rx.Component:
     return rx.chakra.vstack(
-        title(
-            "📋 Función principal",
-            font_size=FontSize.SECOND_SUBTITLE.value,
-            padding_top=Size.DEFAULT.value,
+        rx.cond(
+            job.description != "",
+            title(
+                "📋 Función principal",
+                font_size=FontSize.SECOND_SUBTITLE.value,
+                padding_top=Size.DEFAULT.value,
+            ),
         ),
-        rx.chakra.text(
-            job.description,
-            text_align="justify",
-            font_size=FontSize.BODY.value,
-            padding_bottom=Size.DEFAULT.value,
+        rx.cond(
+            job.description != "",
+            rx.chakra.text(
+                job.description,
+                text_align="justify",
+                font_size=FontSize.BODY.value,
+                padding_bottom=Size.DEFAULT.value,
+            ),
         ),
-        title("🏆 Logros", font_size=FontSize.SECOND_SUBTITLE.value),
-        rx.chakra.text(
-            job.achievements,
-            text_align="justify",
-            font_size=FontSize.BODY.value,
+        rx.cond(
+            job.achievements != "",
+            title("🏆 Logros", font_size=FontSize.SECOND_SUBTITLE.value),
+        ),
+        rx.cond(
+            job.achievements != "",
+            rx.chakra.text(
+                job.achievements,
+                text_align="justify",
+                font_size=FontSize.BODY.value,
+            ),
         ),
         rx.cond(
             len(job.technologies) > 0,
