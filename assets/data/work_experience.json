@@ -1,8 +1,19 @@
 [
     {
+        "title": "Data Scientist",
+        "start_date": "2024-03-18",
+        "end_date": "actualidad",
+        "company_name": "Rappi",
+        "company_url": "https://www.rappi.com.co/",
+        "company_logo": "icons/rappi.svg",
+        "description": "Construcción de data pipelines, diseño de servicios y despliegue de soluciones para el área de Fulfillment.",
+        "achievements": "",
+        "technologies": ["Python", "Airflow", "FastAPI", "Docker", "SQL", "Snowflake", "Git",  "Bitbucket"]
+    },
+    {
         "title": "Senior Data Analyst",
         "start_date": "2023-07-01",
-        "end_date": "actualidad",
+        "end_date": "2024-03-17",
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
         "company_logo": "icons/rappi.svg",
