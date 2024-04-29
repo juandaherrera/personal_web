@@ -5,6 +5,12 @@
         "url": "https://platzi.com/",
         "courses": [
             {
+                "name": "Curso de Programación en Bash Shell",
+                "issue_date": "2024-04-28",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1468-bash-shell/diploma/detalle/",
+                "technologies": ["Bash"]
+            },
+            {
                 "name": "Curso de Manejo de Datos Faltantes: Imputación",
                 "issue_date": "2024-04-10",
                 "credential_url": "https://platzi.com/p/david.parra/curso/4197-datos-faltantes-imputacion/diploma/detalle/",
