@@ -1,7 +1,7 @@
 from datetime import date
 
 # APP Version
-version = "2.0.10"
+version = "2.0.11"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
@@ -38,6 +38,6 @@ CURRENT_POSITION = [
     3000,
     "Data Engineer",
     3000,
-    "BI Specialist",
+    "Python Developer",
     3000,
 ]

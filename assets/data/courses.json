@@ -5,6 +5,12 @@
         "url": "https://platzi.com/",
         "courses": [
             {
+                "name": "Entorno de Trabajo para Data e IA",
+                "issue_date": "2024-05-03",
+                "credential_url": "https://platzi.com/p/david.parra/learning-path/13490-datos-fundamentos-tecnicos/diploma/detalle/",
+                "technologies": ["Git", "CookieCutter", "Python", "Anaconda", "Docker"]
+            },
+            {
                 "name": "Curso de Programación en Bash Shell",
                 "issue_date": "2024-04-28",
                 "credential_url": "https://platzi.com/p/david.parra/curso/1468-bash-shell/diploma/detalle/",
