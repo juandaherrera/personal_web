@@ -6,16 +6,15 @@
         "repository_url": "https://github.com/juandaherrera/personal_web"
     },
     {
+        "name": "JD Science Tools",
+        "description": "Librería de utilidades diseñada para proyectos de Data Science, Data Engineering y Python Development. Este proyecto es de uso personal, pero está disponible para quienes deseen explorarlo o contribuir.",
+        "technologies": ["Python", "Snowflake", "Aiohttp", "Jinja2", "Pandas"],
+        "repository_url": "https://github.com/juandaherrera/jds_tools"
+    },
+    {
         "name": "Prueba Técnica Data Quality Engineer",
         "description": "Solución a prueba técnica de Data Quality Engineer.",
         "technologies": ["Python", "Pandas", "Matplotlib"],
         "repository_url": "https://github.com/juandaherrera/prueba-dqe-r5"
-    },
-    {
-        "name": "Roadmap Retos de Programación",
-        "description": "Ruta de aprendizaje estructurada y desafíos de código basados en el Roadmap de @mouredev, enfocados en afinar la lógica de programación.",
-        "technologies": ["Python", "Javascript", "Bash"],
-        "repository_url": "https://github.com/juandaherrera/roadmap-retos-programacion",
-        "website_url": "https://retosdeprogramacion.com/roadmap/ranking/"
-    }    
+    }   
 ]
