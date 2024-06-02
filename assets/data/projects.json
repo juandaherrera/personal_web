@@ -9,7 +9,8 @@
         "name": "JD Science Tools",
         "description": "Librería de utilidades diseñada para proyectos de Data Science, Data Engineering y Python Development. Este proyecto es de uso personal, pero está disponible para quienes deseen explorarlo o contribuir.",
         "technologies": ["Python", "Snowflake", "Aiohttp", "Jinja2", "Pandas"],
-        "repository_url": "https://github.com/juandaherrera/jds_tools"
+        "repository_url": "https://github.com/juandaherrera/jds_tools",
+        "website_url": "https://pypi.org/project/jds-tools/"
     },
     {
         "name": "Prueba Técnica Data Quality Engineer",
