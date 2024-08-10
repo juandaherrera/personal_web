@@ -14,15 +14,18 @@ def default_button(
     url: str = "/",
     **kwargs,
 ) -> rx.Component:
-    return rx.chakra.link(
-        rx.chakra.button(
-            rx.chakra.hstack(
-                rx.chakra.text(text),
-                rx.chakra.icon(tag=icon),
+    return rx.link(
+        rx.button(
+            rx.hstack(
+                rx.text(text),
+                rx.icon(tag=icon),
+                align="center",
+                spacing="2",
                 font_size=FontSize.BUTTON.value,
                 color=text_color,
                 padding_x=[Size.VERY_SMALL.value, Size.MEDIUM.value],
             ),
+            size="3",
             style=styles.DEFAULT_BUTTON_STYLE,
             border_color=button_color,
             transition="box-shadow 0.3s ease",
@@ -46,7 +49,7 @@ def rounded_button(
     hover_color: str = Color.SECONDARY.value,
     **kwargs,
 ):
-    return rx.chakra.link(
+    return rx.link(
         rx.chakra.hstack(
             rx.chakra.text(text),
             rx.chakra.icon(tag=icon),

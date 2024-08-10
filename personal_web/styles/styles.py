@@ -1,6 +1,7 @@
 from enum import Enum
 
 import reflex as rx
+from reflex.components.radix.themes.typography.link import Link
 
 from personal_web.utils import hex_to_rgb
 
@@ -39,6 +40,7 @@ BASE_STYLE = {
     "color": TextColor.PRIMARY.value,
     "scroll_behavior": "smooth",
     rx.chakra.Link: {"text_decoration": "none", "_hover": {}},
+    Link: {"text_decoration": "none", "_hover": {}},
 }
 
 INDEX_SECTION_STYLE = dict(
@@ -61,6 +63,7 @@ NAVBAR_TITLE_STYLE = dict(
 
 NAVBAR_STYLE = dict(
     position="sticky",
+    align_items="center",
     bg=Color.CONTENT.value,
     padding_x=[
         Size.BIG.value,
@@ -75,8 +78,11 @@ NAVBAR_STYLE = dict(
 )
 
 MAIN_PIC_STYLE = dict(
-    border=f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
-    padding=Size.DEFAULT.value,
+    width="100%",
+    height="100%",
+    aspect_ratio=1 / 1,
+    border=f"{Size.VERY_SMALL.value} solid {Color.PRIMARY.value}",
+    padding=Size.SMALL.value,
     transition="transform 0.2s ease, box-shadow 0.3s ease",
     _hover={
         "transform": [
@@ -86,7 +92,7 @@ MAIN_PIC_STYLE = dict(
             "scale(1.05)",
             "scale(1.035)",
         ],
-        "border": f"{Size.MEDIUM.value} solid {Color.PRIMARY.value}",
+        "border": f"{Size.VERY_SMALL.value} solid {Color.PRIMARY.value}",
         "box_shadow": f"0 0 8px {Color.PRIMARY.value}, 0 0 12px {Color.PRIMARY.value}",
     },
 )

@@ -8,13 +8,13 @@ from personal_web.styles.styles import Size
 
 
 def certifications() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Certificaciones 📃"),
-        rx.chakra.responsive_grid(
+        rx.flex(
             *[certification(item) for item in certifications_list],
-            columns=[1, 1, 2, 2, 3],
-            spacing_x=Size.DEFAULT_BIG.value,
-            spacing_y=Size.MEDIUM_BIG.value
+            width="100%",
+            spacing="9",
+            flex_wrap="wrap",
         ),
         align_items="start",
         spacing=Size.DEFAULT_BIG.value,

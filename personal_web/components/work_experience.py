@@ -121,4 +121,4 @@ def _we_panel(job: Job) -> rx.Component:
 
 
 def tech_badge(tech_name: str) -> rx.Component:
-    return rx.chakra.badge(tech_name, style=styles.TECH_BADGE_STYLE)
+    return rx.badge(tech_name, style=styles.TECH_BADGE_STYLE)
