@@ -58,9 +58,14 @@ def _we_header(job: Job) -> rx.Component:
                     color=Color.SECONDARY.value,
                 ),
                 rx.chakra.span(
-                    f" · {job.calculate_duration()}",
+                    f" · {job.company_name}",
                     color=Color.TERTIARY.value,
                 ),
+                # TODO validar qué sucede con el calculate_duration en el docker
+                # rx.chakra.span(
+                #     f" · {job.calculate_duration()}",
+                #     color=Color.TERTIARY.value,
+                # ),
                 text_align="left",
                 font_size=FontSize.SMALL_TEXT.value,
             ),

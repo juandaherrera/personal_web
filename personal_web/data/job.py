@@ -32,11 +32,12 @@ class Job(BaseModel):
 
     @property
     def end_date_format(self):
-        return (
-            'actualidad'
-            if str(self.end_date).isalpha() or not isinstance(self.end_date, date)
-            else self.end_date.strftime('%b. %Y')
-        )
+        if self.end_date == "":
+            return 'actualidad'
+        try:
+            return self.end_date.strftime('%b. %Y')
+        except:
+            return date.fromisoformat(self.end_date).strftime('%b. %Y')
 
     @property
     def is_current_job(self):
