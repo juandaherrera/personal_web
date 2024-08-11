@@ -2,13 +2,13 @@ import json
 from datetime import date
 from typing import List, Optional
 
-from pydantic import AnyUrl, BaseModel, validator
+from pydantic import BaseModel, validator
 
 
 class Course(BaseModel):
     name: str
     issue_date: date
-    credential_url: Optional[AnyUrl]
+    credential_url: Optional[str]
     technologies: Optional[List[str]] = []
 
     @validator('technologies', pre=True, allow_reuse=True)
@@ -23,7 +23,7 @@ class Course(BaseModel):
 class School(BaseModel):
     name: str
     logo: str
-    url: Optional[AnyUrl]
+    url: Optional[str]
     courses: List[Course]
 
     def __init__(self, **data):

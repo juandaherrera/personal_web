@@ -3,7 +3,7 @@ from datetime import date
 from typing import List, Optional, Union
 
 from dateutil.relativedelta import relativedelta
-from pydantic import AnyUrl, BaseModel, validator
+from pydantic import BaseModel, validator
 
 
 class Job(BaseModel):
@@ -11,7 +11,7 @@ class Job(BaseModel):
     start_date: date
     end_date: Union[date, str]
     company_name: str
-    company_url: Optional[AnyUrl]
+    company_url: Optional[str]
     company_logo: Optional[str]
     description: str
     achievements: Optional[str]
@@ -24,13 +24,17 @@ class Job(BaseModel):
     # TO_DO podría agregar Babel para enviar las fechas en español.
     @property
     def start_date_format(self):
-        return self.start_date.strftime('%b. %Y') if self.start_date else None
+        return (
+            self.start_date.strftime('%b. %Y')
+            if self.start_date and isinstance(self.start_date, date)
+            else None
+        )
 
     @property
     def end_date_format(self):
         return (
             'actualidad'
-            if str(self.end_date).isalpha()
+            if str(self.end_date).isalpha() or not isinstance(self.end_date, date)
             else self.end_date.strftime('%b. %Y')
         )
 
@@ -64,9 +68,7 @@ class Job(BaseModel):
         elif months == 1:
             return f"{years} años y 1 mes"
         else:
-            return (
-                f"{years} años y {months} meses" if months else f"{years} años"
-            )
+            return f"{years} años y {months} meses" if months else f"{years} años"
 
 
 with open("assets/data/work_experience.json") as file:

@@ -1,5 +1,5 @@
 # Stage 1: Construir archivos estáticos con Python
-FROM python:3.11 as builder
+FROM python:3.11 AS builder
 
 WORKDIR /app
 

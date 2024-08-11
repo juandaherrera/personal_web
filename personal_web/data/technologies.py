@@ -1,7 +1,7 @@
 import json
 from typing import List, Optional
 
-from pydantic import AnyUrl, BaseModel
+from pydantic import BaseModel
 
 
 # TO_DO agregar Redash, Snowflake y PowerBI

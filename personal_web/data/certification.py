@@ -1,7 +1,7 @@
 import json
 from typing import List, Optional
 
-from pydantic import AnyUrl, BaseModel
+from pydantic import BaseModel
 
 
 class Certification(BaseModel):
@@ -10,7 +10,7 @@ class Certification(BaseModel):
     institute_logo: str
     start_year: int
     end_year: int
-    credential_url: Optional[AnyUrl] = '/'
+    credential_url: Optional[str] = '/'
 
     @property
     def period(self):
@@ -22,6 +22,4 @@ class Certification(BaseModel):
 with open("assets/data/certifications.json") as file:
     certifications_data = json.load(file)
 
-certifications_list: List[Certification] = [
-    Certification(**item) for item in certifications_data
-]
+certifications_list: List[Certification] = [Certification(**item) for item in certifications_data]
