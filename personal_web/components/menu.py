@@ -1,6 +1,6 @@
 import reflex as rx
 
-from personal_web.styles.colors import Color
+from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
 
 
@@ -17,13 +17,13 @@ def menu() -> rx.Component:
             },
         ),
         rx.chakra.menu_list(
-            _menu_item("Acerca de mí 👨🏻‍💻", "#about_me"),
-            _menu_item("Experiencia 💼", "#experience"),
-            _menu_item("Proyectos 💻", "#projects"),
+            _menu_item("Acerca de mí", "👨🏻‍💻", "#about_me"),
+            _menu_item("Experiencia", "💼", "#experience"),
+            _menu_item("Proyectos", "💻", "#projects"),
             rx.chakra.menu_divider(),
-            _menu_item("Educación 📖", "#education"),
-            _menu_item("Certificaciones 📃", "#certifications"),
-            _menu_item("Cursos 📝", "#courses"),
+            _menu_item("Educación", "📖", "#education"),
+            _menu_item("Certificaciones", "📃", "#certifications"),
+            _menu_item("Cursos", "📝", "#courses"),
             background=Color.CONTENT.value,
             border_color=Color.BACKGROUND.value,
         ),
@@ -31,10 +31,18 @@ def menu() -> rx.Component:
 
 
 # TO_DO revisar emojis a la derecha del todo
-def _menu_item(text: str, url: str, is_external: bool = False) -> rx.Component:
+def _menu_item(text: str, emoji: str, url: str, is_external: bool = False) -> rx.Component:
     return rx.chakra.menu_item(
-        rx.chakra.link(rx.chakra.text(text), href=url, is_external=is_external),
+        rx.link(
+            rx.text(
+                f"{text} ",
+                rx.text.span(f"{emoji}"),
+                _hover={"color": Color.SECONDARY.value},
+            ),
+            href=url,
+            is_external=is_external,
+            color=TextColor.PRIMARY.value,
+        ),
         background="transparent",
         transition="color 0.2s ease",
-        _hover={"color": Color.SECONDARY.value},
     )

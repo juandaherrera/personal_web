@@ -14,49 +14,49 @@ def project_card(project: Project) -> rx.Component:
     return rx.chakra.card(
         _project_card_body(project.description, project.technologies),
         header=_project_card_header(project.name),
-        footer=_project_card_footer(
-            project.repository_url, project.website_url
-        ),
+        footer=_project_card_footer(project.repository_url, project.website_url),
         style=styles.PROJECT_CARD_STYLE,
     )
 
 
 def _project_card_body(description: str, technologies: list) -> rx.Component:
-    return rx.chakra.vstack(
-        rx.chakra.text(description),
+    return rx.vstack(
+        rx.text(description),
         rx.cond(
             len(technologies) > 0,
-            rx.chakra.flex(
+            rx.flex(
                 *[tech_badge(name) for name in technologies],
                 padding_top=Size.DEFAULT_MEDIUM.value,
                 padding_bottom=Size.ZERO.value,
-                spacing=Size.DEFAULT_BIG.value,
+                spacing="0",
                 flex_wrap="wrap",
             ),
         ),
+        spacing="2",
         align_items="start",
     )
 
 
 def _project_card_header(name: str) -> rx.Component:
-    return rx.chakra.flex(
+    return rx.flex(
         title(
             name,
-            font_size=FontSize.SUBTITLES.value,
+            size="6",
         ),
-        rx.chakra.spacer(),
+        rx.spacer(),
         rx.chakra.divider(
             border_color=Color.SECONDARY.value,
         ),
+        align="start",
     )
 
 
 def _project_card_footer(
     github_url: str, website_url: str = "/", website_icon: str = "chrome"
 ) -> rx.Component:
-    return rx.chakra.hstack(
-        rx.chakra.link(
-            rx.chakra.box(
+    return rx.hstack(
+        rx.link(
+            rx.box(
                 class_name="devicon-github-plain",
                 font_size=FontSize.BUTTON_ICONS.value,
                 transition="transform 0.18s ease",
@@ -65,13 +65,14 @@ def _project_card_footer(
                     "transform": "scale(1.25)",
                 },
             ),
+            color="inherit",
             href=github_url,
             is_external=True,
         ),
         rx.cond(
             website_url != "/",
-            rx.chakra.link(
-                rx.chakra.box(
+            rx.link(
+                rx.box(
                     class_name=f"devicon-{website_icon}-plain",
                     font_size=FontSize.BUTTON_ICONS.value,
                     transition="transform 0.18s ease",
@@ -80,6 +81,7 @@ def _project_card_footer(
                         "transform": "scale(1.25)",
                     },
                 ),
+                color="inherit",
                 href=website_url,
                 is_external=True,
             ),

@@ -11,21 +11,29 @@ from personal_web.styles.styles import Size
 
 
 def presentation() -> rx.Component:
-    return rx.chakra.stack(
-        rx.chakra.center(
-            rx.chakra.responsive_grid(
-                rx.chakra.stack(
-                    rx.chakra.avatar(
+    return rx.stack(
+        rx.center(
+            rx.grid(
+                rx.stack(
+                    rx.avatar(
                         src=const.MAIN_PIC,
-                        size="full",
+                        fallback="JD",
+                        size="9",
+                        color_scheme="cyan",
+                        radius="full",
                         style=styles.MAIN_PIC_STYLE,
                     ),
+                    align="center",
+                    justify="end",
                     width="100%",
                     aspect_ratio=1 / 1,
-                    align_items="end",
+                    align_items="center",
                 ),
                 _hello_iam(),
-                columns=[1, 1, 1, 2, 2],
+                columns=rx.breakpoints(
+                    initial="1",
+                    md="2",
+                ),
                 width="100%",
                 padding_y=Size.DEFAULT_BIG.value,
                 spacing_x=Size.VERY_BIG.value,
@@ -36,21 +44,22 @@ def presentation() -> rx.Component:
             width=styles.INDEX_SECTION_STYLE["width"],
             padding_x=styles.INDEX_SECTION_STYLE["padding_x"],
         ),
+        justify="center",
         style=styles.PRESENTATION_STACK_STYLE,
     )
 
 
 def _hello_iam() -> rx.Component:
-    return rx.chakra.vstack(
-        rx.chakra.text(
+    return rx.vstack(
+        rx.text(
             "Hola👋🏻, soy",
             font_size=[Size.DEFAULT_BIG.value, Size.BIG.value],
             color=TextColor.SECONDARY.value,
-            padding_buttom=Size.ZERO.value,
+            margin_bottom=Size.VERY_SMALL.value,
         ),
-        rx.chakra.heading(
+        rx.heading(
             "Juan David Herrera",
-            size="2xl",
+            font_size="2.7em",
             color=TextColor.PRIMARY.value,
         ),
         type_animation(
@@ -60,6 +69,7 @@ def _hello_iam() -> rx.Component:
             style=dict(
                 font_size=[Size.DEFAULT_BIG.value, Size.BIG.value],
                 color=TextColor.SECONDARY.value,
+                margin_top=Size.VERY_SMALL.value,
             ),
         ),
         # Dónde trabajo?
@@ -68,11 +78,11 @@ def _hello_iam() -> rx.Component:
             const.CURRENT_COMPANY_URL,
             f"Logo de {const.CURRENT_COMPANY_NAME}",
         ),
-        rx.chakra.divider(
+        rx.divider(
             border_color=TextColor.PRIMARY.value,
         ),
         # Redes
-        rx.chakra.hstack(
+        rx.hstack(
             link_icon(
                 "icons/github.svg",
                 const.GUTHUB_URL,
@@ -88,11 +98,11 @@ def _hello_iam() -> rx.Component:
                 const.INSTAGRAM_URL,
                 "Logo Instagram",
             ),
-            spacing=Size.DEFAULT_MEDIUM.value,
+            spacing="4",
             padding_y=Size.DEFAULT_MEDIUM.value,
         ),
         # Conoce más acerca de mi
-        rx.chakra.box(
+        rx.box(
             default_button(
                 "Conoce más de mi",
                 "arrow_down",
@@ -101,7 +111,7 @@ def _hello_iam() -> rx.Component:
                 "#about_me",
                 id="main_button",
             ),
-            # display="none",
         ),
+        spacing="2",
         align_items="start",
     )

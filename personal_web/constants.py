@@ -1,7 +1,7 @@
 from datetime import date
 
 # APP Version
-version = "2.0.6"
+version = "2.0.13"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
@@ -13,7 +13,7 @@ META = [
 ]
 
 INDEX_TILE = "Juan David Herrera | Web Personal"
-INDEX_DESCRIPTION = f"Portafolio persona de Juan David Herrera © {date.today().year}"
+INDEX_DESCRIPTION = f"Portafolio personal de Juan David Herrera © {date.today().year}"
 INDEX_PREVIEW = "img/web_preview.webp"
 
 INDEX_META = [
@@ -34,10 +34,8 @@ CURRENT_COMPANY_NAME = "Rappi"
 CURRENT_COMPANY_URL = "https://www.rappi.com.co/"
 CURRENT_COMPANY_LOGO = "icons/rappi.svg"
 CURRENT_POSITION = [
-    "Data Scientist",
-    3000,
     "Data Engineer",
     3000,
-    "BI Specialist",
+    "Python Developer",
     3000,
 ]

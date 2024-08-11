@@ -8,13 +8,14 @@ from personal_web.styles.styles import Size
 
 
 def about_me() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Acerca de mí 👨🏻‍💻"),
-        rx.chakra.text(
+        rx.text(
             ABOUT_ME,
             text_align="justify",
             font_size=FontSize.BODY.value,
         ),
+        spacing="2",
         align_items="start",
         style=styles.INDEX_SECTION_STYLE,
         padding_bottom=Size.VERY_BIG.value,

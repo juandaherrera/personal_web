@@ -11,11 +11,14 @@ total_courses = sum([item.courses_qty for item in schools_list])
 
 
 def courses() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Cursos 📝", margin_bottom=Size.ZERO.value),
-        rx.chakra.text(
+        rx.text(
             "Total cursos finalizados: ",
-            rx.chakra.span(total_courses, color=Color.SECONDARY.value),
+            rx.text.span(
+                total_courses,
+                color=Color.SECONDARY.value,
+            ),
             font_size=FontSize.SECOND_SUBTITLE.value,
         ),
         *[school(item) for item in schools_list],

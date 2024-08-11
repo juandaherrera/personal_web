@@ -4,8 +4,8 @@ from personal_web.styles.styles import Size
 
 
 def link_icon(image: str, url: str, alt: str) -> rx.Component:
-    return rx.chakra.link(
-        rx.chakra.image(
+    return rx.link(
+        rx.image(
             src=image,
             width=Size.BIG.value,
             height=Size.BIG.value,

@@ -6,13 +6,13 @@ from personal_web.styles.styles import Size
 
 def title(
     text: str,
-    size: str = "2xl",
+    size: str = "8",
     color: str = TextColor.PRIMARY.value,
     id: str = None,
     margin_bottom: str = Size.VERY_SMALL.value,
     **kwargs,
 ) -> rx.Component:
-    return rx.chakra.heading(
+    return rx.heading(
         text,
         size=size,
         color=color,

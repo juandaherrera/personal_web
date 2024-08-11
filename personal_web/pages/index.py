@@ -23,22 +23,25 @@ from personal_web.views.technologies import technologies
     meta=const.INDEX_META,
 )
 def index() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         utils.lang(),
         navbar(),
         presentation(),
         about_me(),
         technologies(),
         experience(),
-        rx.chakra.vstack(
+        rx.vstack(
             projects(),
             education(),
             certifications(),
             courses(),
             footer(),
+            align="center",
             width="100%",
             background=Color.BACKGROUND_ALT.value,
             box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
         ),
+        spacing="0",
+        align="center",
         width="100%",
     )

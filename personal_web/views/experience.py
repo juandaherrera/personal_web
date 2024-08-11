@@ -10,11 +10,11 @@ from personal_web.styles.styles import Size
 
 
 def experience() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Experiencia 💼"),
         *[work_experience(item) for item in work_experience_list],
         align_items="start",
-        spacing=Size.DEFAULT_BIG.value,
+        spacing="5",
         style=styles.INDEX_SECTION_STYLE,
         padding_bottom=Size.LARGE.value,
         id="experience",

@@ -8,11 +8,15 @@ from personal_web.styles.styles import Size
 
 
 def education() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Educación 📖"),
-        rx.chakra.responsive_grid(
+        rx.grid(
             *[college_degree(degree) for degree in education_list],
-            columns=[1, 1, 2, 2, 3],
+            columns=rx.breakpoints(
+                initial="1",
+                sm="2",
+                lg="3",
+            ),
             spacing_x=Size.DEFAULT_BIG.value,
             spacing_y=Size.MEDIUM_BIG.value
         ),
