@@ -210,6 +210,12 @@
         "url": "https://udemy.com/",
         "courses": [
             {
+                "name": "Curso de Redis 5",
+                "issue_date": "2024-09-05",
+                "credential_url": "https://rappi.udemy.com/certificate/UC-665c6c28-2672-4504-8fb1-d4c7e07c86e8/",
+                "technologies": ["Redis"]
+            },
+            {
                 "name": "Curso Completo de Microsoft Azure Fundamentales AZ-900",
                 "issue_date": "2024-01-01",
                 "credential_url": "https://www.udemy.com/certificate/UC-d9659f63-61a8-4820-9cfd-29378648af9a/",

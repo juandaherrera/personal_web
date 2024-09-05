@@ -35,6 +35,11 @@
         "url": "https://www.docker.com/"
     },
     {
+        "name": "Redis",
+        "icon": "redis",
+        "url": "https://redis.io/"
+    },
+    {
         "name": "Javascript",
         "icon": "javascript",
         "url": "https://developer.mozilla.org/es/docs/Web/JavaScript"
