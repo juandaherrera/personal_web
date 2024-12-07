@@ -1,14 +1,14 @@
 [
     {
-        "title": "Data Engineer",
+        "title": "Python Developer & Data Engineer",
         "start_date": "2024-03-18",
         "end_date": "",
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
         "company_logo": "icons/rappi.svg",
-        "description": "Construcción de data pipelines, diseño de servicios y despliegue de soluciones para el área de Fulfillment.",
+        "description": "Responsable del mantenimiento y desarrollo del microservicio que calcula las ganancias de los repartidores en cada orden, así como del diseño y mantenimiento de los datamarts de ganancias e incentivos. También, encargado de otros dos microservicios: uno para la estimación del costo de incentivos mediante modelos de ML y otro para la gestión de las configuraciones del microservicio de ganancias, que incluye tanto el front-end como el back-end.",
         "achievements": "",
-        "technologies": ["Python", "Airflow", "FastAPI", "Docker", "SQL", "Snowflake", "Git",  "Bitbucket"]
+        "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]
     },
     {
         "title": "Senior Data Analyst",

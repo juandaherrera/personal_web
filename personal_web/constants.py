@@ -1,7 +1,7 @@
 from datetime import date
 
 # APP Version
-version = "3.0.4"
+version = "3.0.5"
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal
@@ -34,8 +34,8 @@ CURRENT_COMPANY_NAME = "Rappi"
 CURRENT_COMPANY_URL = "https://www.rappi.com.co/"
 CURRENT_COMPANY_LOGO = "icons/rappi.svg"
 CURRENT_POSITION = [
-    "Data Engineer",
-    3000,
     "Python Developer",
+    3000,
+    "Data Engineer",
     3000,
 ]
