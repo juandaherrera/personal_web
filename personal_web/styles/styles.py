@@ -18,7 +18,7 @@ class Size(Enum):
     DEFAULT = "1em"
     DEFAULT_MEDIUM = "1.125em"
     DEFAULT_BIG = "1.5em"
-    BIG = "2em"
+    BIG = "1.88em"
     MEDIUM_BIG = "3em"
     VERY_BIG = "4em"
     LARGE = "5em"
@@ -44,7 +44,7 @@ BASE_STYLE = {
 }
 
 INDEX_SECTION_STYLE = dict(
-    width=["85%", "80%", "80%", "75%"],
+    width=["90%", "85%", "80%", "75%"],
     padding_x=Size.DEFAULT.value,
     padding_top=Size.VERY_BIG.value,
 )

@@ -3,25 +3,26 @@ import reflex as rx
 import personal_web.styles.styles as styles
 from personal_web.components.education import college_degree
 from personal_web.components.texts import title
-from personal_web.data.education import education_list
+from personal_web.data.education import education_en_list, education_list
 from personal_web.styles.styles import Size
 
 
-def education() -> rx.Component:
+def education(en: bool = False) -> rx.Component:
+    selected_list = education_list if not en else education_en_list
     return rx.vstack(
-        title("Educación 📖"),
+        title("Education 📖" if en else "Educación 📖"),
         rx.grid(
-            *[college_degree(degree) for degree in education_list],
+            *[college_degree(degree) for degree in selected_list],
             columns=rx.breakpoints(
                 initial="1",
                 sm="2",
                 lg="3",
             ),
-            spacing_x=Size.DEFAULT_BIG.value,
-            spacing_y=Size.MEDIUM_BIG.value
+            spacing_x="5",
+            spacing_y="2"
         ),
         align_items="start",
-        spacing=Size.DEFAULT_BIG.value,
+        spacing="5",
         style=styles.INDEX_SECTION_STYLE,
         id="education",
     )

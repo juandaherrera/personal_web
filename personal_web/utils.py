@@ -2,6 +2,8 @@ import datetime
 from typing import Optional
 
 import reflex as rx
+from reflex.constants.colors import Color
+from reflex.utils import console
 
 
 def lang(language: str = "es") -> rx.Component:
@@ -12,7 +14,7 @@ def get_experience() -> int:
     return datetime.date.today().year - 2021
 
 
-def hex_to_rgb(hex: str, opacity: Optional[float] = None) -> str:
+def hex_to_rgb(hex: str | Color, opacity: Optional[float] = None) -> str:
     """Convert a hex color code to an RGB or RGBA string.
 
     Args:
@@ -32,13 +34,19 @@ def hex_to_rgb(hex: str, opacity: Optional[float] = None) -> str:
         >>> hex_to_rgb("#FFFFFF", 0.5)
         'rgba(255, 255, 255, 0.5)'
     """
-    if len(hex) != 7 or hex[0] != '#':
-        raise ValueError("El código hexadecimal debe tener la forma #RRGGBB")
+    if isinstance(hex, Color):
+        return hex
+    try:
+        if len(hex) != 7 or hex[0] != '#':
+            raise ValueError("El código hexadecimal debe tener la forma #RRGGBB")
 
-    hex = hex.lstrip("#")
-    hex_tuple = tuple(int(hex[i : i + 2], 16) for i in (0, 2, 4))
-    return (
-        f"rgba({hex_tuple[0]}, {hex_tuple[1]}, {hex_tuple[2]}, {opacity})"
-        if opacity
-        else f"rgb({hex_tuple[0]}, {hex_tuple[1]}, {hex_tuple[2]})"
-    )
+        hex = hex.lstrip("#")
+        hex_tuple = tuple(int(hex[i : i + 2], 16) for i in (0, 2, 4))
+        return (
+            f"rgba({hex_tuple[0]}, {hex_tuple[1]}, {hex_tuple[2]}, {opacity})"
+            if opacity
+            else f"rgb({hex_tuple[0]}, {hex_tuple[1]}, {hex_tuple[2]})"
+        )
+    except Exception as e:
+        console.warn(f"Error trying to convert hex color to RGB: {e}")
+        return "rgb(255, 255, 255)"

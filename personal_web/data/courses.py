@@ -39,10 +39,18 @@ class School(BaseModel):
         return self.courses[0].issue_date
 
 
-with open("assets/data/courses.json") as file:
+with open("assets/data/sp/courses.json") as file:
     schools_data = json.load(file)
+
+with open("assets/data/en/courses.json") as file:
+    schools_data_en = json.load(file)
 
 schools_list: List[School] = [School(**item) for item in schools_data]
 schools_list: List[School] = sorted(
     schools_list, key=lambda school: school.last_course_at, reverse=True
+)
+
+schools_en_list: List[School] = [School(**item) for item in schools_data_en]
+schools_en_list: List[School] = sorted(
+    schools_en_list, key=lambda school: school.last_course_at, reverse=True
 )

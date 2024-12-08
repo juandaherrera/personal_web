@@ -5,6 +5,8 @@ from typing import List, Optional, Union
 from dateutil.relativedelta import relativedelta
 from pydantic import BaseModel, validator
 
+from personal_web.state import MainState
+
 
 class Job(BaseModel):
     title: str
@@ -72,7 +74,11 @@ class Job(BaseModel):
             return f"{years} años y {months} meses" if months else f"{years} años"
 
 
-with open("assets/data/work_experience.json") as file:
+with open("assets/data/sp/work_experience.json", "r") as file:
     work_data = json.load(file)
 
+with open("assets/data/en/work_experience.json", "r") as file:
+    work_data_en = json.load(file)
+
 work_experience_list: List[Job] = [Job(**item) for item in work_data]
+work_experience_en_list: List[Job] = [Job(**item) for item in work_data_en]

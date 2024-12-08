@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Personal Website",
+        "description": "A personal portfolio built with Reflex and deployed on Railway.",
+        "technologies": ["Python", "Reflex", "Chakra UI", "Railway", "Docker"],
+        "repository_url": "https://github.com/juandaherrera/personal_web"
+    },
+    {
+        "name": "JD Science Tools",
+        "description": "A utility library designed for Data Science, Data Engineering, and Python Development projects. Originally created for personal use, it is open to exploration and contributions.",
+        "technologies": ["Python", "Snowflake", "Aiohttp", "Jinja2", "Pandas"],
+        "repository_url": "https://github.com/juandaherrera/jds_tools",
+        "website_url": "https://pypi.org/project/jds-tools/"
+    },
+    {
+        "name": "Technical Assessment - Data Quality Engineer",
+        "description": "Solution for the Data Quality Engineer technical assessment.",
+        "technologies": ["Python", "Pandas", "Matplotlib"],
+        "repository_url": "https://github.com/juandaherrera/prueba-dqe-r5"
+    }   
+]

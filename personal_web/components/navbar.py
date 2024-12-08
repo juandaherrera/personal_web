@@ -1,10 +1,12 @@
 import reflex as rx
 
 import personal_web.styles.styles as styles
+from personal_web.state import MainState
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 from personal_web.utils import hex_to_rgb
 
+from .language_switch import language_switch
 from .menu import menu
 
 
@@ -17,6 +19,7 @@ def navbar() -> rx.Component:
                 transition="text-shadow 0.5s ease",
                 _hover={
                     "text_shadow": f"0 0 8px {Color.SECONDARY.value}",
+                    "cursor": "default",
                 },
             ),
             rx.text(
@@ -25,12 +28,18 @@ def navbar() -> rx.Component:
                 transition="text-shadow 0.5s ease",
                 _hover={
                     "text_shadow": f"0 0 8px {Color.PRIMARY.value}",
+                    "cursor": "default",
                 },
             ),
             style=styles.NAVBAR_TITLE_STYLE,
         ),
         rx.spacer(),
-        menu(),
+        rx.hstack(
+            rx.desktop_only(language_switch()),
+            menu(),
+            spacing="6",
+            align="center",
+        ),
         style=styles.NAVBAR_STYLE,
-        box_shadow=f"0 {Size.VERY_SMALL.value} {Size.BIG.value} 0 {hex_to_rgb(Color.PRIMARY.value, 0.2)}",
+        box_shadow=f"0 {Size.VERY_SMALL.value} {Size.BIG.value} 0 {hex_to_rgb('#FF6B6B', 0.2)}",
     )

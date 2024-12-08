@@ -1,0 +1,282 @@
+[
+    {
+        "name": "Platzi",
+        "logo": "/icons/platzi.svg",
+        "url": "https://platzi.com/",
+        "courses": [
+            {
+                "name": "Work Environment for Data and AI",
+                "issue_date": "2024-05-03",
+                "credential_url": "https://platzi.com/p/david.parra/learning-path/13490-datos-fundamentos-tecnicos/diploma/detalle/",
+                "technologies": [
+                    "Git",
+                    "CookieCutter",
+                    "Python",
+                    "Anaconda",
+                    "Docker"
+                ]
+            },
+            {
+                "name": "Bash Shell Programming Course",
+                "issue_date": "2024-04-28",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1468-bash-shell/diploma/detalle/",
+                "technologies": ["Bash"]
+            },
+            {
+                "name": "Handling Missing Data: Imputation Course",
+                "issue_date": "2024-04-10",
+                "credential_url": "https://platzi.com/p/david.parra/curso/4197-datos-faltantes-imputacion/diploma/detalle/",
+                "technologies": ["Python", "Statistics"]
+            },
+            {
+                "name": "Exploratory Data Analysis Course",
+                "issue_date": "2024-03-29",
+                "credential_url": "https://platzi.com/p/david.parra/curso/3568-analisis-exploratorio-datos/diploma/detalle/",
+                "technologies": ["Python", "Statistics"]
+            },
+            {
+                "name": "Mathematics for Data Science: Descriptive Statistics",
+                "issue_date": "2024-03-10",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2353-estadistica-descriptiva/diploma/detalle/",
+                "technologies": ["Python", "Statistics"]
+            },
+            {
+                "name": "Data Visualization with Matplotlib and Seaborn",
+                "issue_date": "2024-03-07",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2913-matplotlib-seaborn/diploma/detalle/",
+                "technologies": ["Python"]
+            },
+            {
+                "name": "PostgreSQL for Data Science",
+                "issue_date": "2024-02-13",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1780-postgresql-datos/diploma/detalle/",
+                "technologies": ["SQL", "PostgreSQL"]
+            },
+            {
+                "name": "Handling Missing Data: Detection and Exploration",
+                "issue_date": "2024-02-02",
+                "credential_url": "https://platzi.com/p/david.parra/curso/4196-datos-faltantes/diploma/detalle/",
+                "technologies": ["Python", "Pandas"]
+            },
+            {
+                "name": "Principles of Data Visualization for Business Intelligence",
+                "issue_date": "2024-02-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2195-visualizacion-datos/diploma/detalle/",
+                "technologies": ["Power BI"]
+            },
+            {
+                "name": "FastAPI: Database, Modularization, and Deployment",
+                "issue_date": "2023-12-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/5355-fastapi-modularizacion-datos/diploma/detalle/",
+                "technologies": ["Python", "FastAPI"]
+            },
+            {
+                "name": "FastAPI: Introduction, Operations, Validation, and Authentication",
+                "issue_date": "2023-12-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/5354-fastapi/diploma/detalle/",
+                "technologies": ["Python", "FastAPI"]
+            },
+            {
+                "name": "AWS Practical Course: Compute with EC2",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/3073-aws-ec2/diploma/detalle/",
+                "technologies": ["AWS", "EC2"]
+            },
+            {
+                "name": "AWS Practical Course: IAM Roles and Security",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/3044-aws-iam/diploma/detalle/",
+                "technologies": ["AWS", "IAM"]
+            },
+            {
+                "name": "Practical AWS Storage Course",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1424-storage-aws/diploma/detalle/",
+                "technologies": ["AWS", "S3"]
+            },
+            {
+                "name": "Data Warehousing and OLAP Modeling Course",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/7034-data-warehouse/diploma/detalle/",
+                "technologies": ["AWS", "SQL"]
+            },
+            {
+                "name": "Docker Course",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2066-docker/diploma/detalle/",
+                "technologies": ["Docker"]
+            },
+            {
+                "name": "ETL Fundamentals with Python and Pentaho",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/6211-fundamentos-etl/diploma/detalle/",
+                "technologies": ["AWS", "Python", "SQL"]
+            },
+            {
+                "name": "Introduction to AWS: Compute, Storage, and Databases",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2732-aws-computo/diploma/detalle/",
+                "technologies": ["AWS"]
+            },
+            {
+                "name": "Introduction to AWS: Cloud Computing Fundamentals",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2731-aws-fundamentos/diploma/detalle/",
+                "technologies": ["AWS"]
+            },
+            {
+                "name": "Introduction to AWS: Networks, Governance, and Machine Learning",
+                "issue_date": "2023-11-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2733-aws-redes/diploma/detalle/",
+                "technologies": ["AWS"]
+            },
+            {
+                "name": "Professional Work Environment Setup for Data Science",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2435-entorno-ciencia-datos/diploma/detalle/",
+                "technologies": ["CookieCutter", "Python", "Jinja", "Git"]
+            },
+            {
+                "name": "Data Science Work Environment with Jupyter Notebooks and Anaconda",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2434-jupyter-notebook/diploma/detalle/",
+                "technologies": ["Anaconda", "Git"]
+            },
+            {
+                "name": "Database Fundamentals",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1566-bd/diploma/detalle/",
+                "technologies": ["MySQL", "SQL"]
+            },
+            {
+                "name": "Data Engineering Fundamentals",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/5514-course/diploma/detalle/",
+                "technologies": ["ETL"]
+            },
+            {
+                "name": "Introduction to MongoDB",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/4987-mongodb/diploma/detalle/",
+                "technologies": ["MongoDB", "Docker"]
+            },
+            {
+                "name": "MongoDB Data Modeling",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/5356-mongodb-modelado/diploma/detalle/",
+                "technologies": ["MongoDB"]
+            },
+            {
+                "name": "Introduction to the Terminal and Command Line",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2292-course/diploma/detalle/",
+                "technologies": ["Bash"]
+            },
+            {
+                "name": "Data Manipulation and Transformation with Pandas and NumPy",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/2912-pandas-numpy/diploma/detalle/",
+                "technologies": ["Python", "Pandas", "NumPy"]
+            },
+            {
+                "name": "PostgreSQL Course",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1480-postgresql/diploma/detalle/",
+                "technologies": ["PostgreSQL", "SQL"]
+            },
+            {
+                "name": "Python: Comprehensions, Functions, and Error Handling",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/4260-course/diploma/detalle/",
+                "technologies": ["Python"]
+            },
+            {
+                "name": "Python: PIP and Virtual Environments",
+                "issue_date": "2023-10-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/4261-course/diploma/detalle/",
+                "technologies": ["Python", "PIP", "Docker"]
+            },
+            {
+                "name": "Prompt Engineering with ChatGPT",
+                "issue_date": "2023-04-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/7296-chatgpt/diploma/detalle/",
+                "technologies": ["Prompt Engineering"]
+            },
+            {
+                "name": "Professional Git and GitHub",
+                "issue_date": "2023-03-01",
+                "credential_url": "https://platzi.com/p/david.parra/curso/1557-git-github/diploma/detalle/",
+                "technologies": ["Git", "GitHub"]
+            }
+        ]
+    },
+    {
+        "name": "Udemy",
+        "logo": "/icons/udemy.svg",
+        "url": "https://udemy.com/",
+        "courses": [
+            {
+                "name": "Redis 5 Course",
+                "issue_date": "2024-09-05",
+                "credential_url": "https://rappi.udemy.com/certificate/UC-665c6c28-2672-4504-8fb1-d4c7e07c86e8/",
+                "technologies": ["Redis"]
+            },
+            {
+                "name": "Complete Microsoft Azure Fundamentals AZ-900",
+                "issue_date": "2024-01-01",
+                "credential_url": "https://www.udemy.com/certificate/UC-d9659f63-61a8-4820-9cfd-29378648af9a/",
+                "technologies": ["Azure"]
+            },
+            {
+                "name": "Advanced Django Course",
+                "issue_date": "2021-04-01",
+                "credential_url": "https://www.udemy.com/certificate/UC-a8f432a4-17f6-4e6a-b801-7b1bc2170622/",
+                "technologies": [
+                    "Python",
+                    "Django",
+                    "HTML",
+                    "CSS",
+                    "SQL",
+                    "Git"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Coursera",
+        "logo": "/icons/coursera.svg",
+        "url": "https://www.coursera.org/",
+        "courses": [
+            {
+                "name": "Complete Spark with Databricks (Big Data)",
+                "issue_date": "2024-01-01",
+                "credential_url": "https://www.coursera.org/account/accomplishments/records/RQG5CWHQTY6G",
+                "technologies": [
+                    "Azure Databricks",
+                    "Python",
+                    "Apache Spark",
+                    "SQL"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Google",
+        "logo": "/icons/google.svg",
+        "url": "https://grow.google/intl/es/courses-and-tools/",
+        "courses": [
+            {
+                "name": "Advanced Google Analytics",
+                "issue_date": "2019-07-15",
+                "credential_url": "https://analytics.google.com/analytics/academy/certificate/R33dVGyQSmaJSqbbW_nS_w",
+                "technologies": ["Google Analytics"]
+            },
+            {
+                "name": "Google Analytics for Beginners",
+                "issue_date": "2019-07-01",
+                "credential_url": "https://analytics.google.com/analytics/academy/certificate/RbhZX3hCR5iHhNvzdYwcrg",
+                "technologies": ["Google Analytics"]
+            }
+        ]
+    }
+]

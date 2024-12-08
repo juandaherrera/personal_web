@@ -1,4 +1,7 @@
 .web
 .venv
+.git
 .gitignore
 __pycache__/*
+Dockerfile
+uploaded_files

@@ -36,5 +36,5 @@ def college_degree(degree: Degree) -> rx.Component:
             max_width=["90%", "85%", "80%", "80%", "75%"],
         ),
         align="center",
-        spacing=Size.DEFAULT.value,
+        spacing="3",
     )

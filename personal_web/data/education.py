@@ -18,7 +18,12 @@ class Degree(BaseModel):
         return f"{self.start_year} - {self.end_year}"
 
 
-with open("assets/data/education.json") as file:
+with open("assets/data/sp/education.json", "r") as file:
     education_data = json.load(file)
 
+with open("assets/data/en/education.json", "r") as file:
+    education_data_en = json.load(file)
+
+
 education_list: List[Degree] = [Degree(**item) for item in education_data]
+education_en_list: List[Degree] = [Degree(**item) for item in education_data_en]
