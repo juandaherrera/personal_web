@@ -19,7 +19,13 @@ class Certification(BaseModel):
         return f"{self.start_year} - {self.end_year}"
 
 
-with open("assets/data/certifications.json") as file:
+with open("assets/data/sp/certifications.json", "r") as file:
     certifications_data = json.load(file)
 
+with open("assets/data/en/certifications.json", "r") as file:
+    certifications_data_en = json.load(file)
+
 certifications_list: List[Certification] = [Certification(**item) for item in certifications_data]
+certifications_en_list: List[Certification] = [
+    Certification(**item) for item in certifications_data_en
+]

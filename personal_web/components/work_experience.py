@@ -2,6 +2,7 @@ import reflex as rx
 
 import personal_web.styles.styles as styles
 from personal_web.data.job import Job
+from personal_web.state import MainState
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
@@ -85,7 +86,11 @@ def _we_panel(job: Job) -> rx.Component:
         rx.cond(
             job.description != "",
             title(
-                "📋 Función principal",
+                rx.cond(
+                    MainState.is_language_en,
+                    "📋 Main Function",
+                    "📋 Función principal",
+                ),
                 font_size=FontSize.SECOND_SUBTITLE.value,
                 padding_top=Size.DEFAULT.value,
             ),
@@ -101,7 +106,14 @@ def _we_panel(job: Job) -> rx.Component:
         ),
         rx.cond(
             job.achievements != "",
-            title("🏆 Logros", font_size=FontSize.SECOND_SUBTITLE.value),
+            title(
+                rx.cond(
+                    MainState.is_language_en,
+                    "🏆 Achievements",
+                    "🏆 Logros",
+                ),
+                font_size=FontSize.SECOND_SUBTITLE.value,
+            ),
         ),
         rx.cond(
             job.achievements != "",

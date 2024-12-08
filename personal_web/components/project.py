@@ -86,6 +86,6 @@ def _project_card_footer(
                 is_external=True,
             ),
         ),
-        spacing=Size.DEFAULT.value,
+        spacing="2",
         width="100%",
     )

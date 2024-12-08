@@ -12,8 +12,14 @@ def default_button(
     button_color: str,
     text_color: str,
     url: str = "/",
+    pointer: bool = False,
     **kwargs,
 ) -> rx.Component:
+    hover_dict = {
+        "background_color": "transparent",
+        "cursor": "pointer" if pointer else "default",
+        "box_shadow": f"0 0 8px {button_color}, 0 0 12px {button_color}",
+    }
     return rx.link(
         rx.button(
             rx.hstack(
@@ -29,10 +35,7 @@ def default_button(
             style=styles.DEFAULT_BUTTON_STYLE,
             border_color=button_color,
             transition="box-shadow 0.3s ease",
-            _hover={
-                "background_color": "transparent",
-                "box_shadow": f"0 0 8px {button_color}, 0 0 12px {button_color}",
-            },
+            _hover=hover_dict,
         ),
         href=url,
         **kwargs,

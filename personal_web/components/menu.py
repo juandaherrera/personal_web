@@ -3,6 +3,8 @@ import reflex as rx
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
 
+from .language_switch import language_switch
+
 
 def menu() -> rx.Component:
     return rx.chakra.menu(
@@ -27,6 +29,16 @@ def menu() -> rx.Component:
             },
         ),
         rx.chakra.menu_list(
+            rx.mobile_and_tablet(
+                rx.vstack(
+                    language_switch(),
+                    padding_x=Size.MEDIUM.value,
+                    padding_y=Size.MEDIUM.value,
+                )
+            ),
+            rx.mobile_and_tablet(
+                rx.chakra.menu_divider(),
+            ),
             _menu_item("Acerca de mí", "👨🏻‍💻", "#about_me"),
             _menu_item("Experiencia", "💼", "#experience"),
             _menu_item("Proyectos", "💻", "#projects"),

@@ -4,10 +4,10 @@ import personal_web.styles.styles as styles
 from personal_web.components.texts import title
 from personal_web.components.work_experience import tech_badge
 from personal_web.data.courses import Course, School
+from personal_web.state import MainState
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
-from personal_web.utils import hex_to_rgb
 
 from .buttons import rounded_button
 
@@ -28,7 +28,7 @@ def school(school: School) -> rx.Component:
                         md="3",
                     ),
                     width="100%",
-                    spacing=Size.DEFAULT_BIG.value,
+                    spacing="5",
                     padding_top=Size.DEFAULT_BIG.value,
                 )
             ),
@@ -87,16 +87,20 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             ),
             rx.text(
                 rx.text.span(courses_qty, color=Color.SECONDARY.value),
-                " Cursos Finalizados",
+                rx.cond(
+                    MainState.is_language_en,
+                    " Completed Courses",
+                    " Cursos Finalizados",
+                ),
                 font_size=FontSize.BODY.value,
                 text_align="left",
             ),
             align_items="start",
-            spacing=Size.VERY_SMALL.value,
+            spacing="0",
         ),
         rx.spacer(),
         rx.chakra.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE),
         align_items="center",
         width="100%",
-        spacing=Size.DEFAULT.value,
+        spacing="5",
     )

@@ -4,6 +4,7 @@ import personal_web.constants as const
 import personal_web.utils as utils
 from personal_web.components.footer import footer
 from personal_web.components.navbar import navbar
+from personal_web.state import MainState
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 from personal_web.views.about_me import about_me
@@ -29,12 +30,12 @@ def index() -> rx.Component:
         presentation(),
         about_me(),
         technologies(),
-        experience(),
+        rx.cond(MainState.is_language_en, experience(en=True), experience()),
         rx.vstack(
-            projects(),
-            education(),
-            certifications(),
-            courses(),
+            rx.cond(MainState.is_language_en, projects(en=True), projects()),
+            rx.cond(MainState.is_language_en, education(en=True), education()),
+            rx.cond(MainState.is_language_en, certifications(en=True), certifications()),
+            rx.cond(MainState.is_language_en, courses(en=True), courses()),
             footer(),
             align="center",
             width="100%",

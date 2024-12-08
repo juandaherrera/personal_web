@@ -1,35 +1,23 @@
-# Stage 1: Construir archivos estáticos con Python
-FROM python:3.11 AS builder
+FROM python:3.11
+
+RUN apt-get update -y && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# Copia los archivos necesarios para instalar dependencias
 COPY requirements.txt .
 
-# Configura el entorno virtual de Python
-ENV VIRTUAL_ENV=/app/.venv_docker
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN python3.11 -m venv $VIRTUAL_ENV
+RUN pip install -r requirements.txt
 
-# Instala las dependencias
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copia todo el código fuente de la aplicación al contenedor
 COPY . .
 
-# Genera los archivos estáticos
-RUN reflex init
-RUN reflex export --frontend-only --no-zip
+RUN reflex export --frontend-only --no-zip && mv .web/_static/* /usr/share/nginx/html/ && rm -rf .web
 
-# Stage 2: Configurar Nginx para servir los archivos estáticos
-FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copia los archivos estáticos del builder al directorio de Nginx
-COPY --from=builder /app/.web/_static /usr/share/nginx/html
+STOPSIGNAL SIGKILL
 
-# Expone el puerto 80
-EXPOSE 80
+EXPOSE 8080
 
-# Inicia nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD [ -d alembic ] && reflex db migrate; \
+    service nginx start && \
+    exec reflex run --env prod --backend-only

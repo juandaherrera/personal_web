@@ -3,6 +3,7 @@ import datetime
 import reflex as rx
 
 import personal_web.constants as const
+from personal_web.state import MainState
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import FOOTER_LOGO_STYLE, FOOTER_STYLE, Size
 
@@ -14,22 +15,35 @@ def footer() -> rx.Component:
             alt="Logo de Juan David Herrera. Es una 'j' y una 'd juntas",
             style=FOOTER_LOGO_STYLE,
         ),
-        rx.link(
-            rx.text(
-                rx.text.span(
-                    f"© {datetime.date.today().year} ",
-                ),
-                rx.text.span("by juandaherrera "),
-                rx.text.span(f"v{const.version}", color=Color.SECONDARY.value),
-                rx.text.span("."),
-                font_size=Size.DEFAULT.value,
+        rx.text(
+            rx.text.span(
+                f"© {datetime.date.today().year} ",
             ),
-            color="inherit",
-            href=const.REPO_URL,
-            is_external=True,
+            rx.text.span("by juandaherrera "),
+            rx.link(
+                rx.text.span(
+                    f"v{const.version}",
+                    color=Color.SECONDARY.value,
+                    transition="transform 0.2s ease, text-shadow 0.3s ease, color 0.5s ease",
+                    _hover={
+                        "color": Color.SECONDARY.value,
+                        "text_shadow": f"0 0 6px {Color.PRIMARY.value}",
+                        "transform": "scale(1.25)",
+                    },
+                ),
+                color="inherit",
+                href=const.REPO_URL,
+                is_external=True,
+            ),
+            rx.text.span("."),
+            font_size=Size.DEFAULT.value,
         ),
         rx.text(
-            "Built with ❤ from Palmira, Colombia.",
+            rx.cond(
+                MainState.is_language_en,
+                "Built with 🧡 from Palmira, Colombia 🇨🇴.",
+                "Hecho con 🧡 desde Palmira, Colombia 🇨🇴.",
+            ),
             font_size=Size.DEFAULT.value,
             margin_top=Size.ZERO.value,
         ),

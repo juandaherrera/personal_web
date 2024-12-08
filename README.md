@@ -1,7 +1,7 @@
 # 👋🏻 Bienvenido a mi Web
 
 [![Python](https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)
-[![Reflex](https://img.shields.io/badge/Reflex-0.5.9-5646ED?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://reflex.dev)
+[![Reflex](https://img.shields.io/badge/Reflex-0.6.6-5646ED?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://reflex.dev)
 
 ## Descripción
 Este es mi rincón digital, un espacio donde convergen mi vida profesional y, próximamente, también la personal. Como profesional apasionado por los datos, esta web es el reflejo de mi carrera: mis proyectos, estudios, logros y aspectos personales que definen mi trayectoria. Aquí encontrarás una mezcla de experiencias y conocimientos que he ido acumulando a lo largo de mi vida profesional.
@@ -22,7 +22,7 @@ El sitio está estructurado en cinco secciones principales que representan difer
 * [X] Sección de Certificaciones.
 * [ ] Testimonios / Recomendaciones.
 * [ ] Formulario de contacto.
-* [ ] Switch de idioma [ES / EN]
+* [X] Switch de idioma [ES / EN]
 
 
 ## Instalación y despliegue local
