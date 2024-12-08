@@ -1,4 +1,5 @@
 import reflex as rx
+import reflex_chakra as rxc
 
 import personal_web.styles.styles as styles
 from personal_web.styles.colors import Color, TextColor
@@ -53,9 +54,9 @@ def rounded_button(
     **kwargs,
 ):
     return rx.link(
-        rx.chakra.hstack(
-            rx.chakra.text(text),
-            rx.chakra.icon(tag=icon),
+        rxc.hstack(
+            rxc.text(text),
+            rxc.icon(tag=icon),
             color=text_color,
             font_size=text_size,
             spacing=Size.SMALL.value,

@@ -1,6 +1,7 @@
 from enum import Enum
 
 import reflex as rx
+import reflex_chakra as rxc
 from reflex.components.radix.themes.typography.link import Link
 
 from personal_web.utils import hex_to_rgb
@@ -39,7 +40,7 @@ BASE_STYLE = {
     "font_weight": FontWeight.LIGHT.value,
     "color": TextColor.PRIMARY.value,
     "scroll_behavior": "smooth",
-    rx.chakra.Link: {"text_decoration": "none", "_hover": {}},
+    rxc.Link: {"text_decoration": "none", "_hover": {}},
     Link: {"text_decoration": "none", "_hover": {}},
 }
 
@@ -134,6 +135,7 @@ TECH_BADGE_STYLE = dict(
     transition="transform 0.18s ease",
     _hover={
         "transform": "scale(1.15)",
+        "cursor": "default",
     },
 )
 

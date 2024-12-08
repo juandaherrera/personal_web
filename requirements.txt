@@ -135,7 +135,9 @@ reflex==0.6.6.post2
     #   -r requirements.in
     #   reflex-chakra
 reflex-chakra==0.6.2
-    # via reflex
+    # via
+    #   -r requirements.in
+    #   reflex
 reflex-hosting-cli==0.1.29
     # via reflex
 requests==2.32.3

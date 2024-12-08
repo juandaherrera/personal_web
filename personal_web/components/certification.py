@@ -1,4 +1,5 @@
 import reflex as rx
+import reflex_chakra as rxc
 
 from personal_web.components.texts import title
 from personal_web.data.certification import Certification
@@ -21,7 +22,7 @@ def certification(certification: Certification) -> rx.Component:
         rx.vstack(
             title(
                 certification.title,
-                size="6",
+                font_size=FontSize.SUBTITLES.value,
                 margin_bottom=Size.ZERO.value,
             ),
             rx.hstack(
@@ -40,7 +41,7 @@ def certification(certification: Certification) -> rx.Component:
                 ),
                 rx.cond(
                     certification.credential_url != '/',
-                    rx.chakra.divider(
+                    rxc.divider(
                         orientation="vertical",
                         border_color=TextColor.PRIMARY.value,
                         height=Size.BIG.value,

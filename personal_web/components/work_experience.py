@@ -1,137 +1,172 @@
+from datetime import date
+
 import reflex as rx
 
 import personal_web.styles.styles as styles
-from personal_web.data.job import Job
+from personal_web.data.job import Company, Job, resume, resume_en
 from personal_web.state import MainState
 from personal_web.styles.colors import Color, TextColor
-from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 
-from .texts import title
 
-
-def work_experience(job: Job) -> rx.Component:
-    return rx.chakra.accordion(
-        rx.chakra.accordion_item(
-            rx.chakra.accordion_button(_we_header(job), _hover={}),
-            rx.chakra.accordion_panel(_we_panel(job)),
-            border_top_width=Size.ZERO.value,
-            border_color=Color.SECONDARY.value,
-        ),
-        allow_toggle=True,
-        width="100%",
+def company_experience(company: Company, en: bool = False) -> rx.Component:
+    present_word = "present" if en else "actualidad"
+    end_date = (
+        company.end_date.strftime("%b. %Y") if company.end_date < date.today() else present_word
     )
-
-
-def _we_header(job: Job) -> rx.Component:
-    return rx.chakra.hstack(
-        rx.chakra.vstack(
-            rx.chakra.hstack(
-                # Logo compañía
-                rx.chakra.center(
-                    rx.chakra.image(
-                        src=job.company_logo,
-                        alt=f"Logo de {job.company_name}",
-                        height="2.5em",
-                        aspect_ratio=2 / 1,
+    return rx.vstack(
+        rx.hstack(
+            rx.link(
+                rx.tooltip(
+                    rx.image(
+                        src=company.company_logo,
+                        alt=company.company_name,
+                        width=rx.breakpoints(
+                            initial="4em",
+                            md="5em",
+                            lg="6em",
+                        ),
+                        height=rx.breakpoints(
+                            initial="4em",
+                            md="5em",
+                            lg="6em",
+                        ),
+                        padding="0.2em",
+                        transition="transform 0.2s ease",
+                        _hover={
+                            "transform": "scale(1.1)",
+                        },
                     ),
-                    width=["4em", "5.5em"],
-                ),
-                # Divisor
-                rx.chakra.center(
-                    rx.chakra.divider(
-                        orientation="vertical",
-                        border_color=TextColor.PRIMARY.value,
+                    content=(
+                        f"Go to {company.company_name} website"
+                        if en
+                        else f"Ir al sitio web de {company.company_name}"
                     ),
-                    height=Size.BIG.value,
+                    side_offset=-5,
                 ),
-                # Cargo
-                rx.chakra.center(
-                    title(job.title, font_size=FontSize.SUBTITLES.value),
-                    text_align="left",
-                ),
-                spacing=Size.DEFAULT_MEDIUM.value,
+                is_external=True,
+                href=company.company_url,
+                _hover={"cursor": "pointer"},
             ),
-            # Fechas cargo
-            rx.chakra.text(
-                rx.chakra.span(
-                    f"{job.start_date_format} - {job.end_date_format}",
-                    color=Color.SECONDARY.value,
+            rx.divider(orientation="vertical", height="4.5em", border="0.3px solid #E2E8F0"),
+            rx.vstack(
+                rx.heading(company.company_name, size=rx.breakpoints(initial="6", md="7")),
+                rx.text(
+                    f"{company.start_date.strftime('%b. %Y')} -  {end_date}",
                 ),
-                rx.chakra.span(
-                    f" · {job.company_name}",
-                    color=Color.TERTIARY.value,
-                ),
-                # TODO validar qué sucede con el calculate_duration en el docker
-                # rx.chakra.span(
-                #     f" · {job.calculate_duration()}",
-                #     color=Color.TERTIARY.value,
-                # ),
-                text_align="left",
-                font_size=FontSize.SMALL_TEXT.value,
             ),
-            align_items="start",
+            spacing="5",
+            align="center",
         ),
-        rx.chakra.spacer(),
-        # Ícono de acordión
-        rx.chakra.center(
-            rx.chakra.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE)
+        rx.divider(color_scheme="red"),
+        rx.accordion.root(
+            *[job_experience(job, en) for job in company.jobs],
+            width="100%",
+            variant="ghost",
+            collapsible=True,
+            color_scheme="gray",
+            padding_left=rx.breakpoints(
+                initial="0.5em",
+                md="1.5em",
+                lg="2em",
+            ),
+            radius="large",
+            type="multiple",
         ),
         width="100%",
     )
 
 
-def _we_panel(job: Job) -> rx.Component:
-    return rx.chakra.vstack(
+def job_experience(job: Job, en: bool = False) -> rx.Component:
+    present_word = "present" if en else "actualidad"
+    end_date = job.end_date.strftime("%b. %Y") if job.end_date else present_word
+    return rx.accordion.item(
+        header=rx.vstack(
+            rx.heading(
+                job.title,
+                size=rx.breakpoints(
+                    initial="5",
+                    md="6",
+                ),
+                align="left",
+            ),
+            rx.text(
+                f"{job.start_date.strftime('%b. %Y')} -  {end_date}",
+                color_scheme="red",
+            ),
+            align="start",
+        ),
+        content=job_experience_content(job),
+        color=TextColor.PRIMARY.value,
+    )
+
+
+def job_experience_content(job: Job) -> rx.Component:
+    return rx.vstack(
         rx.cond(
             job.description != "",
-            title(
+            rx.heading(
                 rx.cond(
                     MainState.is_language_en,
                     "📋 Main Function",
                     "📋 Función principal",
                 ),
-                font_size=FontSize.SECOND_SUBTITLE.value,
-                padding_top=Size.DEFAULT.value,
+                size=rx.breakpoints(
+                    initial="4",
+                    md="5",
+                ),
             ),
         ),
         rx.cond(
             job.description != "",
-            rx.chakra.text(
+            rx.text(
                 job.description,
                 text_align="justify",
-                font_size=FontSize.BODY.value,
-                padding_bottom=Size.DEFAULT.value,
+                size=rx.breakpoints(
+                    initial="2",
+                    md="4",
+                ),
             ),
         ),
         rx.cond(
             job.achievements != "",
-            title(
+            rx.heading(
                 rx.cond(
                     MainState.is_language_en,
                     "🏆 Achievements",
                     "🏆 Logros",
                 ),
-                font_size=FontSize.SECOND_SUBTITLE.value,
+                size=rx.breakpoints(
+                    initial="4",
+                    md="5",
+                ),
             ),
         ),
         rx.cond(
             job.achievements != "",
-            rx.chakra.text(
+            rx.text(
                 job.achievements,
                 text_align="justify",
-                font_size=FontSize.BODY.value,
+                size=rx.breakpoints(
+                    initial="2",
+                    md="4",
+                ),
             ),
         ),
         rx.cond(
             len(job.technologies) > 0,
-            rx.chakra.flex(
+            rx.flex(
                 *[tech_badge(name) for name in job.technologies],
                 padding_top=Size.DEFAULT_MEDIUM.value,
                 padding_bottom=Size.ZERO.value,
-                spacing=Size.DEFAULT_BIG.value,
+                spacing="0",
                 flex_wrap="wrap",
             ),
+        ),
+        padding_left=rx.breakpoints(
+            initial="0.5em",
+            md="1.5em",
+            lg="2em",
         ),
         align_items="start",
     )

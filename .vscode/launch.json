@@ -6,7 +6,8 @@
             "type": "debugpy",
             "request": "launch",
             "module": "reflex",
-            "args": "run"
+            "args": "run",
+            "justMyCode": true,
         },
     ],
 }

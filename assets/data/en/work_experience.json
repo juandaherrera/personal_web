@@ -1,68 +1,109 @@
 [
     {
-        "title": "Python Developer & Data Engineer",
-        "start_date": "2024-03-18",
-        "end_date": "",
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Responsible for maintaining and developing the microservice that calculates couriers' earnings for each order, as well as designing and maintaining the earnings and incentives datamarts. Also in charge of two additional microservices: one for estimating incentive burn using ML models and another for managing the configurations of the earnings microservice, including both front-end and back-end.",
-        "achievements": "",
-        "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]
+        "company_logo": "icons/rappi_mustache.svg",
+        "jobs": [
+            {
+                "title": "Python Developer & Data Engineer",
+                "start_date": "2024-03-18",
+                "end_date": null,
+                "description": "Responsible for maintaining and developing the microservice that calculates couriers' earnings for each order, as well as designing and maintaining the earnings and incentives datamarts. Also in charge of two additional microservices: one for estimating incentive burn using ML models and another for managing the configurations of the earnings microservice, including both front-end and back-end.",
+                "achievements": "",
+                "technologies": [
+                    "Python",
+                    "Airflow",
+                    "FastAPI",
+                    "Docker",
+                    "Kafka",
+                    "PostgreSQL",
+                    "SQL",
+                    "Snowflake",
+                    "Git",
+                    "Bitbucket"
+                ]
+            },
+            {
+                "title": "Senior Data Analyst",
+                "start_date": "2023-07-01",
+                "end_date": "2024-03-17",
+                "description": "Responsible for maintaining and managing the data analytics infrastructure for the Incentives team globally, ensuring the availability of accurate and reliable data to support strategic decision-making in the area.",
+                "achievements": "Designed, implemented, and managed the central data analytics infrastructure for the Incentives team in 9 countries at Rappi, using tools like Apache Airflow and Snowflake to ensure the availability and integrity of reliable data. Successfully led an Incentives segmentation project, improving budget allocation and couriers' experience through intelligent segmentations based on Machine Learning models. Led the design and execution of A/B tests to enhance couriers' performance during Incentives periods.",
+                "technologies": [
+                    "Python",
+                    "Airflow",
+                    "SQL",
+                    "Snowflake",
+                    "Redash",
+                    "Docker",
+                    "Power BI",
+                    "Google Sheets",
+                    "Git",
+                    "Bitbucket"
+                ]
+            },
+            {
+                "title": "Business Intelligence Analyst",
+                "start_date": "2022-06-01",
+                "end_date": "2023-07-01",
+                "description": "Supporting the decision-making process of the Colombia operation by providing the necessary data and analysis.",
+                "achievements": "Provided, optimized, and automated data and dashboards in PBI required for daily review of important metrics for the operation (consisting of more than 15 dashboards and over 200 queries). Created different predictive models to anticipate certain behaviors in couriers with up to 95% accuracy using multiple linear/logistic regressions and machine learning concepts. Additionally, built different DAGs in Apache Airflow to automate loading and visualization processes of data from different operation verticals.",
+                "technologies": [
+                    "Python",
+                    "Airflow",
+                    "SQL",
+                    "Snowflake",
+                    "Redash",
+                    "Power BI",
+                    "Google Sheets",
+                    "Git",
+                    "Bitbucket"
+                ]
+            }
+        ]
     },
     {
-        "title": "Senior Data Analyst",
-        "start_date": "2023-07-01",
-        "end_date": "2024-03-17",
-        "company_name": "Rappi",
-        "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Responsible for maintaining and managing the data analytics infrastructure for the Incentives team globally, ensuring the availability of accurate and reliable data to support strategic decision-making in the area.",
-        "achievements": "Designed, implemented, and managed the central data analytics infrastructure for the Incentives team in 9 countries at Rappi, using tools like Apache Airflow and Snowflake to ensure the availability and integrity of reliable data. Successfully led an Incentives segmentation project, improving budget allocation and couriers' experience through intelligent segmentations based on Machine Learning models. Led the design and execution of A/B tests to enhance couriers' performance during Incentives periods.",
-        "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Docker", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
-    },
-    {
-        "title": "Business Intelligence Analyst",
-        "start_date": "2022-06-01",
-        "end_date": "2023-07-01",
-        "company_name": "Rappi",
-        "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Supporting the decision-making process of the Colombia operation by providing the necessary data and analysis.",
-        "achievements": "Provided, optimized, and automated data and dashboards in PBI required for daily review of important metrics for the operation (consisting of more than 15 dashboards and over 200 queries). Created different predictive models to anticipate certain behaviors in couriers with up to 95% accuracy using multiple linear/logistic regressions and machine learning concepts. Additionally, built different DAGs in Apache Airflow to automate loading and visualization processes of data from different operation verticals.",
-        "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
-    },
-    {
-        "title": "Data Analyst",
-        "start_date": "2022-01-01",
-        "end_date": "2022-06-01",
         "company_name": "Tecnoquímicas",
         "company_url": "https://www.tqconfiable.com/",
         "company_logo": "icons/tq.svg",
-        "description": "Process and analyze information related to Pharma Operations management.",
-        "achievements": "Designed and implemented an indicator, along with its Power BI dashboard, that allowed measuring the effectiveness with which Business Area made their sales estimates and verifying if non-compliance was caused by Production Area. Additionally, through Power BI, automated the process of creating multiple periodic presentations that were previously done manually, not only reducing the processing time but also improving the quality and analysis of the presented information.",
-        "technologies": ["Microsoft Excel", "Power BI", "Power Query", "DAX", "VBA"]
+        "jobs": [
+            {
+                "title": "Data Analyst",
+                "start_date": "2022-01-01",
+                "end_date": "2022-06-01",
+                "description": "Process and analyze information related to Pharma Operations management.",
+                "achievements": "Designed and implemented an indicator, along with its Power BI dashboard, that allowed measuring the effectiveness with which Business Area made their sales estimates and verifying if non-compliance was caused by Production Area. Additionally, through Power BI, automated the process of creating multiple periodic presentations that were previously done manually, not only reducing the processing time but also improving the quality and analysis of the presented information.",
+                "technologies": [
+                    "Microsoft Excel",
+                    "Power BI",
+                    "Power Query",
+                    "DAX",
+                    "VBA"
+                ]
+            },
+            {
+                "title": "Intern",
+                "start_date": "2021-07-01",
+                "end_date": "2022-01-01",
+                "description": "Conducting man-hours assessments, mapping their production/administrative processes, and generating improvement opportunities.",
+                "achievements": "Designed a tool that enabled the gathering of man-hours information for 211 products in a database of over 450,000 records. Implemented quantitative and qualitative tracking and control mechanisms and tools that allowed diagnosing the state of the Human Sterile Production Area. Created a tool to automatically schedule over 60 operators.",
+                "technologies": ["Microsoft Excel", "VBA", "Python"]
+            }
+        ]
     },
     {
-        "title": "Intern",
-        "start_date": "2021-07-01",
-        "end_date": "2022-01-01",
-        "company_name": "Tecnoquímicas",
-        "company_url": "https://www.tqconfiable.com/",
-        "company_logo": "icons/tq.svg",
-        "description": "Conducting man-hours assessments, mapping their production/administrative processes, and generating improvement opportunities.",
-        "achievements": "Designed a tool that enabled the gathering of man-hours information for 211 products in a database of over 450,000 records. Implemented quantitative and qualitative tracking and control mechanisms and tools that allowed diagnosing the state of the Human Sterile Production Area. Created a tool to automatically schedule over 60 operators.",
-        "technologies": ["Microsoft Excel", "VBA", "Python"]
-    },
-    {
-        "title": "Operations Research Teaching Assistant",
-        "start_date": "2019-01-01",
-        "end_date": "2020-06-01",
         "company_name": "ICESI University",
-        "company_url": "https://www.icesi.edu.co/es/",
+        "company_url": "https://www.icesi.edu.co/",
         "company_logo": "icons/icesi.svg",
-        "description": "Making demand forecasts, managing purchases and the sales channel. Additionally, in charge of generating the brand's visual identity.",
-        "achievements": "Designed the entire brand's visual identity, generated greater recognition of it using Business Facebook ads, standardized customer service processes, managed purchases necessary to supply inventory, and designed software for general company management (customers, suppliers, purchases, sales, and inventories).",
-        "technologies": ["Microsoft Excel", "AMPL", "Python"]
+        "jobs": [
+            {
+                "title": "Operations Research Teaching Assistant",
+                "start_date": "2019-01-01",
+                "end_date": "2020-06-01",
+                "description": "Making demand forecasts, managing purchases and the sales channel. Additionally, in charge of generating the brand's visual identity.",
+                "achievements": "Designed the entire brand's visual identity, generated greater recognition of it using Business Facebook ads, standardized customer service processes, managed purchases necessary to supply inventory, and designed software for general company management (customers, suppliers, purchases, sales, and inventories).",
+                "technologies": ["Microsoft Excel", "AMPL", "Python"]
+            }
+        ]
     }
 ]

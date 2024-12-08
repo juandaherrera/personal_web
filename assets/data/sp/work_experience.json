@@ -1,68 +1,71 @@
 [
     {
-        "title": "Python Developer & Data Engineer",
-        "start_date": "2024-03-18",
-        "end_date": "",
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Responsable del mantenimiento y desarrollo del microservicio que calcula las ganancias de los repartidores en cada orden, así como del diseño y mantenimiento de los datamarts de ganancias e incentivos. También, encargado de otros dos microservicios: uno para la estimación del costo de incentivos mediante modelos de ML y otro para la gestión de las configuraciones del microservicio de ganancias, que incluye tanto el front-end como el back-end.",
-        "achievements": "",
-        "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]
+        "company_logo": "icons/rappi_mustache.svg",
+        "jobs": [
+            {
+                "title": "Python Developer & Data Engineer",
+                "start_date": "2024-03-18",
+                "end_date": null,
+                "description": "Responsable del mantenimiento y desarrollo del microservicio que calcula las ganancias de los repartidores en cada orden, así como del diseño y mantenimiento de los datamarts de ganancias e incentivos. También, encargado de otros dos microservicios: uno para la estimación del costo de incentivos mediante modelos de ML y otro para la gestión de las configuraciones del microservicio de ganancias, que incluye tanto el front-end como el back-end.",
+                "achievements": "",
+                "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]
+            },
+            {
+                "title": "Senior Data Analyst",
+                "start_date": "2023-07-01",
+                "end_date": "2024-03-17",
+                "description": "Responsable de mantener y gestionar la infraestructura de data analytics para el equipo de Incentivos a nivel global, garantizando la disponibilidad de datos precisos y confiables para respaldar la toma de decisiones estratégicas en el área.",
+                "achievements": "Diseñé, implementé y gestioné la infraestructura central de data analytics para el equipo de Incentivos en 9 países de Rappi, utilizando tecnologías como Apache Airflow y Snowflake para garantizar la disponibilidad e integridad de datos confiables. Lideré con éxito un proyecto de segmentación de Incentivos, mejorando la asignación presupuestaria y la experiencia de los repartidores a través de segmentaciones inteligentes basadas en modelos de Machine Learning.",
+                "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Docker", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
+            },
+            {
+                "title": "Business Intelligence Analyst",
+                "start_date": "2022-06-01",
+                "end_date": "2023-07-01",
+                "description": "Apoyar el proceso de toma de decisiones de la operación de Colombia, proporcionando los datos y análisis necesarios para ello.",
+                "achievements": "He brindado, optimizado y automatizado la data y dashboards en PBI requeridos para el seguimiento diario/semanal/mensual de métricas importantes para la operación (siendo más de 15 dashboards y más de 200 queries). He realizado diferentes modelos predictivos para anticipar ciertos comportamientos en los repartidores con un ajuste/precisión de hasta el 95%, haciendo uso de regresiones lineales/logísticas múltiples. También he realizado análisis de texto por medio de diferentes librerías de procesamiento de lenguaje natural en python, lo que ha permitido hallar diferentes patrones y plantear clasificaciones dentro de los textos analizados.",
+                "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
+            }
+        ]
     },
     {
-        "title": "Senior Data Analyst",
-        "start_date": "2023-07-01",
-        "end_date": "2024-03-17",
-        "company_name": "Rappi",
-        "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Responsable de mantener y gestionar la infraestructura de data analytics para el equipo de Incentivos a nivel global, garantizando la disponibilidad de datos precisos y confiables para respaldar la toma de decisiones estratégicas en el área.",
-        "achievements": "Diseñé, implementé y gestioné la infraestructura central de data analytics para el equipo de Incentivos en 9 países de Rappi, utilizando tecnologías como Apache Airflow y Snowflake para garantizar la disponibilidad e integridad de datos confiables. Lideré con éxito un proyecto de segmentación de Incentivos, mejorando la asignación presupuestaria y la experiencia de los repartidores a través de segmentaciones inteligentes basadas en modelos de Machine Learning.",
-        "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Docker", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
-    },
-    {
-        "title": "Business Intelligence Analyst",
-        "start_date": "2022-06-01",
-        "end_date": "2023-07-01",
-        "company_name": "Rappi",
-        "company_url": "https://www.rappi.com.co/",
-        "company_logo": "icons/rappi.svg",
-        "description": "Apoyar el proceso de toma de decisiones de la operación de Colombia, proporcionando los datos y análisis necesarios para ello.",
-        "achievements": "He brindado, optimizado y automatizado la data y dashboards en PBI requeridos para el seguimiento diario/semanal/mensual de métricas importantes para la operación (siendo más de 15 dashboards y más de 200 queries). He realizado diferentes modelos predictivos para anticipar ciertos comportamientos en los repartidores con un ajuste/precisión de hasta el 95%, haciendo uso de regresiones lineales/logísticas múltiples. También he realizado análisis de texto por medio de diferentes librerías de procesamiento de lenguaje natural en python, lo que ha permitido hallar diferentes patrones y plantear clasificaciones dentro de los textos analizados.",
-        "technologies": ["Python", "Airflow", "SQL", "Snowflake", "Redash", "Power BI", "Google Sheets", "Git",  "Bitbucket"]
-    },
-    {
-        "title": "Data Analyst",
-        "start_date": "2022-01-01",
-        "end_date": "2022-06-01",
         "company_name": "Tecnoquímicas",
         "company_url": "https://www.tqconfiable.com/",
         "company_logo": "icons/tq.svg",
-        "description": "Procesar y analizar información relacionada con la gestión de Operaciones Farma.",
-        "achievements": "Diseñé e implementé un indicador, junto a su tablero de control en Power BI, que permitió medir la eficacia con la que las Unidades de Negocio realizaban sus estimados de venta y verificar si el incumplimiento de estos era ocasionado por causales de las Unidades Productivas. Además, por medio de Power BI, automaticé el proceso de realización de múltiples presentaciones periódicas que se construían manualmente, no solo reduciendo el tiempo de proceso, sino también mejorando la calidad y análisis de la información presentada.",
-        "technologies": ["Microsoft Excel", "Power BI", "Power Query", "DAX", "VBA"]
+        "jobs": [
+            {
+                "title": "Data Analyst",
+                "start_date": "2022-01-01",
+                "end_date": "2022-06-01",
+                "description": "Procesar y analizar información relacionada con la gestión de Operaciones Farma.",
+                "achievements": "Diseñé e implementé un indicador, junto a su tablero de control en Power BI, que permitió medir la eficacia con la que las Unidades de Negocio realizaban sus estimados de venta y verificar si el incumplimiento de estos era ocasionado por causales de las Unidades Productivas. Además, por medio de Power BI, automaticé el proceso de realización de múltiples presentaciones periódicas que se construían manualmente, no solo reduciendo el tiempo de proceso, sino también mejorando la calidad y análisis de la información presentada.",
+                "technologies": ["Microsoft Excel", "Power BI", "Power Query", "DAX", "VBA"]
+            },
+            {
+                "title": "Intern",
+                "start_date": "2021-07-01",
+                "end_date": "2022-01-01",
+                "description": "Realizar el levantamiento de horas hombre, mapear sus procesos productivos / administrativos y generar oportunidades de mejora.",
+                "achievements": "Diseñé una herramienta que permitió el levantamiento de información de horas hombre para 211 productos en una base de datos de más de 450.000 registros. Implementé mecanismos y herramientas de seguimiento y control con información cuantitativa y cualitativa que permitieron diagnosticar el estado de la unidad productiva Estériles Humanos. Creé una herramienta para programar a más de 60 operarios de manera automática, aportando reducciones significativas en el tiempo en que se realizaba este proceso y generando una programación de personal óptima (mediante algoritmos de programación lineal).",
+                "technologies": ["Microsoft Excel", "VBA", "Python"]
+            }
+        ]
     },
     {
-        "title": "Intern",
-        "start_date": "2021-07-01",
-        "end_date": "2022-01-01",
-        "company_name": "Tecnoquímicas",
-        "company_url": "https://www.tqconfiable.com/",
-        "company_logo": "icons/tq.svg",
-        "description": "Realizar el levantamiento de horas hombre, mapear sus procesos productivos / administrativos y generar oportunidades de mejora.",
-        "achievements": "Diseñé una herramienta que permitió el levantamiento de información de horas hombre para 211 productos en una base de datos de más de 450.000 registros. Implementé mecanismos y herramientas de seguimiento y control con información cuantitativa y cualitativa que permitieron diagnosticar el estado de la unidad productiva Estériles Humanos. Creé una herramienta para programar a más de 60 operarios de manera automática, aportando reducciones significativas en el tiempo en que se realizaba este proceso y generando una programación de personal óptima (mediante algoritmos de programación lineal).",
-        "technologies": ["Microsoft Excel", "VBA", "Python"]
-    },
-    {
-        "title": "Monitor - Investigación de Operaciones",
-        "start_date": "2019-01-01",
-        "end_date": "2020-06-01",
         "company_name": "Universidad ICESI",
-        "company_url": "https://www.icesi.edu.co/es/",
+        "company_url": "https://www.icesi.edu.co/",
         "company_logo": "icons/icesi.svg",
-        "description": "Brindar apoyo en horarios extracurriculares a los estudiantes del curso de investigación de operaciones.",
-        "achievements": "Incrementé mis conocimientos en los temas de la materia, mejoré mis habilidades de comunicación, ayudé a otros estudiantes a prepararse para diferentes parciales y sustituí al profesor en dos clases presenciales.",
-        "technologies": ["Microsoft Excel", "AMPL", "Python"]
+        "jobs": [
+            {
+                "title": "Monitor - Investigación de Operaciones",
+                "start_date": "2019-01-01",
+                "end_date": "2020-06-01",
+                "description": "Brindar apoyo en horarios extracurriculares a los estudiantes del curso de investigación de operaciones.",
+                "achievements": "Incrementé mis conocimientos en los temas de la materia, mejoré mis habilidades de comunicación, ayudé a otros estudiantes a prepararse para diferentes parciales y sustituí al profesor en dos clases presenciales.",
+                "technologies": ["Microsoft Excel", "AMPL", "Python"]
+            }
+        ]
     }
 ]

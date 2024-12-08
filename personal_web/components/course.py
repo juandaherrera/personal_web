@@ -1,4 +1,5 @@
 import reflex as rx
+import reflex_chakra as rxc
 
 import personal_web.styles.styles as styles
 from personal_web.components.texts import title
@@ -13,13 +14,13 @@ from .buttons import rounded_button
 
 
 def school(school: School) -> rx.Component:
-    return rx.chakra.accordion(
-        rx.chakra.accordion_item(
-            rx.chakra.accordion_button(
+    return rxc.accordion(
+        rxc.accordion_item(
+            rxc.accordion_button(
                 _school_header(school.name, school.logo, school.courses_qty),
                 _hover={},
             ),
-            rx.chakra.accordion_panel(
+            rxc.accordion_panel(
                 rx.grid(
                     *[course(item) for item in school.courses],
                     columns=rx.breakpoints(
@@ -40,7 +41,7 @@ def school(school: School) -> rx.Component:
 
 
 def course(course: Course) -> rx.Component:
-    return rx.chakra.card(
+    return rxc.card(
         rx.flex(
             *[tech_badge(item) for item in course.technologies],
             padding_y=Size.ZERO.value,
@@ -75,7 +76,7 @@ def _course_header(name: str, issue_date: str):
 def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
     return rx.hstack(
         rx.image(src=logo, height=Size.VERY_BIG.value, min_width=Size.VERY_BIG.value),
-        rx.chakra.divider(
+        rxc.divider(
             orientation="vertical",
             border_color=TextColor.PRIMARY.value,
             height=Size.VERY_BIG.value,
@@ -99,7 +100,7 @@ def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
             spacing="0",
         ),
         rx.spacer(),
-        rx.chakra.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE),
+        rxc.accordion_icon(font_size=Size.BIG.value, style=styles.ACCORDION_ICON_STYLE),
         align_items="center",
         width="100%",
         spacing="5",

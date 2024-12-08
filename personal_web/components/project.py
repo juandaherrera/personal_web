@@ -1,4 +1,5 @@
 import reflex as rx
+import reflex_chakra as rxc
 
 import personal_web.styles.styles as styles
 from personal_web.components.texts import title
@@ -11,7 +12,7 @@ from .work_experience import tech_badge
 
 
 def project_card(project: Project) -> rx.Component:
-    return rx.chakra.card(
+    return rxc.card(
         _project_card_body(project.description, project.technologies),
         header=_project_card_header(project.name),
         footer=_project_card_footer(project.repository_url, project.website_url),
@@ -44,7 +45,7 @@ def _project_card_header(name: str) -> rx.Component:
             size="6",
         ),
         rx.spacer(),
-        rx.chakra.divider(
+        rxc.divider(
             border_color=Color.SECONDARY.value,
         ),
         align="start",

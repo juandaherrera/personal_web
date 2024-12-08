@@ -20,12 +20,30 @@ El sitio está estructurado en cinco secciones principales que representan difer
 
 * [X] Sección de Cursos.
 * [X] Sección de Certificaciones.
+* [X] Switch de idioma [ES / EN]
 * [ ] Testimonios / Recomendaciones.
 * [ ] Formulario de contacto.
-* [X] Switch de idioma [ES / EN]
 
 
 ## Instalación y despliegue local
+
+### Para visualizarlo con reflex
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/juandaherrera/personal_web.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd personal_web
+   ```
+3. Instalar los requerimientos (ya sea en un `.env` o en un env de conda):
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Correr el siguiente comando:
+   ```bash
+   reflex run
+   ```
 
 ### Para visualizar el sitio web con Docker:
 
@@ -43,7 +61,7 @@ El sitio está estructurado en cinco secciones principales que representan difer
    ```
 4. Corre un contenedor con la imagen creada:
    ```bash
-   docker run -d -p 80:80 --name personal_web reflex-project:latest
+   docker run -d -p 8080:8080 --name personal_web reflex-project:latest
    ```
 
 Nota: actualmente el proyecto solo tiene desplegado el frontend en [Railway](https://railway.app/). Es por esa razón que se corre en un servidor [NGINX](https://www.nginx.com/) desde el [Dockerfile](Dockerfile).
