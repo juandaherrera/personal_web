@@ -1,10 +1,6 @@
-from typing import Union
 
 import reflex as rx
 from reflex.vars import Var
-
-from personal_web.styles.colors import TextColor
-from personal_web.styles.styles import Size
 
 
 class TypeAnimation(rx.Component):
@@ -14,7 +10,7 @@ class TypeAnimation(rx.Component):
     tag = "TypeAnimation"
     sequence: Var[list]
     speed: Var[int] = 40
-    repeat: Var[Union[int, float]] = 0
+    repeat: Var[int | float] = 0
     cursor: Var[bool] = True
 
 

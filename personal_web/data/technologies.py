@@ -1,5 +1,4 @@
 import json
-from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -8,10 +7,10 @@ from pydantic import BaseModel
 class Technology(BaseModel):
     name: str
     icon: str
-    url: Optional[str] = "/"
+    url: str | None = "/"
 
 
-with open("assets/data/technologies.json") as file:
+with open("assets/data/technologies.json", encoding="utf-8") as file:
     tech_data = json.load(file)
 
-tech_list: List[Technology] = [Technology(**item) for item in tech_data]
+tech_list: list[Technology] = [Technology(**item) for item in tech_data]

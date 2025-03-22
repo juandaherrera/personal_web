@@ -4,7 +4,7 @@ import reflex as rx
 
 import personal_web.constants as const
 from personal_web.state import MainState
-from personal_web.styles.colors import Color, TextColor
+from personal_web.styles.colors import Color
 from personal_web.styles.styles import FOOTER_LOGO_STYLE, FOOTER_STYLE, Size
 
 

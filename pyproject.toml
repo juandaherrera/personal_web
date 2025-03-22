@@ -1,0 +1,71 @@
+[project]
+name = "personal_web"
+version = "5.0.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "reflex==0.6.6.post2",
+    "reflex-chakra",
+    "python-dateutil",
+    "toml>=0.10.2",
+]
+
+[project.optional-dependencies]
+dev = ["mypy", "ruff~=0.8.0"]
+
+[tool.ruff]
+line-length = 99
+indent-width = 4
+target-version = "py311"
+preview = true
+
+[tool.ruff.lint]
+select = [
+    "F",    # Pyflakes
+    "W",    # pycodestyle
+    "E",    # pycodestyle
+    # "D",    # docstrings
+    "I",    # isort
+    "UP",   # pyupgrade
+    "PL",   # Pylint
+    "T201", # Print Statement
+    "S",    # flake8-bandit
+    "TC",   # flake8-type-checking
+    "RUF",  # Ruff-specific rules
+    "C90",  # McCabe
+    "N",    # Naming
+    "B",    # Bugbear
+    "A",    # Builtins
+    "G",    # Logging format
+    "PIE",  # PIE
+    "T20",  # Print
+    "RET",  # Return
+    "ARG",  # Argument unused
+    "TD",   # TODO
+    "DOC",  # pydoclint
+]
+ignore = [
+    "D203",  # one-blank-line-before-class
+    "D212",  # multi-line-summary-first-line
+    "D413",  # new-line-after-last-paragraph
+    "TD003", # missing-todo-link
+    "PLR0913", # too-many-arguments
+    "PLR0917", # too-many-locals
+]
+
+[[tool.mypy.overrides]]
+module = "reflex.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "reflex_chakra.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "dateutil.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "toml.*"
+ignore_missing_imports = true

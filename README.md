@@ -36,13 +36,13 @@ El sitio está estructurado en cinco secciones principales que representan difer
    ```bash
    cd personal_web
    ```
-3. Instalar los requerimientos (ya sea en un `.env` o en un env de conda):
+3. Instalar los requerimientos (con [uv](https://docs.astral.sh/uv/)):
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 4. Correr el siguiente comando:
    ```bash
-   reflex run
+   uv reflex run
    ```
 
 ### Para visualizar el sitio web con Docker:
@@ -63,8 +63,6 @@ El sitio está estructurado en cinco secciones principales que representan difer
    ```bash
    docker run -d -p 8080:8080 --name personal_web reflex-project:latest
    ```
-
-Nota: actualmente el proyecto solo tiene desplegado el frontend en [Railway](https://railway.app/). Es por esa razón que se corre en un servidor [NGINX](https://www.nginx.com/) desde el [Dockerfile](Dockerfile).
 
 ## Contacto
 Si tienes preguntas, sugerencias o simplemente quieres conectarte, no dudes en contactarme a través de:

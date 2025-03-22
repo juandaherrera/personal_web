@@ -1,6 +1,5 @@
 from enum import Enum
 
-import reflex as rx
 import reflex_chakra as rxc
 from reflex.components.radix.themes.typography.link import Link
 

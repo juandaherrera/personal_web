@@ -1,9 +1,9 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
 from personal_web.components.texts import title
 from personal_web.data.personal_info import ABOUT_ME
 from personal_web.state import MainState
+from personal_web.styles import styles
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 

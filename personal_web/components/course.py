@@ -1,11 +1,11 @@
 import reflex as rx
 import reflex_chakra as rxc
 
-import personal_web.styles.styles as styles
 from personal_web.components.texts import title
 from personal_web.components.work_experience import tech_badge
 from personal_web.data.courses import Course, School
 from personal_web.state import MainState
+from personal_web.styles import styles
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size

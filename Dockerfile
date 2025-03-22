@@ -2,12 +2,19 @@ FROM python:3.11
 
 RUN apt-get update -y && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
+RUN pip install uv
+
 WORKDIR /app
 
-COPY requirements.txt .
+COPY pyproject.toml .
+COPY uv.lock .
 
-RUN pip install -r requirements.txt
+# Use the system Python environment
+ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
 
+RUN uv sync
+
+# TODO(@juandaherrera): Remove what is not needed
 COPY . .
 
 RUN reflex export --frontend-only --no-zip && mv .web/_static/* /usr/share/nginx/html/ && rm -rf .web

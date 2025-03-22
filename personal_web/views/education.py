@@ -1,10 +1,9 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
 from personal_web.components.education import college_degree
 from personal_web.components.texts import title
 from personal_web.data.education import education_en_list, education_list
-from personal_web.styles.styles import Size
+from personal_web.styles import styles
 
 
 def education(en: bool = False) -> rx.Component:

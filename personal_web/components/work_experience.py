@@ -2,10 +2,10 @@ from datetime import date
 
 import reflex as rx
 
-import personal_web.styles.styles as styles
-from personal_web.data.job import Company, Job, resume, resume_en
+from personal_web.data.job import Company, Job
 from personal_web.state import MainState
-from personal_web.styles.colors import Color, TextColor
+from personal_web.styles import styles
+from personal_web.styles.colors import TextColor
 from personal_web.styles.styles import Size
 
 
@@ -79,7 +79,7 @@ def company_experience(company: Company, en: bool = False) -> rx.Component:
 
 def job_experience(job: Job, en: bool = False) -> rx.Component:
     present_word = "present" if en else "actualidad"
-    end_date = job.end_date.strftime("%b. %Y") if job.end_date else present_word
+    end_date = job.end_date.strftime("%b. %Y") if job.end_date <= date.today() else present_word
     return rx.accordion.item(
         header=rx.vstack(
             rx.heading(
@@ -104,7 +104,7 @@ def job_experience(job: Job, en: bool = False) -> rx.Component:
 def job_experience_content(job: Job) -> rx.Component:
     return rx.vstack(
         rx.cond(
-            job.description != "",
+            job.description,
             rx.heading(
                 rx.cond(
                     MainState.is_language_en,
@@ -118,7 +118,7 @@ def job_experience_content(job: Job) -> rx.Component:
             ),
         ),
         rx.cond(
-            job.description != "",
+            job.description,
             rx.text(
                 job.description,
                 text_align="justify",
@@ -129,7 +129,7 @@ def job_experience_content(job: Job) -> rx.Component:
             ),
         ),
         rx.cond(
-            job.achievements != "",
+            job.achievements,
             rx.heading(
                 rx.cond(
                     MainState.is_language_en,
@@ -143,7 +143,7 @@ def job_experience_content(job: Job) -> rx.Component:
             ),
         ),
         rx.cond(
-            job.achievements != "",
+            job.achievements,
             rx.text(
                 job.achievements,
                 text_align="justify",

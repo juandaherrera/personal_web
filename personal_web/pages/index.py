@@ -1,7 +1,7 @@
 import reflex as rx
 
 import personal_web.constants as const
-import personal_web.utils as utils
+from personal_web import utils
 from personal_web.components.footer import footer
 from personal_web.components.navbar import navbar
 from personal_web.state import MainState

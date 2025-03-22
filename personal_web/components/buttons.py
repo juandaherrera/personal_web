@@ -1,7 +1,7 @@
 import reflex as rx
 import reflex_chakra as rxc
 
-import personal_web.styles.styles as styles
+from personal_web.styles import styles
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
@@ -45,11 +45,11 @@ def default_button(
 
 def rounded_button(
     text: str,
-    url: str,
+    url: str | None = None,
     icon: str = "external_link",
     border_color: str = TextColor.PRIMARY.value,
     text_color: str = TextColor.SECONDARY.value,
-    text_size: str = FontSize.SMALL_TEXT.value,
+    text_size: str | list[str] = FontSize.SMALL_TEXT.value,
     hover_color: str = Color.SECONDARY.value,
     **kwargs,
 ):

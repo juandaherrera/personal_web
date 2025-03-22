@@ -1,10 +1,9 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
 from personal_web.components.project import project_card
 from personal_web.components.texts import title
 from personal_web.data.project import projects_en_list, projects_list
-from personal_web.styles.styles import Size
+from personal_web.styles import styles
 
 
 def projects(en: bool = False) -> rx.Component:

@@ -1,7 +1,6 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
-from personal_web.state import MainState
+from personal_web.styles import styles
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 from personal_web.utils import hex_to_rgb

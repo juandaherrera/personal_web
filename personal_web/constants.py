@@ -1,7 +1,9 @@
 from datetime import date
 
+from personal_web.utils import get_version_from_toml
+
 # APP Version
-version = "4.1.0"
+version = get_version_from_toml()
 REPO_URL = "https://github.com/juandaherrera/personal_web"
 
 # Personal

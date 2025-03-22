@@ -1,9 +1,7 @@
 import json
-from datetime import date
-from typing import List, Optional, Union
+from datetime import date, timedelta
 
-import reflex as rx
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 
 from personal_web.utils import date_difference
 
@@ -11,17 +9,23 @@ from personal_web.utils import date_difference
 class Job(BaseModel):
     title: str
     start_date: date
-    end_date: Optional[date]
+    end_date: date = Field(default_factory=lambda: date.today() + timedelta(days=365))
     description: str
-    achievements: Optional[str]
-    technologies: Optional[List[str]] = []
+    achievements: str | None
+    technologies: list[str] = Field(default_factory=list)
 
     @field_validator("technologies", mode="before")
+    @classmethod
     def technologies_unicity(cls, v):
         return list(dict.fromkeys(v))
 
+    @field_validator("end_date", mode="before")
+    @classmethod
+    def validate_dates(cls, v):
+        return date.today() + timedelta(days=365) if not v else v
+
     def get_duration(
-        self, overwrite_end_date: Optional[date] = None, is_lang_en: bool = False
+        self, overwrite_end_date: date | None = None, is_lang_en: bool = False
     ) -> str:
         if overwrite_end_date:
             return date_difference(self.start_date, overwrite_end_date, is_lang_en)
@@ -30,9 +34,9 @@ class Job(BaseModel):
 
 class Company(BaseModel):
     company_name: str
-    company_url: Optional[str]
-    company_logo: Optional[str]
-    jobs: List[Job]
+    company_url: str | None
+    company_logo: str | None
+    jobs: list[Job]
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -46,7 +50,7 @@ class Company(BaseModel):
         return min(job.start_date for job in self.jobs)
 
     @property
-    def end_date(self) -> Union[date, str]:
+    def end_date(self) -> date:
         try:
             return min(job.end_date for job in self.jobs)
         except TypeError:
@@ -57,7 +61,7 @@ class Company(BaseModel):
         return self.end_date == date.today()
 
     def get_duration(
-        self, overwrite_end_date: Optional[date] = None, is_lang_en: bool = False
+        self, overwrite_end_date: date | None = None, is_lang_en: bool = False
     ) -> str:
         if overwrite_end_date:
             return date_difference(self.start_date, overwrite_end_date, is_lang_en)
@@ -65,7 +69,7 @@ class Company(BaseModel):
 
 
 class Resume(BaseModel):
-    companies: Optional[List[Company]] = None
+    companies: list[Company] = Field(default_factory=list)
 
     def __init__(self, **data):
         super().__init__(**data)
@@ -76,11 +80,11 @@ class Resume(BaseModel):
             self.companies.sort(key=lambda x: x.end_date, reverse=True)
 
 
-# TODO just have one file with both languages
-with open("assets/data/sp/work_experience.json", "r") as file:
+# TODO(@juandaherrera): just have one file with both languages
+with open("assets/data/sp/work_experience.json", encoding="utf-8") as file:
     work_data = json.load(file)
 
-with open("assets/data/en/work_experience.json", "r") as file:
+with open("assets/data/en/work_experience.json", encoding="utf-8") as file:
     work_data_en = json.load(file)
 
 resume = Resume(companies=work_data)

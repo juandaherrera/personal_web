@@ -1,10 +1,9 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
 from personal_web.components.course import school
 from personal_web.components.texts import title
 from personal_web.data.courses import schools_en_list, schools_list
-from personal_web.state import MainState
+from personal_web.styles import styles
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import FontSize, Size
 

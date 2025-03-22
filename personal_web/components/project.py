@@ -1,10 +1,10 @@
 import reflex as rx
 import reflex_chakra as rxc
 
-import personal_web.styles.styles as styles
 from personal_web.components.texts import title
 from personal_web.data.project import Project
-from personal_web.styles.colors import Color, TextColor
+from personal_web.styles import styles
+from personal_web.styles.colors import Color
 from personal_web.styles.fonts import FontSize
 from personal_web.styles.styles import Size
 

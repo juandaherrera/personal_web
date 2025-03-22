@@ -1,9 +1,9 @@
 import reflex as rx
 
-import personal_web.styles.styles as styles
 from personal_web.components.certification import certification
 from personal_web.components.texts import title
 from personal_web.data.certification import certifications_en_list, certifications_list
+from personal_web.styles import styles
 from personal_web.styles.styles import Size
 
 

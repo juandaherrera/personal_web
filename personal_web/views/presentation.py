@@ -1,12 +1,12 @@
 import reflex as rx
 
 import personal_web.constants as const
-import personal_web.styles.styles as styles
 from personal_web.components.buttons import default_button
 from personal_web.components.link_icon import link_icon
 from personal_web.components.type_animation import type_animation
 from personal_web.components.working_at import working_at
 from personal_web.state import MainState
+from personal_web.styles import styles
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
 
