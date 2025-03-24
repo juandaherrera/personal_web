@@ -1,10 +1,9 @@
 import reflex as rx
 
+from personal_web.components.language_switch import language_switch
 from personal_web.state import MainState
 from personal_web.styles.colors import Color, TextColor
 from personal_web.styles.styles import Size
-
-from .language_switch import language_switch
 
 
 def menu() -> rx.Component:

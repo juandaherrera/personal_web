@@ -1,12 +1,11 @@
 import reflex as rx
 
+from personal_web.components.language_switch import language_switch
+from personal_web.components.menu import menu
 from personal_web.styles import styles
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
 from personal_web.utils import hex_to_rgb
-
-from .language_switch import language_switch
-from .menu import menu
 
 
 def navbar() -> rx.Component:

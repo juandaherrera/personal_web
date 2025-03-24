@@ -3,10 +3,9 @@ from enum import Enum
 import reflex_chakra as rxc
 from reflex.components.radix.themes.typography.link import Link
 
+from personal_web.styles.colors import Color, TextColor
+from personal_web.styles.fonts import Font, FontSize, FontWeight
 from personal_web.utils import hex_to_rgb
-
-from .colors import Color, TextColor
-from .fonts import Font, FontSize, FontWeight
 
 
 # Sizes
