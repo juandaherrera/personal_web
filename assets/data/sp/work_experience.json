@@ -33,7 +33,7 @@
                 "start_date": "2024-03-18",
                 "end_date": "2025-02-10",
                 "description": "Responsable del mantenimiento y desarrollo del microservicio que calcula las ganancias de los repartidores en cada orden, así como del diseño y mantenimiento de los datamarts de ganancias e incentivos. También, encargado de otros dos microservicios: uno para la estimación del costo de incentivos mediante modelos de ML y otro para la gestión de las configuraciones del microservicio de ganancias, que incluye tanto el front-end como el back-end.",
-                "achievements": "",
+                "achievements": "Entrené y desplegué en FastAPI un modelo de ML que predice el costo de +30.000 incentivos a la semana con un margen de error de $50 USD para el 80% de las predicciones. Reconstruí el datamart de incentivos tras una rearquitectura en la base de datos, asegurando la compatibilidad con la antigua arquitectura. Automaticé, mediante Airflow, más de 8 procesos manuales realizados diariamente por 3 personas del equipo de pagos. Lo que no solo ayudó a evitar posibles errores, sino que también proporcionó soluciones más oportunas a los repartidores.",
                 "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]
             },
             {

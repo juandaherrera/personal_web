@@ -1,6 +1,7 @@
 from enum import Enum
 
 import reflex_chakra as rxc
+from reflex import Style
 from reflex.components.radix.themes.typography.link import Link
 
 from personal_web.styles.colors import Color, TextColor
@@ -42,25 +43,25 @@ BASE_STYLE = {
     Link: {"text_decoration": "none", "_hover": {}},
 }
 
-INDEX_SECTION_STYLE = dict(
+INDEX_SECTION_STYLE = Style(
     width=["90%", "85%", "80%", "75%"],
     padding_x=Size.DEFAULT.value,
     padding_top=Size.VERY_BIG.value,
 )
 
-DEFAULT_BUTTON_STYLE = dict(
+DEFAULT_BUTTON_STYLE = Style(
     background_color="transparent",
     border=f"{Size.VERY_SMALL.value} solid",
     padding_y=Size.DEFAULT_BIG.value,
 )
 
-NAVBAR_TITLE_STYLE = dict(
+NAVBAR_TITLE_STYLE = Style(
     font_size=Size.BIG.value,
     font_family=Font.JUANDAHERRERA.value,
     font_weight=FontWeight.JUANDAHERRERA.value,
 )
 
-NAVBAR_STYLE = dict(
+NAVBAR_STYLE = Style(
     position="sticky",
     align_items="center",
     bg=Color.CONTENT.value,
@@ -76,7 +77,7 @@ NAVBAR_STYLE = dict(
     width="100%",
 )
 
-MAIN_PIC_STYLE = dict(
+MAIN_PIC_STYLE = Style(
     width="100%",
     height="100%",
     aspect_ratio=1 / 1,
@@ -96,7 +97,7 @@ MAIN_PIC_STYLE = dict(
     },
 )
 
-PRESENTATION_STACK_STYLE = dict(
+PRESENTATION_STACK_STYLE = Style(
     align_items="center",
     width="100%",
     background=Color.BACKGROUND_ALT.value,
@@ -105,12 +106,12 @@ PRESENTATION_STACK_STYLE = dict(
     padding_y=Size.DEFAULT_BIG.value,
 )
 
-TECH_STACK_ICON_STYLE = dict(
+TECH_STACK_ICON_STYLE = Style(
     font_size=Size.LARGE.value,
     padding_x=Size.MEDIUM.value,
 )
 
-TECH_STACK_STYLE = dict(
+TECH_STACK_STYLE = Style(
     transition="transform 0.2s ease, text-shadow 0.3s ease, color 0.5s ease",
     _hover={
         "color": Color.SECONDARY.value,
@@ -119,7 +120,7 @@ TECH_STACK_STYLE = dict(
     },
 )
 
-TECH_BADGE_STYLE = dict(
+TECH_BADGE_STYLE = Style(
     padding_y=Size.SMALL.value,
     padding_x=Size.DEFAULT.value,
     bg=hex_to_rgb(Color.AQUA.value, 0.15),
@@ -137,7 +138,7 @@ TECH_BADGE_STYLE = dict(
     },
 )
 
-PROJECT_CARD_STYLE = dict(
+PROJECT_CARD_STYLE = Style(
     color=TextColor.PRIMARY.value,
     background=hex_to_rgb(Color.CONTENT.value, 0.55),
     width="100%",
@@ -148,19 +149,19 @@ PROJECT_CARD_STYLE = dict(
     },
 )
 
-EDUCATION_COLLEGE_LOGO_STYLE = dict(
+EDUCATION_COLLEGE_LOGO_STYLE = Style(
     height="5em",
     aspect_ratio=1 / 1,
 )
 
-SCHOOL_ACCORDION_STYLE = dict(
+SCHOOL_ACCORDION_STYLE = Style(
     width="100%",
     background=hex_to_rgb(Color.CONTENT.value, 0.55),
     border_radius=Size.MEDIUM.value,
     padding=Size.MEDIUM.value,
 )
 
-COURSE_CARD_STYLE = dict(
+COURSE_CARD_STYLE = Style(
     background=hex_to_rgb(Color.BACKGROUND_ALT.value, 1),
     transition="transform 0.3s ease, box-shadow 0.35s ease",
     _hover={
@@ -169,7 +170,7 @@ COURSE_CARD_STYLE = dict(
     },
 )
 
-ACCORDION_ICON_STYLE = dict(
+ACCORDION_ICON_STYLE = Style(
     transition="tex-shadow 0.3s ease, color 0.35s ease, transform 0.35s ease",
     _hover={
         "transform": "scale(1.2)",
@@ -178,12 +179,12 @@ ACCORDION_ICON_STYLE = dict(
     },
 )
 
-FOOTER_LOGO_STYLE = dict(
+FOOTER_LOGO_STYLE = Style(
     height=["3.5em", "4em"],
     margin_bottom=Size.ZERO.value,
 )
 
-FOOTER_STYLE = dict(
+FOOTER_STYLE = Style(
     padding_top=Size.VERY_BIG.value,
     padding_bottom=Size.MEDIUM.value,
     color=TextColor.SECONDARY.value,

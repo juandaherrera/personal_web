@@ -1,5 +1,8 @@
+from typing import Any
+
 import reflex as rx
 import reflex_chakra as rxc
+from reflex import Var
 
 from personal_web.styles import styles
 from personal_web.styles.colors import Color, TextColor
@@ -8,7 +11,7 @@ from personal_web.styles.styles import Size
 
 
 def default_button(
-    text: str,
+    text: str | Var[Any],
     icon: str,
     button_color: str,
     text_color: str,

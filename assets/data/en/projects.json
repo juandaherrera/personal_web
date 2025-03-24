@@ -1,8 +1,8 @@
 [
     {
         "name": "Personal Website",
-        "description": "A personal portfolio built with Reflex and deployed on Railway.",
-        "technologies": ["Python", "Reflex", "Chakra UI", "Railway", "Docker"],
+        "description": "A personal portfolio built with Reflex and deployed on Azure Container Apps.",
+        "technologies": ["Python", "Reflex", "Chakra UI", "Railway", "Docker", "Azure"],
         "repository_url": "https://github.com/juandaherrera/personal_web"
     },
     {
