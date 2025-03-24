@@ -52,7 +52,7 @@ class Company(BaseModel):
     @property
     def end_date(self) -> date:
         try:
-            return min(job.end_date for job in self.jobs)
+            return max(job.end_date for job in self.jobs)
         except TypeError:
             return date.today()
 

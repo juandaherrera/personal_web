@@ -1,5 +1,29 @@
 [
     {
+        "company_name": "Snoonu",
+        "company_url": "https://www.snoonu.com/",
+        "company_logo": "icons/snoonu.svg",
+        "jobs": [
+            {
+                "title": "ML Backend Engineer",
+                "start_date": "2025-02-10",
+                "end_date": null,
+                "description": "He estado involucrado en la refactorización de un monorepo, dividiéndolo en múltiples librerías y servicios independientes para mejorar la modularidad y el mantenimiento del código. Además, contribuyo al desarrollo de nuevas funcionalidades y correcciones, enfocándome en optimizar las respuestas de los modelos de ML y reducir los tiempos de procesamiento dentro de nuestros microservicios. Para lograr esto, trabajo en estrecha colaboración con un equipo de científicos de datos, garantizando una integración fluida entre los modelos y la infraestructura backend.",
+                "achievements": "",
+                "technologies": [
+                    "Python",
+                    "SQL",
+                    "FastAPI",
+                    "BigQuery",
+                    "Git",
+                    "GitHub",
+                    "AWS",
+                    "Docker"
+                ]
+            }
+        ]
+    },
+    {
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
         "company_logo": "icons/rappi_mustache.svg",
@@ -7,7 +31,7 @@
             {
                 "title": "Python Developer & Data Engineer",
                 "start_date": "2024-03-18",
-                "end_date": null,
+                "end_date": "2025-02-10",
                 "description": "Responsable del mantenimiento y desarrollo del microservicio que calcula las ganancias de los repartidores en cada orden, así como del diseño y mantenimiento de los datamarts de ganancias e incentivos. También, encargado de otros dos microservicios: uno para la estimación del costo de incentivos mediante modelos de ML y otro para la gestión de las configuraciones del microservicio de ganancias, que incluye tanto el front-end como el back-end.",
                 "achievements": "",
                 "technologies": ["Python", "Airflow", "FastAPI", "Docker", "Kafka", "PostgreSQL", "SQL", "Snowflake", "Git",  "Bitbucket"]

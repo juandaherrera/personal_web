@@ -40,34 +40,9 @@
         "url": "https://redis.io/"
     },
     {
-        "name": "Javascript",
-        "icon": "javascript",
-        "url": "https://developer.mozilla.org/es/docs/Web/JavaScript"
-    },
-    {
-        "name": "HTML",
-        "icon": "html5",
-        "url": "https://developer.mozilla.org/es/docs/Web/HTML"
-    },
-    {
-        "name": "CSS",
-        "icon": "css3",
-        "url": "https://developer.mozilla.org/es/docs/Web/CSS"
-    },
-    {
-        "name": "JQuery",
-        "icon": "jquery",
-        "url": "https://jquery.com/"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "bootstrap",
-        "url": "https://getbootstrap.com/"
-    },
-    {
-        "name": "Markdown",
-        "icon": "markdown",
-        "url": "https://es.wikipedia.org/wiki/Markdown"
+        "name": "Kafka",
+        "icon": "apachekafka",
+        "url": "https://kafka.apache.org/"
     },
     {
         "name": "Bash",

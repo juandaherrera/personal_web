@@ -17,6 +17,8 @@ RUN uv sync
 # TODO(@juandaherrera): Remove what is not needed
 COPY . .
 
+ARG BACKEND_PORT=8080
+
 RUN reflex export --frontend-only --no-zip && mv .web/_static/* /usr/share/nginx/html/ && rm -rf .web
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf

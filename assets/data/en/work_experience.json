@@ -1,5 +1,29 @@
 [
     {
+        "company_name": "Snoonu",
+        "company_url": "https://www.snoonu.com/",
+        "company_logo": "icons/snoonu.svg",
+        "jobs": [
+            {
+                "title": "ML Backend Engineer",
+                "start_date": "2025-02-10",
+                "end_date": null,
+                "description": "I’ve been involved in refactoring a monorepo, breaking it down into multiple independent libraries and services to improve code modularity and maintainability. Additionally, I contribute to developing new features and fixes, focusing on optimizing ML model responses and reducing processing times within our microservices. To achieve this, I work closely with a team of Data Scientists, ensuring seamless integration between models and the backend infrastructure.",
+                "achievements": "",
+                "technologies": [
+                    "Python",
+                    "SQL",
+                    "FastAPI",
+                    "BigQuery",
+                    "Git",
+                    "GitHub",
+                    "AWS",
+                    "Docker"
+                ]
+            }
+        ]
+    },
+    {
         "company_name": "Rappi",
         "company_url": "https://www.rappi.com.co/",
         "company_logo": "icons/rappi_mustache.svg",
@@ -7,9 +31,9 @@
             {
                 "title": "Python Developer & Data Engineer",
                 "start_date": "2024-03-18",
-                "end_date": null,
+                "end_date": "2025-02-10",
                 "description": "Responsible for maintaining and developing the microservice that calculates couriers' earnings for each order, as well as designing and maintaining the earnings and incentives datamarts. Also in charge of two additional microservices: one for estimating incentive burn using ML models and another for managing the configurations of the earnings microservice, including both front-end and back-end.",
-                "achievements": "",
+                "achievements": "Trained and deployed an ML model in FastAPI that predicts the cost of over 30,000 incentives per week with a margin of error of $50 USD for 80% of the predictions. Rebuilt the incentives datamart after a database re-architecture, ensuring compatibility with the previous architecture. Automated, using Airflow, more than 8 manual processes performed daily by 3 people on the payments team. This not only helped avoid potential errors but also provided more timely solutions for the couriers.",
                 "technologies": [
                     "Python",
                     "Airflow",

@@ -32,12 +32,14 @@ LINKEDIN_URL = "https://www.linkedin.com/in/juan-david-herrera/"
 INSTAGRAM_URL = "https://www.instagram.com/juandaherrep/"
 
 # Cargo actual
-CURRENT_COMPANY_NAME = "Rappi"
-CURRENT_COMPANY_URL = "https://www.rappi.com.co/"
-CURRENT_COMPANY_LOGO = "icons/rappi.svg"
+CURRENT_COMPANY_NAME = "Snoonu"
+CURRENT_COMPANY_URL = "https://snoonu.com/"
+CURRENT_COMPANY_LOGO = "icons/snoonu_full.svg"
 CURRENT_POSITION = [
+    "ML Backend Engineer",
+    3000,
     "Python Developer",
     3000,
-    "Data Engineer",
-    3000,
+    # "Data Engineer",
+    # 3000,
 ]

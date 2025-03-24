@@ -102,11 +102,6 @@ def _hello_iam() -> rx.Component:
                 const.LINKEDIN_URL,
                 "Logo LinkedIn",
             ),
-            link_icon(
-                "icons/instagram.svg",
-                const.INSTAGRAM_URL,
-                "Logo Instagram",
-            ),
             spacing="4",
             padding_y=Size.DEFAULT_MEDIUM.value,
         ),
