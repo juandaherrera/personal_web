@@ -1,7 +1,8 @@
-.web
-.venv
-.git
+.web/*
+.venv/*
+.git/*
+.vscode/*
 .gitignore
 __pycache__/*
 Dockerfile
-uploaded_files
+uploaded_files/*
