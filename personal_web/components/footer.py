@@ -41,8 +41,8 @@ def footer() -> rx.Component:
         rx.text(
             rx.cond(
                 MainState.is_language_en,
-                "Built with 🧡 from Palmira, Colombia 🇨🇴.",
-                "Hecho con 🧡 desde Palmira, Colombia 🇨🇴.",
+                "Built with 🧡 from Palmira, Colombia 🇨🇴",
+                "Hecho con 🧡 desde Palmira, Colombia 🇨🇴",
             ),
             font_size=Size.DEFAULT.value,
             margin_top=Size.ZERO.value,
