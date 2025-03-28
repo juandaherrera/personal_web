@@ -9,7 +9,9 @@ from personal_web.styles.colors import TextColor
 from personal_web.styles.styles import Size
 
 
-def company_experience(company: Company, en: bool = False) -> rx.Component:
+def company_experience(
+    company: Company, duration: str, jobs_duration: list[str], en: bool = False
+) -> rx.Component:
     present_word = "present" if en else "actualidad"
     end_date = (
         company.end_date.strftime("%b. %Y") if company.end_date < date.today() else present_word
@@ -51,8 +53,17 @@ def company_experience(company: Company, en: bool = False) -> rx.Component:
             rx.divider(orientation="vertical", height="4.5em", border="0.3px solid #E2E8F0"),
             rx.vstack(
                 rx.heading(company.company_name, size=rx.breakpoints(initial="6", md="7")),
-                rx.text(
-                    f"{company.start_date.strftime('%b. %Y')} -  {end_date}",
+                rx.flex(
+                    rx.text(f"{company.start_date.strftime('%b. %Y')} -  {end_date}"),
+                    rx.tablet_and_desktop(
+                        rx.text(
+                            "·",
+                        ),
+                    ),
+                    rx.text(f"({duration})", color_scheme="gray"),
+                    align="start",
+                    spacing="2",
+                    flex_wrap="wrap",
                 ),
             ),
             spacing="5",
@@ -60,7 +71,10 @@ def company_experience(company: Company, en: bool = False) -> rx.Component:
         ),
         rx.divider(color_scheme="red"),
         rx.accordion.root(
-            *[job_experience(job, en) for job in company.jobs],
+            *[
+                job_experience(job, jobs_duration[index], en)
+                for index, job in enumerate(company.jobs)
+            ],
             width="100%",
             variant="ghost",
             collapsible=True,
@@ -77,7 +91,7 @@ def company_experience(company: Company, en: bool = False) -> rx.Component:
     )
 
 
-def job_experience(job: Job, en: bool = False) -> rx.Component:
+def job_experience(job: Job, duration: str, en: bool = False) -> rx.Component:
     present_word = "present" if en else "actualidad"
     end_date = job.end_date.strftime("%b. %Y") if job.end_date <= date.today() else present_word
     return rx.accordion.item(
@@ -90,9 +104,24 @@ def job_experience(job: Job, en: bool = False) -> rx.Component:
                 ),
                 align="left",
             ),
-            rx.text(
-                f"{job.start_date.strftime('%b. %Y')} -  {end_date}",
-                color_scheme="red",
+            rx.flex(
+                rx.text(
+                    f"{job.start_date.strftime('%b. %Y')} -  {end_date}",
+                    color_scheme="red",
+                ),
+                rx.tablet_and_desktop(
+                    rx.text(
+                        "·",
+                        color_scheme="red",
+                    ),
+                ),
+                rx.text(
+                    f"({duration})",
+                    color=TextColor.PINK.value,
+                ),
+                align="start",
+                spacing="2",
+                flex_wrap="wrap",
             ),
             align="start",
         ),

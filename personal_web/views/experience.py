@@ -3,6 +3,7 @@ import reflex as rx
 from personal_web.components.texts import title
 from personal_web.components.work_experience import company_experience
 from personal_web.data.job import resume, resume_en
+from personal_web.state import MainState
 from personal_web.styles import styles
 from personal_web.styles.styles import Size
 
@@ -12,7 +13,15 @@ def experience(en: bool = False) -> rx.Component:
     return rx.vstack(
         title("Work Experience 💼" if en else "Experiencia 💼"),
         rx.vstack(
-            *[company_experience(company, en) for company in selected_obj.companies],
+            *[
+                company_experience(
+                    company,
+                    MainState.companies_duration[index],
+                    MainState.jobs_duration[index],
+                    en,
+                )
+                for index, company in enumerate(selected_obj.companies)
+            ],
             spacing="5",
             width="100%",
         ),

@@ -1,12 +1,12 @@
 [project]
 name = "personal_web"
-version = "5.3.3"
+version = "5.4.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "reflex==0.7.3",
-    "reflex-chakra",
+    "reflex==0.7.4",
+    "reflex-chakra~=0.7.0",
     "python-dateutil",
     "toml>=0.10.2",
 ]

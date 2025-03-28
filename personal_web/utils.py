@@ -15,7 +15,7 @@ def get_experience() -> int:
     return date.today().year - 2021
 
 
-def hex_to_rgb(hex_value: str | Color, opacity: float | None = None) -> str:
+def hex_to_rgb(hex_value: str | Color, opacity: float | None = None) -> str | Color:
     """Convert a hex_value color code to an RGB or RGBA string.
 
     Args:
@@ -53,45 +53,76 @@ def hex_to_rgb(hex_value: str | Color, opacity: float | None = None) -> str:
         return "rgb(255, 255, 255)"
 
 
-def date_difference(start_date: date, end_date: date, is_lang_en: bool = False) -> str:  # noqa: C901, PLR0911, PLR0912
-    # TODO(@juandaherrera): Refactor this function to make it more readable and maintainable
-    # Suma un mes al final para cumplir con la regla
+def format_duration_en(years: int, months: int) -> str:
+    """
+    Formats a duration given in years and months into a human-readable string in English.
+
+    Args:
+        years (int): The number of years in the duration.
+        months (int): The number of months in the duration.
+
+    Returns:
+        str: A formatted string representing the duration.
+            The format varies based on the values of `years` and `months`
+    """
+    if years == 0:
+        return "1 mo" if months == 1 else f"{months} mos"
+    if years == 1:
+        return "1yr" if months == 0 else f"1yr {months} mos" if months > 1 else "1yr 1 mo"
+    if months == 0:
+        return f"{years}yrs"
+    return f"{years}yrs {months} mos" if months > 1 else f"{years}yrs 1 mo"
+
+
+def format_duration_es(years: int, months: int) -> str:
+    """
+    Formats a duration in years and months into a human-readable string in Spanish.
+
+    Args:
+        years (int): The number of years in the duration.
+        months (int): The number of months in the duration.
+
+    Returns:
+        str: A string representing the duration in Spanish. The format varies depending
+            on the values of `years` and `months`
+    """
+    if years == 0:
+        return "1 mes" if months == 1 else f"{months} meses"
+    if years == 1:
+        return (
+            "1 año"
+            if months == 0
+            else f"1 año y {months} meses"
+            if months > 1
+            else "1 año y 1 mes"
+        )
+    if months == 0:
+        return f"{years} años"
+    return f"{years} años y {months} meses" if months > 1 else f"{years} años y 1 mes"
+
+
+def date_difference(start_date: date, end_date: date, is_lang_en: bool = False) -> str:
+    """
+    Calculate the difference between two dates in terms of years and months,
+    and return it as a formatted string in either English or Spanish.
+
+    Args:
+        start_date (date): The starting date of the range.
+        end_date (date): The ending date of the range.
+        is_lang_en (bool, optional): If True, the output will be formatted in English.
+                                     If False, the output will be formatted in Spanish.
+                                     Defaults to False.
+
+    Returns:
+        str: A formatted string representing the difference in years and months
+             between the two dates.
+    """
+    end_date = end_date if end_date <= date.today() else date.today()
     adjusted_end_date = end_date + relativedelta(months=1)
-
-    # Calcula la diferencia en años y meses
     diff = relativedelta(adjusted_end_date, start_date)
-    years = diff.years
-    months = diff.months
 
-    # Formateo en inglés
-    if is_lang_en:
-        if years == 0 and months == 1:
-            return "1 mo"
-        elif years == 0:  # noqa: RET505
-            return f"{months} mos"
-        elif years == 1 and months == 0:
-            return "1yr"
-        elif years == 1:
-            return f"1yr {months} mos"
-        elif months == 1:
-            return f"{years}yrs 1 mo"
-        else:
-            return f"{years}yrs {months} mos" if months else f"{years}yrs"
-
-    # Formateo en español
-    else:  # noqa: PLR5501
-        if years == 0 and months == 1:
-            return "1 mes"
-        elif years == 0:  # noqa: RET505
-            return f"{months} meses"
-        elif years == 1 and months == 0:
-            return "1 año"
-        elif years == 1:
-            return f"1 año y {months} meses"
-        elif months == 1:
-            return f"{years} años y 1 mes"
-        else:
-            return f"{years} años y {months} meses" if months else f"{years} años"
+    formatter = format_duration_en if is_lang_en else format_duration_es
+    return formatter(diff.years, diff.months)
 
 
 def get_version_from_toml(config_path: str = "pyproject.toml") -> str:
