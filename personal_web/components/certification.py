@@ -39,7 +39,7 @@ def certification(certification: Certification) -> rx.Component:
                     spacing="0",
                 ),
                 rx.cond(
-                    certification.credential_url != '/',
+                    certification.credential_url != "/",
                     rxc.divider(
                         orientation="vertical",
                         border_color=TextColor.PRIMARY.value,
@@ -47,7 +47,7 @@ def certification(certification: Certification) -> rx.Component:
                     ),
                 ),
                 rx.cond(
-                    certification.credential_url != '/',
+                    certification.credential_url != "/",
                     rounded_button(
                         "Credencial",
                         url=certification.credential_url,

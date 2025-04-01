@@ -22,7 +22,7 @@ from personal_web.views.technologies import technologies
     description=const.INDEX_DESCRIPTION,
     image=const.INDEX_PREVIEW,
     meta=const.INDEX_META,
-    on_load=MainState.calculate_durations
+    on_load=MainState.calculate_durations,
 )
 def index() -> rx.Component:
     return rx.vstack(

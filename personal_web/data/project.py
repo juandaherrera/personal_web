@@ -7,7 +7,9 @@ class Project(BaseModel):
     name: str
     description: str
     technologies: list[str] = []
-    repository_url: str = Field(default="/", )
+    repository_url: str = Field(
+        default="/",
+    )
     website_url: str = Field(default="/")
 
 

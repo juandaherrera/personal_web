@@ -18,7 +18,7 @@ def education(en: bool = False) -> rx.Component:
                 lg="3",
             ),
             spacing_x="5",
-            spacing_y="2"
+            spacing_y="2",
         ),
         align_items="start",
         spacing="5",

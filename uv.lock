@@ -677,7 +677,7 @@ wheels = [
 
 [[package]]
 name = "personal-web"
-version = "5.4.0"
+version = "5.5.0"
 source = { virtual = "." }
 dependencies = [
     { name = "python-dateutil" },
@@ -696,7 +696,7 @@ dev = [
 requires-dist = [
     { name = "mypy", marker = "extra == 'dev'" },
     { name = "python-dateutil" },
-    { name = "reflex", specifier = "==0.7.4" },
+    { name = "reflex", specifier = "==0.7.5" },
     { name = "reflex-chakra", specifier = "~=0.7.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = "~=0.8.0" },
     { name = "toml", specifier = ">=0.10.2" },
@@ -948,7 +948,7 @@ wheels = [
 
 [[package]]
 name = "reflex"
-version = "0.7.4"
+version = "0.7.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "alembic" },
@@ -982,9 +982,9 @@ dependencies = [
     { name = "wheel" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/57/be/c904df8718a194f1a9579e781a2124c6238a82937e3db4041d49b64e2c9d/reflex-0.7.4.tar.gz", hash = "sha256:c08757a3240345042587ad65d8835cfb1542505e5702703ac7f571acd0fd361c", size = 551782 }
+sdist = { url = "https://files.pythonhosted.org/packages/17/22/7ed81e33e271c52f9a392536b2fd1adc6f0d7287ab0d8aaf7a99d8a789e9/reflex-0.7.5.tar.gz", hash = "sha256:5bd64d6ff6a25e218b9443b5a8774b068a47d3b47ad2135480323b6f905eb6af", size = 556492 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/65/ca/79279ebe1bd7ac235f491c4397bc968ab1a4fde5b07d1fb938769e58d948/reflex-0.7.4-py3-none-any.whl", hash = "sha256:b3f98ddd896416e19bfe225f49a4cecd6613b288f6ac197ac48a6a1c47320648", size = 839471 },
+    { url = "https://files.pythonhosted.org/packages/fc/78/89e28491c197998b7b2a9d9b290077fc66017d5a082f649edd85b11170f3/reflex-0.7.5-py3-none-any.whl", hash = "sha256:3d25833c2915729ed0c1ca6d3f8bb01e3e0aa6257fe13ad18b5810ebff55cec3", size = 845725 },
 ]
 
 [[package]]
