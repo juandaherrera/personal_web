@@ -5,7 +5,7 @@
         "company_logo": "icons/snoonu.svg",
         "jobs": [
             {
-                "title": "ML Backend Engineer",
+                "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
                 "end_date": null,
                 "description": "He estado involucrado en la refactorización de un monorepo, dividiéndolo en múltiples librerías y servicios independientes para mejorar la modularidad y el mantenimiento del código. Además, contribuyo al desarrollo de nuevas funcionalidades y correcciones, enfocándome en optimizar las respuestas de los modelos de ML y reducir los tiempos de procesamiento dentro de nuestros microservicios. Para lograr esto, trabajo en estrecha colaboración con un equipo de científicos de datos, garantizando una integración fluida entre los modelos y la infraestructura backend.",

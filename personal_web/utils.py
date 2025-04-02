@@ -119,7 +119,7 @@ def date_difference(start_date: date, end_date: date, is_lang_en: bool = False) 
     """
     end_date = end_date if end_date <= date.today() else date.today()
     adjusted_end_date = end_date + relativedelta(months=1)
-    diff = relativedelta(adjusted_end_date, start_date)
+    diff = relativedelta(adjusted_end_date.replace(day=1), start_date.replace(day=1))
 
     formatter = format_duration_en if is_lang_en else format_duration_es
     return formatter(diff.years, diff.months)
