@@ -181,6 +181,7 @@ ACCORDION_ICON_STYLE = Style(
 
 FOOTER_LOGO_STYLE = Style(
     height=["3.5em", "4em"],
+    width="auto",
     margin_bottom=Size.ZERO.value,
 )
 

@@ -15,6 +15,7 @@ def working_at(image: str, url: str, alt: str) -> rx.Component:
                 src=image,
                 alt=alt,
                 height=["2em", "2.5em"],
+                width="auto",
                 transition="transform 0.2s ease",
                 _hover={
                     "transform": "scale(1.1)",

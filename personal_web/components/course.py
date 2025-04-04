@@ -74,7 +74,13 @@ def _course_header(name: str, issue_date: str):
 
 def _school_header(name: str, logo: str, courses_qty: int) -> rx.Component:
     return rx.hstack(
-        rx.image(src=logo, height=Size.VERY_BIG.value, min_width=Size.VERY_BIG.value),
+        rx.image(
+            src=logo,
+            height=Size.VERY_BIG.value,
+            width="auto",
+            min_width=Size.VERY_BIG.value,
+            loading="lazy",
+        ),
         rxc.divider(
             orientation="vertical",
             border_color=TextColor.PRIMARY.value,

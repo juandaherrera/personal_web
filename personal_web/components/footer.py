@@ -13,6 +13,7 @@ def footer() -> rx.Component:
         rx.image(
             src="favicon.ico",
             alt="Logo de Juan David Herrera. Es una 'j' y una 'd juntas",
+            loading="lazy",
             style=FOOTER_LOGO_STYLE,
         ),
         rx.text(

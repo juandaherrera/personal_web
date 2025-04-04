@@ -16,7 +16,7 @@ META = [
 
 INDEX_TILE = "Juan David Herrera | Web Personal"
 INDEX_DESCRIPTION = f"Portafolio personal de Juan David Herrera © {date.today().year}"
-INDEX_PREVIEW = "img/web_preview.webp"
+INDEX_PREVIEW = "img/web_preview.png"
 
 INDEX_META = [
     {"name": "og:title", "content": INDEX_TILE},

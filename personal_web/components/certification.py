@@ -15,6 +15,7 @@ def certification(certification: Certification) -> rx.Component:
             rx.image(
                 src=certification.institute_logo,
                 alt=f"Logo de {certification.institute}",
+                loading="lazy",
                 style=EDUCATION_COLLEGE_LOGO_STYLE,
             ),
         ),
