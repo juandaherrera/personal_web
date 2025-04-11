@@ -7,14 +7,17 @@ from personal_web.components.navbar import navbar
 from personal_web.state import MainState
 from personal_web.styles.colors import Color
 from personal_web.styles.styles import Size
-from personal_web.views.about_me import about_me
-from personal_web.views.certifications import certifications
-from personal_web.views.courses import courses
-from personal_web.views.education import education
-from personal_web.views.experience import experience
-from personal_web.views.presentation import presentation
-from personal_web.views.projects import projects
-from personal_web.views.technologies import technologies
+from personal_web.views import (
+    about_me,
+    certifications,
+    courses,
+    education,
+    experience,
+    presentation,
+    projects,
+    recommendations,
+    technologies,
+)
 
 
 @rx.page(
@@ -37,12 +40,15 @@ def index() -> rx.Component:
             rx.cond(MainState.is_language_en, education(en=True), education()),
             rx.cond(MainState.is_language_en, certifications(en=True), certifications()),
             rx.cond(MainState.is_language_en, courses(en=True), courses()),
-            footer(),
             align="center",
             width="100%",
+            padding_bottom=Size.LARGE.value,
             background=Color.BACKGROUND_ALT.value,
             box_shadow=f"0 0 {Size.DEFAULT_BIG.value} {Color.CONTENT.value}",
         ),
+        recommendations(),
+        # rx.cond(MainState.is_language_en, contact(en=True), contact()),
+        footer(),
         spacing="0",
         align="center",
         width="100%",
