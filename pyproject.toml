@@ -1,6 +1,6 @@
 [project]
 name = "personal_web"
-version = "5.5.2"
+version = "5.5.3"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
