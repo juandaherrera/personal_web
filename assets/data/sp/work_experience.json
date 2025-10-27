@@ -8,18 +8,22 @@
                 "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
                 "end_date": null,
-                "description": "Responsable de la optimización e instrumentalización de los servicios y librerías encargados de calcular los tiempos estimados de llegada (ETA) de las órdenes, con foco en reducir la latencia, mejorar la trazabilidad y garantizar la estabilidad en producción. Encargado del desarrollo de nuevas funcionalidades y ajustes orientados a mejorar el rendimiento de los modelos de ML integrados en los microservicios. Actualmente, en desarrollo de un servicio para la generación de correos personalizados utilizando un LLM y múltiples algoritmos de personalización, enfocado en mejorar la experiencia del usuario. Trabajo en estrecha colaboración con el equipo de científicos de datos para asegurar una integración fluida entre modelos y backend.",
+                "description": "Responsable de la optimización e instrumentalización de los servicios y librerías encargados de calcular los tiempos estimados de llegada (ETA) de las órdenes, con foco en reducir la latencia, mejorar la trazabilidad y garantizar la estabilidad en producción. Encargado del desarrollo de nuevas funcionalidades y ajustes orientados a mejorar el rendimiento de los modelos de ML integrados en los microservicios. Actualmente, en desarrollo de un servicio para la generación de comunicaciones personalizadas, utilizando AWS Personalize y enriqueciendo la información con datos provenientes de múltiples fuentes internas. Trabajo en estrecha colaboración con el equipo de científicos de datos para asegurar una integración fluida entre modelos y backend.",
                 "achievements": "",
                 "technologies": [
                     "Python",
                     "SQL",
+                    "Redis",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "RabbitMQ",
+                    "DataDog",
+                    "AWS",
+                    "Docker",
                     "FastAPI",
                     "Pydantic-ai",
                     "BigQuery",
-                    "Git",
-                    "GitHub",
-                    "AWS",
-                    "Docker"
+                    "GitHub"
                 ]
             }
         ]

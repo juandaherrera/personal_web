@@ -6,11 +6,10 @@
         "repository_url": "https://github.com/juandaherrera/personal_web"
     },
     {
-        "name": "JD Science Tools",
-        "description": "Librería de utilidades diseñada para proyectos de Data Science, Data Engineering y Python Development. Este proyecto es de uso personal, pero está disponible para quienes deseen explorarlo o contribuir.",
-        "technologies": ["Python", "Snowflake", "Aiohttp", "Jinja2", "Pandas"],
-        "repository_url": "https://github.com/juandaherrera/jds_tools",
-        "website_url": "https://pypi.org/project/jds-tools/"
+        "name": "Finmail (Azure Function)",
+        "description": "Finmail es un sistema de procesamiento de correos electrónicos financieros construido con Azure Functions. Procesa correos transaccionales (de varias de mis cuentas bancarias), extrae la información financiera relevante y la sube a una hoja de cálculo de Google.",
+        "technologies": ["Python", "UV", "Azure Functions", "Finances"],
+        "repository_url": "https://github.com/juandaherrera/finmail"
     },
     {
         "name": "Prueba Técnica Data Quality Engineer",

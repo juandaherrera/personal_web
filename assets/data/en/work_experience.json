@@ -8,18 +8,22 @@
                 "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
                 "end_date": null,
-                "description": "In charge of optimizing and instrumenting the services and libraries responsible for calculating order ETA, with a focus on reducing latency, improving traceability, and ensuring production stability. Responsible for developing new features and performance improvements for the ML models integrated into the microservices. Currently working on the development of a service that generates personalized emails using an LLM and multiple personalization algorithms, aimed at enhancing user experience. Closely collaborating with the data science team to ensure seamless integration between models and backend infrastructure.",
+                "description": "In charge of optimizing and instrumenting the services and libraries responsible for calculating order ETA, with a focus on reducing latency, improving traceability, and ensuring production stability. Responsible for developing new features and performance improvements for the ML models integrated into the microservices. Currently working on the development of a service for generating personalized communications using AWS Personalize, enriched with data from multiple internal sources. Closely collaborating with the data science team to ensure seamless integration between models and backend infrastructure.",
                 "achievements": "",
                 "technologies": [
                     "Python",
                     "SQL",
+                    "Redis",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "RabbitMQ",
+                    "DataDog",
+                    "AWS",
+                    "Docker",
                     "FastAPI",
                     "Pydantic-ai",
                     "BigQuery",
-                    "Git",
-                    "GitHub",
-                    "AWS",
-                    "Docker"
+                    "GitHub"
                 ]
             }
         ]
