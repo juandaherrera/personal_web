@@ -8,8 +8,8 @@
                 "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
                 "end_date": null,
-                "description": "In charge of optimizing and instrumenting the services and libraries responsible for calculating order ETA, with a focus on reducing latency, improving traceability, and ensuring production stability. Responsible for developing new features and performance improvements for the ML models integrated into the microservices. Currently working on the development of a service for generating personalized communications using AWS Personalize, enriched with data from multiple internal sources. Closely collaborating with the data science team to ensure seamless integration between models and backend infrastructure.",
-                "achievements": "",
+                "description": "Responsible for the development, maintenance, and optimization of several core services at Snoonu, including the ETA calculation service, the personalized communications system based on AWS Personalize, and the service acting as a centralized feature store for platform users. I act as the technical owner of these services, actively contributing to architectural decisions, refactors, and the definition of engineering standards, with a strong focus on performance, production stability, observability, and the seamless integration of ML models within a scalable microservices architecture.",
+                "achievements": "Reduced P99 latency of the ETA service from 130 ms to 40 ms (-70%) by optimizing CPU-bound processes and execution flows. Led and implemented the team-wide migration to Datadog, defining observability standards for metrics, logs, and traces applied consistently across services. Designed, built, and deployed two services from scratch to production, covering infrastructure, application code, and integration with internal clients, ensuring minimal operational friction and a strong focus on end results.",
                 "technologies": [
                     "Python",
                     "SQL",
