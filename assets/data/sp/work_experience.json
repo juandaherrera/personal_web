@@ -5,9 +5,31 @@
         "company_logo": "icons/snoonu.svg",
         "jobs": [
             {
+                "title": "Senior ML Backend Engineer",
+                "start_date": "2026-02-19",
+                "end_date": null,
+                "description": "Responsable técnico de servicios core de la plataforma, elevando estándares de arquitectura, escalabilidad y calidad en producción, y asegurando una integración robusta de soluciones de ML.",
+                "achievements": null,
+                "technologies": [
+                    "Python",
+                    "SQL",
+                    "Redis",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "RabbitMQ",
+                    "DataDog",
+                    "AWS",
+                    "Docker",
+                    "FastAPI",
+                    "Pydantic-ai",
+                    "BigQuery",
+                    "GitHub"
+                ]
+            },
+            {
                 "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
-                "end_date": null,
+                "end_date": "2026-02-19",
                 "description": "Encargado del desarrollo, mantenimiento y optimización de varios servicios core en Snoonu, incluyendo el servicio de cálculo de ETAs, el sistema de comunicaciones personalizadas basado en AWS Personalize y el servicio que funciona como feature store centralizado para los usuarios de la plataforma. Actúo como owner técnico de estos servicios, participando activamente en decisiones de arquitectura, refactorizaciones y definición de estándares, con foco en mejorar el rendimiento, la estabilidad en producción, la observabilidad y la correcta integración de modelos de ML dentro de una arquitectura de microservicios escalable.",
                 "achievements": "Reduje la latencia P99 del servicio de ETAs de 130 ms a 40 ms (-70%), mediante la optimización de procesos CPU-bound y mejoras en el flujo de ejecución. Instrumentalicé y lideré la migración del equipo hacia Datadog, definiendo estándares de observabilidad para métricas, logs y trazas aplicados de forma transversal en los proyectos. Diseñé, desarrollé y llevé a producción dos servicios desde cero, abarcando infraestructura, código e integración con clientes internos, garantizando baja fricción operativa y foco en el impacto final.",
                 "technologies": [

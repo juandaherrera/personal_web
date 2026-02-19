@@ -5,9 +5,31 @@
         "company_logo": "icons/snoonu.svg",
         "jobs": [
             {
+                "title": "Senior ML Backend Engineer",
+                "start_date": "2026-02-19",
+                "end_date": null,
+                "description": "Technical owner of core platform services, driving high standards in architecture, scalability, and production excellence, and ensuring reliable ML integration.",
+                "achievements": null,
+                "technologies": [
+                    "Python",
+                    "SQL",
+                    "Redis",
+                    "PostgreSQL",
+                    "MongoDB",
+                    "RabbitMQ",
+                    "DataDog",
+                    "AWS",
+                    "Docker",
+                    "FastAPI",
+                    "Pydantic-ai",
+                    "BigQuery",
+                    "GitHub"
+                ]
+            },
+            {
                 "title": "Middle ML Backend Engineer",
                 "start_date": "2025-02-10",
-                "end_date": null,
+                "end_date": "2026-02-19",
                 "description": "Responsible for the development, maintenance, and optimization of several core services at Snoonu, including the ETA calculation service, the personalized communications system based on AWS Personalize, and the service acting as a centralized feature store for platform users. I act as the technical owner of these services, actively contributing to architectural decisions, refactors, and the definition of engineering standards, with a strong focus on performance, production stability, observability, and the seamless integration of ML models within a scalable microservices architecture.",
                 "achievements": "Reduced P99 latency of the ETA service from 130 ms to 40 ms (-70%) by optimizing CPU-bound processes and execution flows. Led and implemented the team-wide migration to Datadog, defining observability standards for metrics, logs, and traces applied consistently across services. Designed, built, and deployed two services from scratch to production, covering infrastructure, application code, and integration with internal clients, ensuring minimal operational friction and a strong focus on end results.",
                 "technologies": [

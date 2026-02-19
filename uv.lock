@@ -387,7 +387,7 @@ wheels = [
 
 [[package]]
 name = "personal-web"
-version = "5.6.1"
+version = "5.6.2"
 source = { virtual = "." }
 dependencies = [
     { name = "python-dateutil" },

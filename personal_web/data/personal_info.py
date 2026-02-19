@@ -4,23 +4,28 @@ from personal_web.state import MainState
 from personal_web.utils import get_experience
 
 SPANISH_ABOUT_ME = f"""
-Soy Ingeniero Industrial y ML Backend Engineer con más de {get_experience()} años de experiencia
- en desarrollo backend e ingeniería de datos. Mi principal enfoque es construir y optimizar
- microservicios, garantizando escalabilidad, rendimiento y eficiencia en el manejo de datos.
- Actualmente, trabajo en Snoonu desarrollando soluciones backend utilizando Python, FastAPI,
- PostgreSQL y Redis, aplicando principios de código limpio, realizando pruebas con Pytest y
- automatizando flujos de trabajo con GitHub Actions. También tengo experiencia con Airflow y
- Snowflake, especialmente en entornos de ingeniería de datos.
+Soy Ingeniero Industrial y Senior ML Backend Engineer con más de {get_experience()} años
+de experiencia en backend y data engineering. Me enfoco en diseñar y evolucionar
+sistemas distribuidos orientados a ML, priorizando escalabilidad, resiliencia y
+excelencia operativa. Actualmente trabajo en Snoonu, donde soy responsable técnico
+de servicios core construidos con Python y FastAPI, integrando modelos de ML en
+arquitecturas de microservicios y asegurando alto rendimiento en producción.
+También tengo experiencia en pipelines de datos y arquitecturas analíticas con
+Airflow y Snowflake.
 """
 
+
 ENGLISH_ABOUT_ME = f"""
-I'm an Industrial Engineer and ML Backend Engineer with over {get_experience()} years of experience
- in backend development and data engineering. My main focus is building and optimizing
- microservices, ensuring scalability, performance, and efficiency in data handling. Currently,
- I work at Snoonu, developing backend solutions using Python, FastAPI, PostgreSQL, and Redis, while
- applying clean code principles, testing with Pytest, and automating workflows with GitHub Actions.
- I also have experience with Airflow and Snowflake, particularly in Data Engineering environments.
+I'm an Industrial Engineer and Senior ML Backend Engineer with over
+{get_experience()} years of experience in backend and data engineering. I focus on
+designing and evolving ML-oriented distributed systems, prioritizing scalability,
+resilience, and operational excellence. Currently at Snoonu, I act as technical
+owner of core services built with Python and FastAPI, integrating ML models into
+scalable microservice architectures and ensuring strong production performance.
+I also have experience building data pipelines and analytical architectures using
+Airflow and Snowflake.
 """
+
 
 ABOUT_ME = cond(
     MainState.is_language_en,
